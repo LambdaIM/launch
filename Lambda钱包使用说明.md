@@ -132,12 +132,8 @@ Repeat the passphrase:
 现在支持 领取测试网的LAMB和TBB,用以进行存储挖矿测试
 
 领取规则：  
-一个ip每天可以领取3000个LAMB,1个TBB；  
-一个lambda主网地址，可以分别领取一次LAMB和TBB
-
-
-
-
+一个IP每天可以领取50000个LAMB,5个TBB；  
+一个lambda主网地址，可以领取10次LAMB和TBB
 
 
 
