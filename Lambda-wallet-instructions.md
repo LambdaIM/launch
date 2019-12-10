@@ -1,10 +1,10 @@
 # Lambda Wallet Wallet Instructions
-Version 0.4.15
+Version 0.4.18
 
 A wallet supports the creation and management of multiple accounts in Chinese and English.
 
 
-Download ：[https://github.com/LambdaIM/launch/releases/tag/Wallet0.4.15](https://github.com/LambdaIM/launch/releases/tag/Wallet0.4.15)
+Download ：[https://github.com/LambdaIM/launch/releases/tag/Wallet0.4.18](https://github.com/LambdaIM/launch/releases/tag/Wallet0.4.18)
 
 
 
@@ -14,9 +14,9 @@ Download ：[https://github.com/LambdaIM/launch/releases/tag/Wallet0.4.15](https
 * [Switch-Language](#Switch-Language)
 * [Create-Account](#Create-Account)
 * [Use-Mnemonic-Import-Account-Into-Lambda-Program](#Use-Mnemonic-Import-Account-Into-Lambda-Program)
-* [Signatures&Add-address-To-Pledge-System](#Signatures-And-Add-address-To-Pledge-System)
 * [Import-Account](#Import-Account)
 * [Home-Page-Description](#Home-Page-Description)
+* [Collect-test-token-of-test-network](#Collect-test-token-of-test-network)
 * [Transfer](#Transfer)
 * [Export-Account-Profile](#Export-Account-Profile)
 * [Change-Validator-Node-IP](#Change-Validator-Node-IP)
@@ -91,15 +91,7 @@ If the address of the output account is consistent with the wallet, the import i
 **tips**
 Please note the mnemonic words showed in picture is just an example. 
 
-## Signatures-And-Add-address-To-Pledge-System
-![avatar](img/sin@2x.png)
-input some word, and then copy the signature data to the Pledge System(https://validator.lambdastorage.com/#/)
 
-![avatar](img/sin2@2x.png)
-
-Click to add the address in the address list page of Pledge System
-
-![avatar](img/sin3.png)
 
 
 
@@ -136,6 +128,23 @@ At the bottom is the information of the Validator node the wallet connected, inc
 When account has a transaction record shows as follows
 
 ![avatar](img/home@2x.png)
+
+
+## Collect-test-token-of-test-network
+
+After logging into the wallet account, click the activity link on the home page
+![avatar](img/WXceshicoinen.png)
+Jump to 
+[http://faucet.lambda.im/](http://faucet.lambda.im/)
+![avatar](img/WXceshicoinget.png)
+Enter the created lambda primary network address, for examplelambda163q4m634nq8les4nuvdvz49tk6aeh926t0**** 
+
+Now it supports receiving LAMB and TBB of test network for storage mining test
+Claim rules:
+One IP can get 3000 LAMB and one TBB every day;
+One lambda main network address, which can be picked up once and once respectively
+
+
 
 
 ## Transfer
