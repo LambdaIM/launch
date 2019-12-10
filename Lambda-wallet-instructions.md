@@ -141,8 +141,8 @@ Enter the created lambda primary network address, for examplelambda163q4m634nq8l
 
 Now it supports receiving LAMB and TBB of test network for storage mining test
 Claim rules:
-One IP can get 3000 LAMB and one TBB every day;
-One lambda main network address, which can be picked up once and once respectively
+One IP can get 50000 LAMB and 5 TBB every day;
+One lambda main network address, which can be picked up ten times and ten times respectively.
 
 
 
