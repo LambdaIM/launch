@@ -8,8 +8,8 @@
 - [Lambda wallet toturial](./Lambda-wallet-instructions.md)
 - [Lambda cli toturial](./docs/lambdacli/README.md)
 - [Start your own `lambda` testnet](./docs/deploy-testnet.md).
-- [The guide of Testnet0.4.0 for Miner](./Testnet0.4.0-Miner-guide-en.md)
-- [The guide of Testnet0.4.0 for Storagenode](./Testnet0.4.0-Storagenode-configure-en.md)
+- [The guide of Testnet0.4.3 for Miner](./Testnet0.4.3-Miner-guide-en.md)
+- [The guide of Testnet0.4.3 for Storagenode](./Testnet0.4.3-Storagenode-configure-en.md)
 
 ## 中文
 - [Validator 主网接入教程](./主网接入教程(Validator).md)
