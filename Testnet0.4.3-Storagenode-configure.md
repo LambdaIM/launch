@@ -67,7 +67,7 @@ mining_dir = [ "/root/.lambda_storage/mining"]
 
 ### 启动storagenode
 
-启动storagenode server和启动storagenode gateway。
+启动storagenode
 ```
 ./storagenode run --daemonize --log.file [log_file_path]
 ```

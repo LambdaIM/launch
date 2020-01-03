@@ -22,22 +22,23 @@
 
 
 # 1使用钱包质押
+打开钱包，点击【验证节点】标签页
 ![avatar](img/valist@2x.png)
-点击到验证节点 列表
+点击【验证节点列表】
 ![avatar](img/valist2@2x.png)
-点击查看验证节点详细信息
+选一个节点 点击【质押地址】进入验证节点详情页
 ![avatar](img/vainfo@2x.png)
-点击质押按钮进行质押，质押不得少于1TBB
+点击质押按钮质押到当前节点，质押不得少于1TBB
 ![avatar](img/zhiyainfo@2x.png)
 
 
 # 2钱包创建挖矿子账户及导出
 
-在钱包首页点击子账户链接，切换到子账户标签页
+在钱包【首页】点击【子账户】链接，切换到子账户标签页
 
 ![avatar](img/sonaccount.png)
 
-可以看到创建矿工子账户和导入按钮
+可以看到【创建矿工子账户】和【导入】按钮
 
 ## 创建子账户
 点击创建子账户按钮，打开创建子账户弹窗
@@ -51,7 +52,7 @@
 ## 导入子账户
 如果已有子账户json文件，可通过钱包导入子账户。如已进行上面创建子账户操作，可跳过此步。
 
-点击导入按钮，打开导入子账户弹窗
+点击导入按钮，打开导入矿工子账户弹窗
 
 ![avatar](img/sonaccountd2.png)
 
@@ -91,7 +92,7 @@
 ![图片](https://uploader.shimo.im/f/CJ4oW9spwJQ0gCML.png!thumbnail)
 
 # 4矿工初始化
-点击初始化按钮打开初始化界面
+点击【初始化】按钮打开初始化界面
 
 ![图片](https://uploader.shimo.im/f/RnAchczcOTAGlqp5.png!thumbnail)
 
@@ -122,14 +123,16 @@
 
 ![avatar](img/marketd2.png)
 
-创建矿工需要选择钱包中的子账户 和 矿工服务器的DHT ID
-可以在 矿工管理程序——矿工节点页面点击服务器名称——进入矿工节点详情页 获取矿工服务的 DHT ID
-例如
+创建矿工需要选择钱包中的子账户 和 矿工服务器的DHT ID  
+
+可以在 矿工管理程序——矿工节点页面点击服务器名称——进入矿工节点详情页 获取矿工服务的 DHT ID 
+
+例如  
 
 ![avatar](img/marketd3.png)
 
 # 6配置矿工节点
-点击配置节点按钮打开配置界面
+点击【配置节点】按钮打开配置界面
 
 ![图片](https://uploader.shimo.im/f/30euDM6ET8gEMMH2.png!thumbnail)
 
@@ -211,7 +214,7 @@ data_backup_interval = "300000000000"
 
 如果启动后状态没有变化 可以点击打开远程日志按钮，查看日志
 
-一般如果是缺少配置导致的失败，日志里面会列出比填写的配置项是哪些
+一般如果是缺少配置导致的失败，日志里面会列出必填的配置项是哪些
 
 ![图片](https://uploader.shimo.im/f/94q81R6xm0cshGqr.png!thumbnail)
 

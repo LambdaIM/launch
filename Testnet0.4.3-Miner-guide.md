@@ -5,7 +5,7 @@
 * [清除历史数据](#清除历史数据)
 * [配置miner：](#配置miner节点)
 * [1. 下载安装包并解压](#1下载安装包并解压)
-* [2. 配置miner](#2配置miner)
+* [2. 配置lambdacli](#2配置lambdacli)
 * [3. 添加矿工账户](#3添加矿工账户)
 * [4. 创建miner](#4创建miner)
 * [5. 初始化storagenode](#5初始化storagenode)
