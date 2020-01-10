@@ -252,7 +252,7 @@ function sign(bytes, privateKey) {
 
 
 
-# 4转账业务
+# 4转账业务和交易详情
  发送接口
 
 ```
@@ -335,6 +335,10 @@ function sign(bytes, privateKey) {
 ```
 /txs?sender=${addr}&page=1000000            获取最新发送的交易
 /txs?recipient=${addr}&page=1000000         获取最新接受的交易
+```
+根据交易哈希获取交易详情
+```
+`/txs/${hash}`
 ```
 
 # 4.1各种交易模拟获取gas 【post】
