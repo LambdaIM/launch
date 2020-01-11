@@ -28,13 +28,13 @@ tar zxvf lambda-storage-0.2.2-testnet.tar.gz
 cd lambda-storage-0.2.2-testnet
 ```
 
-### minernode升级配置文件
+### minernode升级
 
 ```
 ./minernode upgrade
 ```
 
-### storagenode升级配置文件
+### storagenode升级
 
 ```
 ./storagenode upgrade

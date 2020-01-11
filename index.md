@@ -7,6 +7,7 @@
 - [Lambdacli 使用教程](./docs/lambdacli/README.md)
 - [测试网0.4.3Miner接入教程](Testnet0.4.3-Miner-guide.md)
 - [测试网0.4.3Storagenode接入教程](./Testnet0.4.3-Storagenode-configure.md)
+- [storage0.2.2升级](./storage0.2.2-upgrade.md)
 - [矿工管理程序(StorageManager)使用教程](./StorageManager-Guide0.1.11.md)
 - [质押相关操作手册](./质押相关操作手册.md)
 - [钱包API接入文档](./Lambda-Wallet-Interface.md)
