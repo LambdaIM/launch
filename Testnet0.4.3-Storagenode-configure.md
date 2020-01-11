@@ -17,8 +17,8 @@
 
 
 ```
-version = "0.2.1-105-g41400a6"
-commit = "41400a6bc28c24b8161e6e1375fafa93be466393"
+version = "0.2.2"
+commit = "df27600a6fc5a8c27c635d55b3ef4a51c2993715"
 mode = "release"
 
 # 服务需要监听的地址
