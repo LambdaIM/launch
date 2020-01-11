@@ -20,6 +20,7 @@
 * [4. 挖矿收益](#4挖矿收益)
 ---
 * [提取订单收益](#提取订单收益)
+* [测试网络连通](#测试网络连通)
 
 
 # 清除历史数据
@@ -42,15 +43,15 @@ mkdir -p ~/LambdaIM && cd ~/LambdaIM
 ```
 下载安装包
 ```
-wget https://github.com/LambdaIM/launch/releases/download/Storage0.2.1/lambda-storage-0.2.1-testnet.tar.gz
+wget https://github.com/LambdaIM/launch/releases/download/Storage0.2.2/lambda-storage-0.2.2-testnet.tar.gz
 ```
 解压安装包
 ```
-tar zxvf lambda-storage-0.2.1-testnet.tar.gz
+tar zxvf lambda-storage-0.2.2-testnet.tar.gz
 ```
 进入解压后的目录
 ```
-cd lambda-storage-0.2.1-testnet
+cd lambda-storage-0.2.2-testnet
 ```
 
 ## 2配置lambdacli
@@ -120,6 +121,13 @@ lambdavaloper1r340rrv9fs95gqy5087e2mtz82vvwrglt6amx3
 ```
 会生成矿工配置文件~/.lambda_miner/config/config.toml，参考如下说明进行配置
 ```
+version = "0.2.1-105-g41400a6"
+commit = "41400a6bc28c24b8161e6e1375fafa93be466393"
+mode = "release"
+
+# ensure_level=0会多占用磁盘1/6空间，ensure_level=1会多占用1/3空间
+ensure_level = "0"
+
 # 服务需要监听的地址
 # 以本机内网IP为 192.168.10.10，端口映射的外网IP为 200.200.200.100 为例
 [server]
@@ -203,11 +211,13 @@ Miner Address: lambda1wgdcvew36nqwm2d5gj6yxraayjvnhfpf5rrfww  //矿工子账户�
 ```
 ./minernode info
 返回结果：
-                dht id: CdZsGtfsXVjMgt51EnaGAqr78YmgFxYsCAn4ubR1Dpgo //创建矿工时会用到此dht-id
-        server.address: 0.0.0.0:14000
-  kad.external_address: 182.92.242.59:14000
-    kad.bootstrap_addr: [182.92.242.59:13000]
-server.private_address: 127.0.0.1:14001
+               version: 0.2.1-124-gc6ef4e8
+                dht id: G4xW3UHMfFnTmaRMZUJ7PKcfvr9YTTFyekcsRxKDZZD9  //创建矿工时会用到此dht-id
+server.private_address: 172.17.159.130:15001
+        server.address: 0.0.0.0:26654
+  kad.external_address: 39.106.153.62:26654
+    kad.bootstrap_addr: [39.106.153.62:26650 172.17.159.130:26652]
+      Ensure-level = 0: 1/6 of disk-space would be used for data-replicating
 
 创建矿工命令：
 ./lambdacli tx market create-miner --dht-id [dht-id] --mining-address [miningAddr] --from [miner-name] --broadcast-mode block -y
@@ -471,5 +481,55 @@ LAMBDA_ORDER_ID=[orderId] ./storagecli ls lamb://[bucket-name]/
 # 提取订单收益
 [提取单个匹配订单收益](./docs/lambdacli/tx/market/withdraw-miner.md)  
 [批量提取匹配订单收益](./docs/lambdacli/tx/market/miner-withdraw-count.md)
+
+## 测试网络连通
+
+当启动miner、storagenode、或上传文件时有报错，请使用以下命令进行排查。
+
+### 1测试miner服务
+
+```
+./minernode info --test
+返回结果均为successful即正常：
+               version: 0.2.1-124-gc6ef4e8
+                dht id: G4xW3UHMfFnTmaRMZUJ7PKcfvr9YTTFyekcsRxKDZZD9
+server.private_address: 172.17.159.130:15001   successful
+        server.address: 0.0.0.0:26654    successful
+  kad.external_address: 39.106.153.62:26654    successful
+    kad.bootstrap_addr: [39.106.153.62:26650 172.17.159.130:26652]    successful successful
+      Ensure-level = 0: 1/6 of disk-space would be used for data-replicating
+```
+### 2测试storagenode服务
+
+```
+./storagenode info network --test
+
+返回结果均为successful即正常：
+               version: 0.2.1-124-gc6ef4e8
+                dht id: 3mta4YEgHB43RHYE83aWBouvFNNCtSc832siEwmcTUsZ
+  storage.storage_name: sn1
+ storage.miner_address: 172.17.159.130:15001   successful
+server.private_address: 172.17.159.130:16001   successful
+        server.address: 0.0.0.0:26660    successful
+  kad.external_address: 39.106.153.62:26660    successful
+    kad.bootstrap_addr: [172.17.159.130:26650 172.17.159.130:26652]     successful successful
+
+```
+
+## 查看存储节点磁盘空间
+```
+./storagenode info disk
+               version:  0.2.1-124-gc6ef4e8
+  storage.storage_name:  sn1
+      storage.data_dir:  [/lambda/data/xvdd/store /lambda/data/xvde/store /lambda/data/xvdc/中文test/store /lambda/.1lambda_storage/store]
+
+Disk                           |Total  |Used    |Free    |Order                                    |Reserved |Occupied
+/lambda/data/xvdd/store        |18 GiB |8.9 GiB |8.8 GiB |753E54547CC66DB840E6C717C98492640B6E5CF8 |3.0 GiB  |540 MiB
+                               |       |        |        |E15F0CCA09A8F92E401E322638CA777BC9EA24B8 |3.0 GiB  |1.9 GiB
+/lambda/data/xvde/store        |18 GiB |592 MiB |17 GiB  |D3280F0343112CC35B864CFFEE96DE3D2F39F3C7 |12 GiB   |579 MiB
+/lambda/data/xvdc/中文test/store |18 GiB |13 GiB  |4.6 GiB |DBE8C6D465D1701E71A7CBDF35E9F602A9CE55AE |6.0 GiB  |3.8 GiB
+
+Reserved为订单预留的磁盘空间，Occupied为当前订单实际占用磁盘空间
+```
 
 
