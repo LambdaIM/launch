@@ -19,6 +19,7 @@ nav:
         - 存储节点接入: Testnet0.4.3-Storagenode-configure.md
         - 同步节点: Testnet0.4.3-Sync-Node.md
         - storage0.2.2升级: storage0.2.2-upgrade.md
+        - 挖矿手册: lambda-store-v0.2.2-store-and-mining.md
         - 矿工和存储节点文件备份: StorageFile-Backup.md
         - 测试网最新版本: version/TestnetLatest.md
     - 钱包:
