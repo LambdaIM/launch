@@ -42,21 +42,46 @@ cd lambda-storage-0.2.2-testnet
 
 ### 重启minernode
 [log_file_path] 指定矿工日志完整路径
-```
-停止minernode：
-./minernode run --stop
 
-启动minernode：
+1. 停止minernode：
+```
+./minernode run --stop
+```
+返回结果如下即停止成功：
+```
+stop daemon process from minernode.pid:22937 successfully
+```
+如果返回结果停止失败，使用以下命令停掉minernode：
+```
+kill -9 `ps aux | grep 'minernode' |grep -v grep| awk '{print $2}'`
+```
+2. 启动minernode：
+```
 ./minernode run --query-interval 5 --daemonize --log.file [log_file_path]
+```
+
 如[your-account-name]_miner_key.json没有移动到~/.lambda_miner/config/default_miner_key.json，则加上--key-file参数启动：
+```
 ./minernode run --query-interval 5 --daemonize --log.file [log_file_path] --key-file [filepath/your-account-name]_miner_key.json
 ```
+
 ### 重启storagenode
 [log_file_path] 指定storagenode运行日志路径
-```
-停止storagenode：
-./storagenode run --stop
 
-启动storagenode：
+1. 停止storagenode：
+```
+./storagenode run --stop
+```
+返回结果如下即停止成功：
+```
+stop daemon process from storagenode.pid:22937 successfully
+```
+如果返回结果停止失败，使用以下命令停掉storagenode：
+```
+kill -9 `ps aux | grep 'storagenode' |grep -v grep| awk '{print $2}'`
+```
+
+2. 启动storagenode：
+```
 ./storagenode run --daemonize --log.file [log_file_path]
 ```
