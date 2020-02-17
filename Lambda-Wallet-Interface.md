@@ -537,7 +537,7 @@ unbonded是反质押完成 或 被禁的节点过了21天还没解禁
 ### shares 和tbb转换【个人质押量计算】
 个人质押后获取到质押分份额后，显示如果是显示质押的tbb数量需要进行转换计算
 
-shares/delegator_shares*tokens
+shares*(tokens/delegator_shares)
 
 用个人的shares 除以节点总的shares 再乘以节点总的tokens
 
