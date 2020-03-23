@@ -19,7 +19,7 @@ nav:
         - 验证节点接入: Testnet-Validator-Guide.md
         - 矿工接入: Testnet-Miner-Guide.md
         - 存储节点接入: Testnet-Storagenode-Configure.md
-        - 0.4.6节点升级: Testnet-Validator-Upgrade-Guide.md
+        - 0.4.7节点升级: Testnet-Validator-Upgrade-Guide.md
         - 同步节点: Testnet-Sync-Node.md
         - 验证节点挖矿手册: Lambda-Validator-Mining.md
         - 存储矿工挖矿手册: Lambda-Store-and-Mining.md

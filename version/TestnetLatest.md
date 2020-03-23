@@ -1,8 +1,8 @@
-# 测试网lambda testnet v0.4.6
+# 测试网lambda testnet v0.4.7
 
-lambda testnet v0.4.6
+lambda testnet v0.4.7
 
-包名: lambda-0.4.6-testnet.tar.gz  
+包名: lambda-0.4.7-testnet.tar.gz  
 MD5: 02c43da2d3107130d3a4fdf390e7f8f1
 
 1. 修复已知bug；  
@@ -13,6 +13,6 @@ MD5: 02c43da2d3107130d3a4fdf390e7f8f1
 节点升级参考：http://docs.lambda.im/Testnet-Validator-Upgrade-Guide/
 
 下载地址：  
-[https://github.com/LambdaIM/launch/releases/tag/v0.4.6](https://github.com/LambdaIM/launch/releases/tag/v0.4.6)
+[https://github.com/LambdaIM/launch/releases/tag/v0.4.7](https://github.com/LambdaIM/launch/releases/tag/v0.4.7)
 
-[http://download.lambdastorage.com/lambda/0.4.6/](http://download.lambdastorage.com/lambda/0.4.6/)
+[http://download.lambdastorage.com/lambda/0.4.7/](http://download.lambdastorage.com/lambda/0.4.7/)

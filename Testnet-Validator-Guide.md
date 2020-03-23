@@ -1,6 +1,7 @@
-# 测试网节点0.4.6 接入教程
+# 测试网节点0.4.7 接入教程
 
-节点升级参考[测试网Validator 0.4.6 升级教程](Testnet-Validator-Upgrade-Guide.md)
+节点升级参考[测试网Validator 0.4.7 升级教程](Testnet-Validator-Upgrade-Guide.md)
+
 ### 1. 下载安装包并解压
 创建目录并进入
 ```
@@ -8,15 +9,15 @@ mkdir -p ~/LambdaIM && cd ~/LambdaIM
 ```
 下载安装包
 ```
-wget https://github.com/LambdaIM/launch/releases/download/v0.4.6/lambda-0.4.6-testnet.tar.gz
+wget https://github.com/LambdaIM/launch/releases/download/v0.4.7/lambda-0.4.7-testnet.tar.gz
 
 如下载缓慢可使用下面的链接：
-wget http://download.lambdastorage.com/lambda/0.4.6/lambda-0.4.6-testnet.tar.gz
+wget http://download.lambdastorage.com/lambda/0.4.7/lambda-0.4.7-testnet.tar.gz
 ```
 
 解压安装包
 ```
-tar zxvf lambda-0.4.6-testnet.tar.gz && cd lambda-0.4.6-testnet
+tar zxvf lambda-0.4.7-testnet.tar.gz && cd lambda-0.4.7-testnet
 ```
 
 ### 2. 初始化节点  
@@ -108,11 +109,6 @@ replacement_cache_size = 5
 [discov]
 discovery_interval = "3m0s"
 
-[db]
-app_db = "/root/.lambda/data"
-market_db = "/root/.lambda"
-pdp_db = "/root/.lambda"
-identity_files = "/root/.lambda/identity"
 ```
 
 ### 7. 启动节点  
@@ -236,5 +232,9 @@ nohup ./lambdacli rest-server --node tcp://0.0.0.0:26657 --laddr tcp://0.0.0.0:1
 ./lambdacli tx slashing unjail --from [your-account-name]
 ```
 
-### 备份和恢复验证节点文件
+### 备份和恢复验证节点配置文件
 以防配置文件丢失，请提前做好文件备份：[验证节点文件备份](StorageFile-Backup.md)
+
+### 备份和恢复节点签名文件
+**注意：节点签名文件一定要提前备份，防止误删造成的资产损失**  
+参考：[备份和恢复节点签名文件](Mainnet-Validator-Keybackup.md)

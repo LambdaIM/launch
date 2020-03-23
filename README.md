@@ -8,8 +8,8 @@
 - [Lambda wallet toturial](./Lambda-Wallet-Guide-en.md)
 - [Lambdacli toturial](./docs/lambdacli/README.md)
 - [Start your own `lambda` testnet](./docs/deploy-testnet.md).
-- [The guide of Testnet0.4.6 for Miner](./Testnet-Miner-Guide-en.md)
-- [The guide of Testnet0.4.6 for Storagenode](./Testnet-Storagenode-Configure-en.md)
+- [The guide of Testnet0.4.7 for Miner](./Testnet-Miner-Guide-en.md)
+- [The guide of Testnet0.4.7 for Storagenode](./Testnet-Storagenode-Configure-en.md)
 
 ## 中文
 - [Validator 主网接入教程](./Mainnet-Validator-Guide.md)
@@ -18,10 +18,10 @@
 - [主网同步节点教程](./Mainet-Sync-Node.md)
 - [Lambda 钱包使用教程](./Lambda-Wallet-Guide.md)
 - [Lambdacli 使用教程](./docs/lambdacli/README.md)
-- [测试网0.4.6节点接入教程](Testnet-Validator-Guide.md)
-- [测试网0.4.6节点升级教程](Testnet-Validator-Upgrade-Guide.md)
-- [测试网0.4.6Miner接入教程](Testnet-Miner-Guide.md)
-- [测试网0.4.6Storagenode接入教程](./Testnet-Storagenode-Configure.md)
+- [测试网0.4.7节点接入教程](Testnet-Validator-Guide.md)
+- [测试网0.4.7节点升级教程](Testnet-Validator-Upgrade-Guide.md)
+- [测试网0.4.7Miner接入教程](Testnet-Miner-Guide.md)
+- [测试网0.4.7Storagenode接入教程](./Testnet-Storagenode-Configure.md)
 - [验证节点挖矿手册](./Lambda-Validator-Mining.md)
 - [存储矿工挖矿手册](./Lambda-Store-and-Mining.md)
 - [StorageManager矿工管理程序使用教程](./StorageManager-Guide.md)
