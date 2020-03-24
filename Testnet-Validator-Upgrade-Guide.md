@@ -36,7 +36,7 @@ kill `ps aux | grep lambda |grep -v grep| awk '{print $2}'`
 ```
 **注意**：  
 1. 成功停止节点服务后，禁止使用v0.4.6版本的lambda程序做任何操作。  
-2. 保证后续三步执行的lambda、lambdacli程序均为v0.4.7版本。  
+2. 保证后续执行的lambda、lambdacli程序均为v0.4.7版本。  
 
 ### 3. 执行升级脚本
 [lambda_home_dir] 脚本支持输入指定路径作为 lambda home 路径，若不加上该参数，默认读取 ~/.lambda 目录
@@ -54,6 +54,15 @@ Move /root/.lambda/pdp.ms.db to /root/.lambda/data? [Y/n] y
 "/root/.lambda/pdp.ms.db" -> "/root/.lambda/data/pdp.ms.db"
 Move /root/.lambda/identity to /root/.lambda? [Y/n] y
 mv: "/root/.lambda/identity" 与"/root/.lambda/identity" 为同一文件
+
+
+如执行脚本过程中遇到文件路径不对的或迁移失败的db，也可以手动迁移，只需要将application.db、 market.db、pdp.db、pdp.ms.db、 identity 目录移动到 /root/.lambda/config/config.toml 配置的 db_dir 目录下。
+
+命令：mv [源文件] [新目录]
+例如：
+源文件为/root/.lambda/data/application.db
+config.toml中db_dir = "/lambda/test/data"（即移动到新目录/lambda/test/data下）
+mv /root/.lambda/data/application.db /lambda/test/data/
 ```
 
 ### 4. 版本检查和自动回滚
