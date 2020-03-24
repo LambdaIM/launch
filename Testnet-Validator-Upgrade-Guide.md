@@ -42,8 +42,9 @@ kill `ps aux | grep lambda |grep -v grep| awk '{print $2}'`
 [lambda_home_dir] 脚本支持输入指定路径作为 lambda home 路径，若不加上该参数，默认读取 ~/.lambda 目录
 ``` 
 ./upgrade_db.sh [lambda_home_dir]
-
+```
 以下提示[Y/n]时需要手动输入y，输出结果如下：
+```
 Move /root/.lambda/data/application.db to /root/.lambda/data? [Y/n] y
 mv: "/root/.lambda/data/application.db" 与"/root/.lambda/data/application.db" 为同一文件
 Move /root/.lambda/market.db to /root/.lambda/data? [Y/n] y
@@ -54,14 +55,15 @@ Move /root/.lambda/pdp.ms.db to /root/.lambda/data? [Y/n] y
 "/root/.lambda/pdp.ms.db" -> "/root/.lambda/data/pdp.ms.db"
 Move /root/.lambda/identity to /root/.lambda? [Y/n] y
 mv: "/root/.lambda/identity" 与"/root/.lambda/identity" 为同一文件
+```
 
+如执行脚本过程中遇到文件路径不对的或迁移失败的db，也可以手动迁移，只需要将application.db、 market.db、pdp.db、pdp.ms.db、 identity 目录移动到 /root/.lambda/config/config.toml 配置的 db_dir 目录下。  
 
-如执行脚本过程中遇到文件路径不对的或迁移失败的db，也可以手动迁移，只需要将application.db、 market.db、pdp.db、pdp.ms.db、 identity 目录移动到 /root/.lambda/config/config.toml 配置的 db_dir 目录下。
-
-命令：mv [源文件] [新目录]
+命令：mv [源文件] [新目录]  
 例如：
+``` 
 源文件为/root/.lambda/data/application.db
-config.toml中db_dir = "/lambda/test/data"（即移动到新目录/lambda/test/data下）
+config.toml中设置db_dir = "/lambda/test/data"（即移动到新目录/lambda/test/data下）
 mv /root/.lambda/data/application.db /lambda/test/data/
 ```
 
