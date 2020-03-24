@@ -57,9 +57,9 @@ Move /root/.lambda/identity to /root/.lambda? [Y/n] y
 mv: "/root/.lambda/identity" 与"/root/.lambda/identity" 为同一文件
 ```
 
-如执行脚本过程中遇到文件路径不对的或迁移失败的db，也可以手动迁移，只需要将application.db、 market.db、pdp.db、pdp.ms.db、 identity 目录移动到 /root/.lambda/config/config.toml 配置的 db_dir 目录下。  
+如执行脚本过程中遇到文件路径不对的或迁移失败的db，也可以手动迁移，只需要分别将`application.db`、 `market.db`、`pdp.db`、`pdp.ms.db`、 `identity` 目录移动到 /root/.lambda/config/config.toml 配置的 db_dir 目录下。  
 
-命令：mv [源文件] [新目录]  
+命令：`mv [源文件] [新目录]`  
 例如：
 ``` 
 源文件为/root/.lambda/data/application.db
