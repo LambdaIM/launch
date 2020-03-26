@@ -541,6 +541,22 @@ LAMBDA_ORDER_ID=[orderId] ./storagecli cp [account-name] [srcPath] lamb://[bucke
 LAMBDA_ORDER_ID=[orderId] ./storagecli ls lamb://[bucket-name]/ 
 ```
 
+### 3查看订单和矿工状态
+```
+./storagecli order list [account-name]
+```
+
+例如
+``` 
+./storagecli order list myaccount 
+
+OrderId                                  |Expire           |Used/Total      |ProviderStatus
+81B7663F9D5F40A37F4875FC1B95E2C5E1CD7FEA |2020-04-24 09:00 |100 GiB/100 GiB |Maintaining
+EF667304E33C6AAB9D56F04DF878FD93A5153B6D |2020-04-24 09:00 |100 GiB/100 GiB |Invalid
+Total: 2
+```
+ProviderStatus一列为矿工状态，Avaialable为正常状态，Maintaining矿工在维护，Invalid 矿工失效
+
 ## 挖矿
 - 矿工挖矿
 
