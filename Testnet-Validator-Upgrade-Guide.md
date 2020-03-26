@@ -76,14 +76,11 @@ drwxr-xr-x 2 root root 4.0K 3月  24 07:32 state.db
 drwxr-xr-x 2 root root 4.0K 3月  24 02:19 tx_index.db
 ```
 
-如执行脚本过程中遇到文件路径不对的或迁移失败的db，也可以手动迁移，只需要分别将`application.db`、 `market.db`、`pdp.db`、`pdp.ms.db`目录移动到 `/root/.lambda/config/config.toml` 配置的 `db_dir` 目录下。  
-
-命令：`mv [源文件] [新目录]`  
-例如：
+如果升级失败，可手动升级：
 ``` 
-源文件为/root/.lambda/data/application.db
-config.toml中设置db_dir = "/lambda/test/data"（即移动到新目录/lambda/test/data下）
-mv /root/.lambda/data/application.db /lambda/test/data/
+mv ~/.lambda/pdp.db ~/.lambda/data
+mv ~/.lambda/pdp.ms.db ~/.lambda/data
+mv ~/.lambda/market.db ~/.lambda/data
 ```
 
 ### 4. 版本检查和自动回滚
