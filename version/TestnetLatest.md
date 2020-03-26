@@ -3,11 +3,15 @@
 lambda testnet v0.4.7
 
 包名: lambda-0.4.7-testnet.tar.gz  
-MD5: 02c43da2d3107130d3a4fdf390e7f8f1
+MD5: 16f3e17f6976d86469478fc522f38ec4
+  
+1. 新增节点私钥备份导出功能；  
+2. 新增节点服务查询功能；
+3. 新增矿工维护/维护完成/解禁矿工状态切换功能；
+4. 修改节点双签惩罚规则；
+5. 新增链状态整体回退功能；
+6. 修复已知bug；
 
-1. 修复已知bug；  
-2. 版本检查和回滚命令优化；  
-3. 允许矿工转质押
 
 新节点接入参考：http://docs.lambda.im/Testnet-Validator-Guide/
 节点升级参考：http://docs.lambda.im/Testnet-Validator-Upgrade-Guide/
