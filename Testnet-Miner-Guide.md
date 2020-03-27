@@ -149,7 +149,7 @@ lambdavaloper1r340rrv9fs95gqy5087e2mtz82vvwrglt6amx3
 
 [build]
 version = "0.2.4"
-commit = "20b8847d14a32481e64bae8617abbe7b55cac45b"
+commit = "030c696bc6829cfafb3d240d66058b16b41aa460"
 mode = "release"
 
 # 服务需要监听的地址
@@ -497,7 +497,7 @@ OrderId                                  |Expire           |Used/Total      |Pro
 EF667304E33C6AAB9D56F04DF878FD93A5153B6D |2020-04-24 09:00 |100 GiB/100 GiB |Invalid
 Total: 2
 ```
-ProviderStatus一列为矿工状态，Avaialable为正常状态，Maintaining矿工在维护，Invalid 矿工失效
+ProviderStatus为矿工状态，Avaialable为正常状态，Maintaining矿工正在维护，Invalid 矿工失效
 
 ## 挖矿
 #### 矿工挖矿

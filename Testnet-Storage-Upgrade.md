@@ -56,6 +56,10 @@ kill `ps aux | grep 'minernode' |grep -v grep| awk '{print $2}'`
 ```
 
 ## storagenode升级
+### 备份旧版配置文件
+``` 
+cp ~/.lambda_storage/config/config.toml ~/LambdaIM/lambda-storage-0.2.4-testnet/
+```
 ### storagenode升级
 ``` 
 ./storagenode upgrade
@@ -69,8 +73,10 @@ kill `ps aux | grep 'minernode' |grep -v grep| awk '{print $2}'`
 ``` 
 以如下旧版配置为例
 [storage]
+# 存储目录
 data_dir = ["/data/test1/store1"]
 [mining]
+# 挖矿目录
 mining_dir = ["/data/test1/mining1"]
 
 新版需修改配置如下

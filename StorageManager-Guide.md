@@ -159,17 +159,9 @@ miner.root_secret_seed
 参考如下说明进行配置(实际修改了对应服务器的配置文件~/.lambda_miner/config/config.toml):
 
 ```
-####
-## Not used in v0.2.4, will be removed after v0.2.4
-version = "0.2.4"
-commit = "20b8847d14a32481e64bae8617abbe7b55cac45b"
-mode = "release"
-ensure_level = "0"
-####
-
 [build]
 version = "0.2.4"
-commit = "20b8847d14a32481e64bae8617abbe7b55cac45b"
+commit = "030c696bc6829cfafb3d240d66058b16b41aa460"
 mode = "release"
 
 # 服务需要监听的地址
@@ -179,32 +171,19 @@ mode = "release"
 address = "192.168.10.10:13000"
 # 对内提供服务的地址，主要是给StorageNode使用，推荐配置为内网地址
 private_address = "192.168.10.10:13001"
-debug_log_traffic = "false"
 
 [kad]
 # DHT接入节点地址，存储网络提供，可填写多个，以 47.94.129.97:13000 为例
-# 可填写自己质押的验证节点配置lambda.toml中 kad.external_address
+# 可填写自己质押的验证节点配置lambda.toml中的 kad.external_address
 # 可选官方dht地址：39.105.148.217:13000/47.94.129.97:13000/47.93.196.236:13000/182.92.66.63:13000
 bootstrap_addr = ["47.94.129.97:13000"]
-# time you would wait to connect dht seed node
-bootstrap_backoff_max = "30s"
-bootstrap_backoff_base = "1s"
-db_path = "/root/.lambda_miner/kademlia"
 # this should listen at Public IP
 ## 对外暴露的提供服务的地址
 external_address = "200.200.200.100:13000"
-alpha = 3
 
-[kad.routing_table_config]
-bucket_size = 20
-replacement_cache_size = 5
-
-
-####
-## Not used in v0.2.4, will be removed after v0.2.4
-[api_key]
-root_secret_seed = ""
-####
+[log]
+level = "info"
+output_file = "stdout"
 
 [miner]
 # ensure_level=0会多占用磁盘1/6空间，ensure_level=1会多占用1/3空间
@@ -212,18 +191,14 @@ ensure_level = "0"
 #root access key，不能为空
 root_secret_seed = "aaa"
 
-[log]
-level = "info"
-output_file = "stdout"
-
 [db]
 # db config
-lru_cache = "131072"
-keep_log_file_num = "100"
-write_buffer_size = "134217728"
+lru_cache = "0"
+keep_log_file_num = "16"
+write_buffer_size = "268435456"
 recycle_log_file_num = "0"
 target_file_size_base = "268435456"
-max_write_buffer_number = "4"
+max_write_buffer_number = "25"
 max_bytes_for_level_base = "4294967296"
 level_0_stop_writes_trigger = "24"
 target_file_size_multiplier = "1"
@@ -233,9 +208,8 @@ level_0_slowdown_writes_trigger = "17"
 level_0_file_num_compaction_trigger = "8"
 level_compaction_dynamic_level_bytes = "0"
 compaction_algorithm = "0"
-rate_bytes_per_sec = "10240"
+rate_bytes_per_sec = "67108864"
 data_backup_path = ""
-data_backup_interval = "300000000000"
 ```
 配置完成后可以点击启动按钮，启动矿工服务，成功后状态会变成绿色的☑️
 
@@ -283,6 +257,11 @@ storage.root_secret_seed
 `~/.lambda_storage/config/config.toml` 配置说明
 
 ```
+[build]
+version = "0.2.4"
+commit = "030c696bc6829cfafb3d240d66058b16b41aa460"
+mode = "release"
+
 # 服务需要监听的地址
 # 以本机内网IP为 192.168.10.20，端口映射的外网IP为 200.200.200.200 为例
 [server]
@@ -290,25 +269,16 @@ storage.root_secret_seed
 address = "192.168.10.20:14000"
 # 对内提供服务的地址，主要是给StorageNode使用，推荐配置为内网地址
 private_address = "192.168.10.20:14001"
-debug_log_traffic = "false"
-
 
 [kad]
 # address you want kad to connect with
 # DHT接入节点地址，可以是自己质押的验证节点或minernode配置的kad.external_address，这里以 47.94.129.97:13000 为例
-# 可选dht地址：39.105.148.217:13000/47.94.129.97:13000/47.93.196.236:13000/182.92.66.63:13000
+# 可选官方dht地址：39.105.148.217:13000/47.94.129.97:13000/47.93.196.236:13000/182.92.66.63:13000
 bootstrap_addr = ["47.94.129.97:13000"]
 # time you would wait to connect dht seed node
-bootstrap_backoff_max = "30s"
-bootstrap_backoff_base = "1s"
 db_path = "/root/.lambda_storage/kademlia"
 # this should listen at Public IP
 external_address = "200.200.200.200:14000"
-alpha = 3
-
-[kad.routing_table_config]
-bucket_size = 20
-replacement_cache_size = 5
 
 [log]
 level = "info"
@@ -317,18 +287,12 @@ output_file = "stdout"
 [storage]
 ## 用于生成apikey的种子内容，不能为空
 root_secret_seed = "fasdf"
-## 存储路径，可填写多个以逗号隔开
-data_dir = [ "/root/.lambda_storage/store"]
-## minernode对内提供服务的地址，即它的server.private_address
-miner_address = "192.168.10.10:13001"
 ## 存储节点的名字，需要在矿池内部唯一，即连接同一矿工的多个storagenode的storage_name不能重复
 storage_name = "machine1"
-
-[mining]
-## 挖矿记录的数据文件
-db_path = "/root/.lambda_storage/statementdb"
-## 存储挖矿文件(删除的)的存储路径，可填写多个以逗号隔开
-mining_dir = [ "/root/.lambda_storage/mining"]
+## minernode对内提供服务的地址，即它的server.private_address
+miner_address = "192.168.10.10:13001"
+## 存储路径，可填写多个以逗号隔开
+data_dir = ["/root/.lambda_storage"]
 ```
 配置完成之后
 

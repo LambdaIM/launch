@@ -21,7 +21,7 @@
 ```
 [build]
 version = "0.2.4"
-commit = "20b8847d14a32481e64bae8617abbe7b55cac45b"
+commit = "030c696bc6829cfafb3d240d66058b16b41aa460"
 mode = "release"
 
 # 服务需要监听的地址
