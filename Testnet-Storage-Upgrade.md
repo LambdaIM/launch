@@ -1,26 +1,23 @@
-# storage0.2.4升级
+# Storage0.2.4升级
 
 * [下载安装包并解压](#下载安装包并解压)
-* [清除旧版数据](#清除旧版数据)
-* [minernode升级配置文件](#minernode升级配置文件)
-* [storagenode升级配置文件](#storagenode升级配置文件)
-* [minernode重启](#minernode重启)
-* [storagenode重启](#storagenode重启)
+* [minernode升级](#minernode升级)
+* [storagenode升级](#storagenode升级)
+* [storagecli升级](#storagecli升级)
 
-以下为 旧版lambda-storage 升级到 lambda-storage-0.2.4-testnet 步骤
+新矿工和存储节点接入参考：[配置矿工和存储节点](Testnet-Miner-Guide.md)
 
-
-
-### 下载安装包并解压
-
+## 下载安装包并解压
 创建目录并进入 
-
 ```
 mkdir -p ~/LambdaIM && cd ~/LambdaIM
 ```
 下载安装包
 ```
 wget https://github.com/LambdaIM/launch/releases/download/Storage0.2.4/lambda-storage-0.2.4-testnet.tar.gz
+
+如下载缓慢可使用下面的链接：
+wget http://download.lambdastorage.com/lambda-storage/0.2.4/lambda-storage-0.2.4-testnet.tar.gz
 ```
 解压安装包
 ```
@@ -31,34 +28,10 @@ tar zxvf lambda-storage-0.2.4-testnet.tar.gz
 cd lambda-storage-0.2.4-testnet
 ```
 
-### 清除旧版数据
-清除旧版miner数据
-```
-rm -rf ~/.lambda_miner/{kademlia,var}
-```
-
-清除旧版storagenode数据
-```
-rm -rf ~/.lambda_storage/{kademlia,orders.json,statementdb,storagedb}
-rm -rf ~/.lambda_storage/{store,mining} 
-```
-注： 如果~/.lambda_storage/config/config.toml的data_dir和 mining_dir配置有改动，需清除掉配置的目录下的数据
-
-清除旧版storagecli数据
-```
-rm -rf ~/.lambda_storagecli/localdb
-```
-
+## minernode升级
 ### minernode升级
-
-```
+``` 
 ./minernode upgrade
-```
-
-### storagenode升级
-
-```
-./storagenode upgrade
 ```
 
 ### 重启minernode
@@ -86,6 +59,39 @@ kill `ps aux | grep 'minernode' |grep -v grep| awk '{print $2}'`
 ./minernode run --query-interval 5 --daemonize --log.file [log_file_path] --key-file [filepath/your-account-name]_miner_key.json
 ```
 
+## storagenode升级
+### storagenode升级
+``` 
+./storagenode upgrade
+```
+
+### 修改配置和移动目录
+修改新版配置`~/.lambda_storage/config/config.toml`下的`storage.data_dir`，将旧版配置的存储目录`storage.data_dir`和挖矿目录`mining.mining_dir`放到storage.data_dir目录下
+
+注意：如旧版的存储目录、挖矿目录 和 新版的storage.data_dir均为默认值，可跳过此步
+
+``` 
+以如下旧版配置为例
+[storage]
+data_dir = ["/data/test1/store1"]
+[mining]
+mining_dir = ["/data/test1/mining1"]
+
+新版需修改配置如下
+vi ~/.lambda_storage/config/config.toml
+[storage]
+data_dir = ["/data/test1"]
+
+移动存储和挖矿目录
+mv /data/test1/store1 /data/test1/store
+mv /data/test1/mining1 /data/test1/mining
+```
+
+### 重建索引
+``` 
+./storagenode info index --rebuild
+```
+
 ### 重启storagenode
 [log_file_path] 指定storagenode运行日志路径
 
@@ -106,3 +112,17 @@ kill `ps aux | grep 'storagenode' |grep -v grep| awk '{print $2}'`
 ```
 ./storagenode run --daemonize --log.file [log_file_path]
 ```
+
+## storagecli升级
+### 清除历史token
+``` 
+./storagecli token clear
+```
+
+### 同步订单token  
+[account-name] 为发起买单账户名称
+```
+./storagecli token sync [account-name]
+```
+
+

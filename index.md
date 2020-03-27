@@ -10,6 +10,7 @@
 - [测试网0.4.7节点升级教程](Testnet-Validator-Upgrade-Guide.md)
 - [测试网0.4.7Miner接入教程](Testnet-Miner-Guide.md)
 - [测试网0.4.7Storagenode接入教程](./Testnet-Storagenode-Configure.md)
+- [Storage0.2.4升级](Testnet-Storage-Upgrade.md)
 - [验证节点挖矿手册](./Lambda-Validator-Mining.md)
 - [存储矿工挖矿手册](./Lambda-Store-and-Mining.md)
 - [矿工管理程序(StorageManager)使用教程](./StorageManager-Guide.md)

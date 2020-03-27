@@ -1,4 +1,4 @@
-# storagenode0.2.3 配置 
+# storagenode0.2.4 配置 
 * [storagenode初始化](#storagenode初始化)
 * [修改配置文件](#修改配置文件)
 * [启动storagenode](#启动storagenode)
@@ -15,26 +15,12 @@
 ### 修改配置文件
 初始化storagenode后，默认生成配置文件~/.lambda_storage/config/config.toml
 
-- 如已备份旧版storagenode配置文件，可使用旧文件覆盖新的，然后使用`storagenode upgrade`命令升级即可
-```
-\cp -rf ~/lambda_bak/storage_config.toml ~/.lambda_storage/config/config.toml
-
-./storagenode upgrade
-```
-
-- 如未部署过storagenode，需参考如下说明手动修改配置文件  
+参考如下说明手动修改配置文件  
 `vi ~/.lambda_storage/config/config.toml`
 
 ```
-####
-## Not used in v0.2.3, will be removed after v0.2.3
-version = "0.2.3"
-commit = "20b8847d14a32481e64bae8617abbe7b55cac45b"
-mode = "release"
-####
-
 [build]
-version = "0.2.3"
+version = "0.2.4"
 commit = "20b8847d14a32481e64bae8617abbe7b55cac45b"
 mode = "release"
 
@@ -45,7 +31,6 @@ mode = "release"
 address = "192.168.10.20:14000"
 # 对内提供服务的地址，主要是给StorageNode使用，推荐配置为内网地址
 private_address = "192.168.10.20:14001"
-debug_log_traffic = "false"
 
 [kad]
 # address you want kad to connect with
@@ -53,16 +38,9 @@ debug_log_traffic = "false"
 # 可选官方dht地址：39.105.148.217:13000/47.94.129.97:13000/47.93.196.236:13000/182.92.66.63:13000
 bootstrap_addr = ["47.94.129.97:13000"]
 # time you would wait to connect dht seed node
-bootstrap_backoff_max = "30s"
-bootstrap_backoff_base = "1s"
 db_path = "/root/.lambda_storage/kademlia"
 # this should listen at Public IP
 external_address = "200.200.200.200:14000"
-alpha = 3
-
-[kad.routing_table_config]
-bucket_size = 20
-replacement_cache_size = 5
 
 [log]
 level = "info"
@@ -75,16 +53,9 @@ root_secret_seed = "fasdf"
 storage_name = "machine1"
 ## minernode对内提供服务的地址，即它的server.private_address
 miner_address = "192.168.10.10:13001"
-## 记录文件位置的数据库
-db_path = "/root/.lambda_storage/storagedb"
 ## 存储路径，可填写多个以逗号隔开
-data_dir = ["/root/.lambda_storage/store"]
+data_dir = ["/root/.lambda_storage"]
 
-[mining]
-## 挖矿记录的数据文件
-db_path = "/root/.lambda_storage/statementdb"
-## 存储挖矿文件(删除的)的存储路径，可填写多个以逗号隔开
-mining_dir = [ "/root/.lambda_storage/mining"]
 ```
 
 ### 启动storagenode
