@@ -41,11 +41,7 @@ cd lambda-storage-0.2.4-testnet
 ```
 ./minernode run --stop
 ```
-返回结果如下即停止成功：
-```
-stop daemon process from minernode.pid:22937 successfully
-```
-如果返回结果停止失败，使用以下命令停掉minernode：
+如停止失败，使用以下命令停掉minernode：
 ```
 kill `ps aux | grep 'minernode' |grep -v grep| awk '{print $2}'`
 ```
@@ -99,11 +95,7 @@ mv /data/test1/mining1 /data/test1/mining
 ```
 ./storagenode run --stop
 ```
-返回结果如下即停止成功：
-```
-stop daemon process from storagenode.pid:22937 successfully
-```
-如果返回结果停止失败，使用以下命令停掉storagenode：
+如停止失败，使用以下命令停掉storagenode：
 ```
 kill `ps aux | grep 'storagenode' |grep -v grep| awk '{print $2}'`
 ```
