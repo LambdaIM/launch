@@ -67,7 +67,7 @@ cd lambda-storage-0.2.4-testnet
 ```
 
 ```
-./lambdacli config chain-id lambda-chain-test4.5
+./lambdacli config chain-id lambda-chain-test4.8
 ```
 ```
 

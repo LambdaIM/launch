@@ -1,4 +1,4 @@
-# 测试网0.4.7同步节点 接入教程
+# 测试网0.4.8同步节点 接入教程
 
 ### 1. 下载安装包并解压
 创建目录并进入
@@ -7,22 +7,22 @@ mkdir -p ~/LambdaIM && cd ~/LambdaIM
 ```
 下载安装包
 ```
-wget https://github.com/LambdaIM/launch/releases/download/v0.4.7/lambda-0.4.7-testnet.tar.gz
+wget https://github.com/LambdaIM/launch/releases/download/v0.4.8/lambda-0.4.8-testnet.tar.gz
 
 如下载缓慢可使用下面的链接：
-wget http://download.lambdastorage.com/lambda/0.4.7/lambda-0.4.7-testnet.tar.gz
+wget http://download.lambdastorage.com/lambda/0.4.8/lambda-0.4.8-testnet.tar.gz
 ```
 
 解压安装包
 ```
-tar zxvf lambda-0.4.7-testnet.tar.gz && cd lambda-0.4.7-testnet
+tar zxvf lambda-0.4.8-testnet.tar.gz && cd lambda-0.4.8-testnet
 ```
 
 ### 2. 初始化节点  
 将下面命令中的[your-moniker]替换成您自定义的节点名称，不用加中括号`  
 `注意：这里的 your-moniker 必须使用英文，用于P2P网络
 ```
-./lambda init [your-moniker] --chain-id lambda-chain-test4.5
+./lambda init [your-moniker] --chain-id lambda-chain-test4.8
 ```
 如果初始化报错，可能是由于有老版本的配置数据导致，可以通过下面的命令清除错误数据
 ```
@@ -95,7 +95,17 @@ replacement_cache_size = 5
 discovery_interval = "3m0s"
 ```
 
-### 6. 启动节点  
+### 6. 下载和解压社区提供的区块链数据包
+下载数据压缩包lambda_0.4.8_data.tar.gz
+``` 
+wget http://download.lambdastorage.com/lambda/0.4.8/lambda_0.4.8_data.tar.gz
+```
+解压`lambda_0.4.8_data.tar.gz`到`~/.lambda/`目录下（解压过程耗时较长，请耐心等待）
+``` 
+tar -zxvf lambda_0.4.8_data.tar.gz -C ~/.lambda/
+```
+
+### 7. 启动节点  
 ```
 ./lambda start --p2p.laddr tcp://0.0.0.0:26656 --rpc.laddr tcp://0.0.0.0:26657 --daemonize --log.file /tmp/lambda.log
 ```

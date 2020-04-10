@@ -65,7 +65,7 @@ Select validator IP as below：
 ```
 
 ```
-./lambdacli config chain-id lambda-chain-test4.5
+./lambdacli config chain-id lambda-chain-test4.8
 ./lambdacli config trust-node true
 ```
 ```

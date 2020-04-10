@@ -1,6 +1,6 @@
-# 测试网节点0.4.7 接入教程
+# 测试网节点0.4.8 接入教程
 
-节点升级参考[测试网Validator 0.4.7 升级教程](Testnet-Validator-Upgrade-Guide.md)
+节点升级参考[测试网Validator 0.4.8 升级教程](Testnet-Validator-Upgrade-Guide.md)
 
 ### 1. 下载安装包并解压
 创建目录并进入
@@ -9,22 +9,22 @@ mkdir -p ~/LambdaIM && cd ~/LambdaIM
 ```
 下载安装包
 ```
-wget https://github.com/LambdaIM/launch/releases/download/v0.4.7/lambda-0.4.7-testnet.tar.gz
+wget https://github.com/LambdaIM/launch/releases/download/v0.4.8/lambda-0.4.8-testnet.tar.gz
 
 如下载缓慢可使用下面的链接：
-wget http://download.lambdastorage.com/lambda/0.4.7/lambda-0.4.7-testnet.tar.gz
+wget http://download.lambdastorage.com/lambda/0.4.8/lambda-0.4.8-testnet.tar.gz
 ```
 
 解压安装包
 ```
-tar zxvf lambda-0.4.7-testnet.tar.gz && cd lambda-0.4.7-testnet
+tar zxvf lambda-0.4.8-testnet.tar.gz && cd lambda-0.4.8-testnet
 ```
 
 ### 2. 初始化节点  
 将下面命令中的[your-moniker]替换成您自定义的节点名称，不用加中括号`  
 `注意：这里的 your-moniker 必须使用英文，用于P2P网络
 ```
-./lambda init [your-moniker] --chain-id lambda-chain-test4.5
+./lambda init [your-moniker] --chain-id lambda-chain-test4.8
 ```
 如果初始化报错，可能是由于有老版本的测试网配置数据导致，可以通过下面的命令清除错误数据
 ```
@@ -48,7 +48,7 @@ rm -rf ~/.lambda/config/config.toml ~/.lambda/config/genesis.json ~/.lambda/iden
 ./lambdacli config node tcp://0.0.0.0:26657
 ```
 ```
-./lambdacli config chain-id lambda-chain-test4.5
+./lambdacli config chain-id lambda-chain-test4.8
 ```
 ```
 ./lambdacli config trust-node true
@@ -111,7 +111,17 @@ discovery_interval = "3m0s"
 
 ```
 
-### 7. 启动节点  
+### 7. 下载和解压社区提供的区块链数据包
+下载数据压缩包lambda_0.4.8_data.tar.gz
+``` 
+wget http://download.lambdastorage.com/lambda/0.4.8/lambda_0.4.8_data.tar.gz
+```
+解压`lambda_0.4.8_data.tar.gz`到`~/.lambda/`目录下（解压过程耗时较长，请耐心等待）
+``` 
+tar -zxvf lambda_0.4.8_data.tar.gz -C ~/.lambda/
+```
+
+### 8. 启动节点  
 ```
 ./lambda start --p2p.laddr tcp://0.0.0.0:26656 --rpc.laddr tcp://0.0.0.0:26657 --daemonize --log.file /tmp/lambda.log
 ```
@@ -142,7 +152,7 @@ lambda.pid is running, pid is 28800
 daemon have stoped
 ```
 
-### 8. 添加账户  
+### 9. 添加账户  
 将[your-account-name]替换成您自定义的账户名称，需要设置您的账户密码，不用加中括号
 ```
 ./lambdacli keys add [your-account-name]
@@ -155,10 +165,10 @@ daemon have stoped
 输入命令后按照提示输入密码和助记词即可
 
 
-### 9. 节点领取测试网测试币
+### 10. 节点领取测试网测试币
 需要领取测试网TBB用以进行节点测试的，可联系Lambda官方客服
 
-### 10. 创建Validator  
+### 11. 创建Validator  
 创建Validator需要如下信息:   
 * amount -- 节点自抵押量不得小于666.666666TBB即666666666utbb (1TBB=1000000utbb)
 * pubkey -- 通过命令`./lambda tendermint show-validator` 获取
@@ -196,7 +206,7 @@ Validator 的操作地址也可通过命令获取
 ./lambdacli keys show [your-account-name] --bech val
 ```
 
-### 11. 启动rest-server服务
+### 12. 启动rest-server服务
 rest-server服务可提供给钱包和storagecli连接
 ```
 nohup ./lambdacli rest-server --node tcp://0.0.0.0:26657 --laddr tcp://0.0.0.0:13659 >> /tmp/lambdacli.log 2>&1 &
