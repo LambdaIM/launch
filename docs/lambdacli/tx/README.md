@@ -23,6 +23,7 @@ lambdacli tx --help
 | [sign](sign.md)     | Sign transactions generated offline                                      |
 | [multisign](multisign.md)     | Generate multisig signatures for transactions generated offline     |
 | [broadcast](broadcast.md)   | Broadcast transactions generated offline                 |
+| [encode](encode.md)   | Encode transactions generated offline                 |
 | [distr](./distr/README.md)             | Distribution transactions subcommands                                     |
 | [staking](./staking/README.md)   | Staking transaction subcommands                                           |
 | [slashing](./slashing/unjail.md)                   | Slashing transactions subcommands                                           |

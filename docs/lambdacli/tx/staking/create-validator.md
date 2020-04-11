@@ -4,7 +4,7 @@
 
 Send transaction to apply to be validator and delegate a certain amount tokens on it
 
-For more detailed information, please refer to [Join Mainnet](../../../join-mainnet.md)
+For more detailed information, please refer to [Join Mainnet](../../join-mainnet.md)
 
 ## Usage
 

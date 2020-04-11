@@ -32,5 +32,6 @@ lambdacli tx market --help
 | [maintain](maintain.md)                                   | maintain a miner                                      |
 | [unmaintain](unmaintain.md)                                   | cancel maintain miner                                      |
 | [unjail](unjail.md)                                   | free a miner                                      |
+| [order-renewal](order-renewal.md)                                   | renew a match order                                      |
 
 

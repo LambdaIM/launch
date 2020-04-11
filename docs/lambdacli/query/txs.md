@@ -4,6 +4,8 @@
 
 Search for transactions that match the exact given tags where results are paginated
 
+[all msg type](txs_set.md)
+
 ## Usage
 
 ```
