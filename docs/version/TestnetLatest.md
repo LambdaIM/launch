@@ -3,10 +3,10 @@
 ## lambda testnet v0.4.8
 
 包名: lambda-0.4.8-testnet.tar.gz  
-MD5: 126b98e1829658c2a22338572372818e
+MD5: a6cb577442d1eefe6550567ceebc3e08
 
 区块链数据压缩包名: lambda_0.4.8_data.tar.gz  
-MD5: 待添加
+MD5: 4aaf01e9e0c4bf18789caa26c93e4886
   
 1. 新增评估节点磁盘性能的脚本；  
 2. 增加节点运行版本信息；
