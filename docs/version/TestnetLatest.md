@@ -3,7 +3,7 @@
 ## lambda testnet v0.4.8
 
 包名: lambda-0.4.8-testnet.tar.gz  
-MD5: 待添加
+MD5: 126b98e1829658c2a22338572372818e
 
 区块链数据压缩包名: lambda_0.4.8_data.tar.gz  
 MD5: 待添加
