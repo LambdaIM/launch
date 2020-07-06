@@ -584,7 +584,17 @@ TBB可用于质押
 
 ### 授权矿工挖矿
 点击授权，弹出授权窗口
-![avatar](img/Authorization/authorization.png)
+![avatar](img/Authorization/Minerauthorization.png)
+需要注意的是这里公钥支持两种加密算法secp256k1，ed25519 生成的公钥
+
+对于使用钱包的用户，可以在设置页面复制账户的公钥，填进去也是可以的
+例如
+ 钱包配置文件中格式化后的的公钥 lambdapub1addwnpepqwdrgj5xqkn3uydvyu6glz4l6ju34lx2ec0j2lzlxgd2mjgh0xyns7djzpe
+
+secp256k1算法生成的 的公钥 A5o0SoYFpx4RrCc0j4q/1Lka/MrOHyV8XzIarckXeYk4
+
+edd25519 算法生成的公钥 K7cURUPuZroE666ZTWGme2ciQ69PfjKxyaK1hXTMDgk=
+
 输入授权人公钥，点击下一步，确认手续费后，完成交易，市场就解散了，
 需要说明的是确认页面看到的公钥，是解码后的原始公钥，和输入的公钥长度不一样
 
