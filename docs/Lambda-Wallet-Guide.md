@@ -43,6 +43,8 @@
 * [创建资产与做市商相关操作](#创建资产与做市商相关操作)
 * [资产质押与矿工相关操作](#资产质押与矿工相关操作)
 * [授权市场维护与验证节点相关操作](#授权市场维护与验证节点相关操作)
+* [购买授权空间与空间用户相关操作](#购买授权空间与空间用户相关操作)
+
 
 
 
@@ -624,6 +626,31 @@ edd25519 算法生成的公钥 K7cURUPuZroE666ZTWGme2ciQ69PfjKxyaK1hXTMDgk=
 填写矿工的lambda 地址
 ![avatar](img/Authorization/Deleteminer.png)
 点击下一步，确认矿工lambda地址和手续费，完成交易即可剔除矿工
+
+## 购买授权空间与空间用户相关操作
+打开钱包后，点击首页的资产标签，即可看到各种资产的余额
+![avatar](img/Authorization/userspace0.png)
+
+### 购买空间
+点击授权市场，切换到授权市场页面，可以查看当前链上有哪些市场，每个市场使用哪种资产
+![avatar](img/Authorization/userspace1.png)
+点击一个市场的购买，打开购买弹窗
+![avatar](img/Authorization/userspace2.png)
+
+这里填写矿工操作地址时候需要在浏览器中查找合适的矿工
+![avatar](img/Authorization/userspace3.png)
+在找到合适的矿工，复制矿工地址，填写到钱包中，
+输入需要购买的空间和时长大小，点击下一步,确认手续费后，交易完成就购买成功了
+
+购买成功后点击匹配订单，可以查看订单记录和订单详情
+![avatar](img/Authorization/userspace4.png)
+![avatar](img/Authorization/userspace6.png)
+
+### 订单续期
+在匹配订单的详情页面
+![avatar](img/Authorization/userspace6.png)
+点击订单续期，打开订单续期对话框
+![avatar](img/Authorization/userspace7.png)
 
 
 
