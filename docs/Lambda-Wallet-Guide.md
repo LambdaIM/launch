@@ -618,6 +618,15 @@ edd25519 算法生成的公钥 K7cURUPuZroE666ZTWGme2ciQ69PfjKxyaK1hXTMDgk=
 赎回会赎回全部质押
 点击下一步，确认手续费后，完成交易即可赎回成功
 
+### 提取授权市场订单收益
+
+在钱包首页，点击提取授权市场订单收益，弹出对话框
+![avatar](img/Authorization/minermenu.png)
+选择资产类别，在填写页码，例如1、2、3、4
+![avatar](img/Authorization/miner1.png)
+交易完成即可提取这个这个资产对应的市场的订单收益
+
+
 ## 授权市场维护与验证节点相关操作
 
 验证节点可以维护授权市场，验证节点可以剔除矿工
@@ -651,6 +660,7 @@ edd25519 算法生成的公钥 K7cURUPuZroE666ZTWGme2ciQ69PfjKxyaK1hXTMDgk=
 ![avatar](img/Authorization/userspace6.png)
 点击订单续期，打开订单续期对话框
 ![avatar](img/Authorization/userspace7.png)
+填写需要续期的时长，完成交易即可。
 
 
 
