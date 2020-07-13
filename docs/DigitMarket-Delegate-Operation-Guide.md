@@ -57,9 +57,9 @@
 - `[mint-type]`  增发类型，可设置为`not_mint`（不可增发）、`one_time_mint`（一次性增发）、`inflated_mint`（块增发）。其中`inflated_mint`用于挖矿增发。  
 - `[total-supply]`  指定发行的资产总量。  
 - `[inflation]`  为初始每块增发资产数量。
-- `[adjust-rate]`  为资产增发数量变化系数。  
-- `[adjust-period]`  为每个出块周期块数量。  
-- `[max-adjust-count]`  为最大周期次数。  
+- `[adjust-rate]`  为资产增发数量减产系数，需要小于1。  
+- `[adjust-period]`  为每个减产周期出块数量。  
+- `[max-adjust-count]`  为最大减产次数。  
 - `[genesis-height]`  为初始挖矿块高。区块链到指定块高后，有资产矿工提交声明和证明，资产才会增发，否则不增发。     
 
 例如：
@@ -68,14 +68,14 @@
 预留1亿 XXB（=100000000000000uxxb, 1XXB=1000000uxxb）资产，
 指定从第50000块高（genesis-height）开始挖矿增发（50000块高以前不增发），
 每块增发1000000uxxb（inflation），增发10000块（adjust-period）后，
-根据变化系数（adjust-rate）调整每块增发数量为500000uxxb（=1000000uxxb * 0.5），按此数量再增发10000块，
+根据减产系数（adjust-rate）调整每块增发数量为500000uxxb（=1000000uxxb * 0.5），按此数量再增发10000块，
 以此类推，第二次调整增发数量为250000uxxb，第三次调整增发数量为125000uxxb，第四次调整增发数量为62500uxxb，
-到第五次调整增发数量为31250uxxb后，不再调整增发数量，每块按31250uxxb增发直到总资产数量达到发行资产总量（total-supply）
+到第五次（max-adjust-count）调整增发数量为31250uxxb后，不再调整增发数量，每块按31250uxxb增发直到总资产数量达到发行资产总量（total-supply）900亿XXB
 
 ./lambdacli tx asset create 100000000000000uxxb 1000000000000ulamb \
 --asset-name "XBB Coin" \
 --mint-type inflated_mint \
---total-supply 100000000000000 \
+--total-supply 90000000000000000 \
 --inflation 1000000 \
 --adjust-rate 0.5 \
 --adjust-period 10000 \

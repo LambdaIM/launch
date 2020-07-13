@@ -11,12 +11,10 @@ MD5         : 36b89b0a08818d227a6b10604e4bb70c
 Mac 安装包   : Wallet-0.5.53.dmg  
 MD5         : ca94350d803d78c27e0759e16d3e93e8  
 
-1. 增加删除账户功能  
-2. 多语言优化  
-3. 导入配置文件优化  
-4. 部分交易类型文案优化  
-5. 增加顶部菜单
-6. 支持显示s3版本  
+1. 新增做市商角色 
+2. 支持创建资产/资产市场、授权、订单购买等资产市场相关功能  
+3. 矿工子账户导入、导出、创建格式更改  
+4. 部分交易列表和详情优化  
 
 下载地址：  
 [https://github.com/LambdaIM/launch/releases/tag/Wallet0.5.53](https://github.com/LambdaIM/launch/releases/tag/Wallet0.5.53)

@@ -12,6 +12,7 @@ MD5: 384d17df5fd4b8306214eb2421f0ba3c
 
 新节点接入参考：[http://docs.lambda.im/Testnet-Validator-Guide/](http://docs.lambda.im/Testnet-Validator-Guide/)  
 
+数字资产和市场操作手册：[http://docs.lambda.im/DigitMarket-Delegate-Operation-Guide/](http://docs.lambda.im/DigitMarket-Delegate-Operation-Guide/)
 
 下载地址：  
 [https://github.com/LambdaIM/launch/releases/tag/v0.5.0](https://github.com/LambdaIM/launch/releases/tag/v0.5.0)
@@ -19,8 +20,8 @@ MD5: 384d17df5fd4b8306214eb2421f0ba3c
 [http://download.lambdastorage.com/lambda/0.5.0/](http://download.lambdastorage.com/lambda/0.5.0/)
 
 ## lambda storage v0.2.7_rc1
-包名：lambda-storage-0.2.7_rc1-testnet.tar.gz
-MD5:d2ff9ccf52f1fcd880fdfa71233db313
+包名: lambda-storage-0.2.7_rc1-testnet.tar.gz
+MD5: d2ff9ccf52f1fcd880fdfa71233db313
 
 1. 新增资产声明和挖矿；
 2. 新增文件转让功能；
