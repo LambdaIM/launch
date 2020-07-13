@@ -50,19 +50,19 @@ rm -rf ~/.lambda_miner ~/.lambda_storage ~/.lambda_storagecli
         
         === "node1"
             ```shell
-            ./lambdacli config node tcp://47.93.196.236:26657
+            ./lambdacli config node tcp://bj1.testnet.lambdastorage.com:26657
             ```
         === "node2"
             ```shell
-            ./lambdacli config node tcp://47.94.129.97:26657
+            ./lambdacli config node tcp://bj2.testnet.lambdastorage.com:26657
             ```
         === "node3"
             ```shell
-            ./lambdacli config node tcp://39.105.148.217:26657
+            ./lambdacli config node tcp://bj3.testnet.lambdastorage.com:26657
             ```
         === "node4"
             ```shell
-            ./lambdacli config node tcp://182.92.66.63:26657
+            ./lambdacli config node tcp://bj4.testnet.lambdastorage.com:26657
             ```    
               
     !!! abstract ""

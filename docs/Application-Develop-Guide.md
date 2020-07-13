@@ -7,16 +7,16 @@
 wget http://download.lambdastorage.com/lambda/0.5.0/lambda-0.5.0-testnet.tar.gz
 mkdir -p ~/LambdaIM && cd ~/LambdaIM
 tar zxvf lambda-0.5.0-testnet.tar.gz && cd lambda-0.5.0-testnet
-./lambdacli config node tcp://47.93.196.236:26657
+./lambdacli config node tcp://bj1.testnet.lambdastorage.com:26657
 ./lambdacli config chain-id lambda-chain-test4.9
 ./lambdacli config trust-node true
 ```
 * 测试网可选节点：
 ```   plain
-./lambdacli config node tcp://47.93.196.236:26657
-./lambdacli config node tcp://47.94.129.97:26657
-./lambdacli config node tcp://39.105.148.217:26657
-./lambdacli config node tcp://182.92.66.63:26657
+./lambdacli config node tcp://bj1.testnet.lambdastorage.com:26657
+./lambdacli config node tcp://bj2.testnet.lambdastorage.com:26657
+./lambdacli config node tcp://bj3.testnet.lambdastorage.com:26657
+./lambdacli config node tcp://bj4.testnet.lambdastorage.com:26657
 ```
 ### 创建用户并保存助记词
 
@@ -199,10 +199,10 @@ Response:
 测试网节点列表：
 
 ```   plain
-47.93.196.236:13659
-47.94.129.97:13659
-39.105.148.217:13659
-182.92.66.63:13659
+bj1.testnet.lambdastorage.com:13659
+bj2.testnet.lambdastorage.com:13659
+bj3.testnet.lambdastorage.com:13659
+bj4.testnet.lambdastorage.com:13659
 ```
 #### 查询资产
 
@@ -211,7 +211,7 @@ Response:
 测试接口：
 
 ```   plain
-http://47.93.196.236:13659/auth/accounts/lambda1v664znyhztfx3m0v0uua497r5cptg3rd2ytnm8
+http://bj1.testnet.lambdastorage.com:13659/auth/accounts/lambda1v664znyhztfx3m0v0uua497r5cptg3rd2ytnm8
 ```
 返回结果：
 ```   javascript
@@ -240,7 +240,7 @@ txs/{txhash}
 测试接口：
 
 ```   plain
-http://47.93.196.236:13659/txs/680CC553CD23CC6951865C97635691F1FA1D35A669E5A12BF83DFF025C5D2F0E
+http://bj1.testnet.lambdastorage.com:13659/txs/680CC553CD23CC6951865C97635691F1FA1D35A669E5A12BF83DFF025C5D2F0E
 ```
 返回结果：
 ```   json
@@ -326,7 +326,7 @@ http://47.93.196.236:13659/txs/680CC553CD23CC6951865C97635691F1FA1D35A669E5A12BF
 ```
 测试接口：
 ```   plain
-http://47.93.196.236:13659/node_info
+http://bj1.testnet.lambdastorage.com:13659/node_info
 ```
 返回结果：
 ```   json
@@ -337,7 +337,7 @@ http://47.93.196.236:13659/node_info
     "app": "0"
   },
   "id": "e02882af5bdafa5aec086c32b8398c268d2337f1",
-  "listen_addr": "47.93.196.236:26656",
+  "listen_addr": "bj1.testnet.lambdastorage.com:26656",
   "network": "lambda-chain-test4.9", //chain-id
   "version": "0.5.0-goleveldb",
   "channels": "4020212223303800",
@@ -355,7 +355,7 @@ http://47.93.196.236:13659/node_info
 ```
 测试接口：
 ```   plain
-http://47.93.196.236:13659/auth/accounts/lambda16cheh6j34ncyunwgfkq2940cs8222jka0fsp4k
+http://bj1.testnet.lambdastorage.com:13659/auth/accounts/lambda16cheh6j34ncyunwgfkq2940cs8222jka0fsp4k
 ```
 输出结果：
 ```   json
@@ -393,7 +393,7 @@ http://47.93.196.236:13659/auth/accounts/lambda16cheh6j34ncyunwgfkq2940cs8222jka
 ```
 测试接口：
 ```   plain
-http://47.93.196.236:13659/bank/accounts/lambda1jdev3l38xwxxfq5fdpx6cva2agfxrkugrflur6/transfers
+http://bj1.testnet.lambdastorage.com:13659/bank/accounts/lambda1jdev3l38xwxxfq5fdpx6cva2agfxrkugrflur6/transfers
 ```
 发送内容
 
@@ -456,7 +456,7 @@ http://47.93.196.236:13659/bank/accounts/lambda1jdev3l38xwxxfq5fdpx6cva2agfxrkug
 ```
 测试接口
 ```   plain
-http://47.93.196.236:13659/txs
+http://bj1.testnet.lambdastorage.com:13659/txs
 类型 post
 发送数据类型 json
 ```

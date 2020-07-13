@@ -5,7 +5,7 @@
 
 主网的钱包服务地址： 39.107.247.86:13659
 
-测试网的钱包服务地址： 47.93.196.236:13659
+测试网的钱包服务地址： bj1.testnet.lambdastorage.com:13659
 
 业务发送说明：发送交易数据可以采用同步或异步方式，同步方式可以获取因为格式等造成的错误信息；异步为async，同步为 block
 所有交易类型最终发送数据 ，post方式发送到接口/txs 中
@@ -21,7 +21,7 @@
 ```
   账户信息接口 /auth/accounts/${address}
 ```
-例如 [http://47.93.196.236:13659/auth/accounts/lambda1v664znyhztfx3m0v0uua497r5cptg3rd2ytnm8](http://47.93.196.236:13659/auth/accounts/lambda1v664znyhztfx3m0v0uua497r5cptg3rd2ytnm8)
+例如 [http://bj1.testnet.lambdastorage.com:13659/auth/accounts/lambda1v664znyhztfx3m0v0uua497r5cptg3rd2ytnm8](http://bj1.testnet.lambdastorage.com:13659/auth/accounts/lambda1v664znyhztfx3m0v0uua497r5cptg3rd2ytnm8)
 查找coins 中denom 为 ulamb  即可
 
 ```
@@ -47,7 +47,7 @@
 ```
 查询个人质押信息的接口 `/staking/delegators/${addr}/delegations`
 ```
-例如 [http://47.93.196.236:13659/staking/delegators/lambda1thj5fv8d0dsh3aealhpxm9mvgxjfh87s224esr/delegations](http://47.93.196.236:13659/staking/delegators/lambda1thj5fv8d0dsh3aealhpxm9mvgxjfh87s224esr/delegations)
+例如 [http://bj1.testnet.lambdastorage.com:13659/staking/delegators/lambda1thj5fv8d0dsh3aealhpxm9mvgxjfh87s224esr/delegations](http://bj1.testnet.lambdastorage.com:13659/staking/delegators/lambda1thj5fv8d0dsh3aealhpxm9mvgxjfh87s224esr/delegations)
 ```
 [
   {
@@ -111,7 +111,7 @@ unbonding是反质押中，或被禁闭中    unbonded是反质押完成 或 �
 `/distribution/delegators/${delegatorAddr}/rewards/${validatorAddr}`
   
 ```
-例如  [http://47.93.196.236:13659/distribution/delegators/lambda163q4m634nq8les4nuvdvz49tk6aeh926t0ccsc/rewards/lambdavaloper1prrcl9674j4aqrgrzmys5e28lkcxmntxuvjpcl](http://47.93.196.236:13659/distribution/delegators/lambda163q4m634nq8les4nuvdvz49tk6aeh926t0ccsc/rewards/lambdavaloper1prrcl9674j4aqrgrzmys5e28lkcxmntxuvjpcl)
+例如  [http://bj1.testnet.lambdastorage.com:13659/distribution/delegators/lambda163q4m634nq8les4nuvdvz49tk6aeh926t0ccsc/rewards/lambdavaloper1prrcl9674j4aqrgrzmys5e28lkcxmntxuvjpcl](http://bj1.testnet.lambdastorage.com:13659/distribution/delegators/lambda163q4m634nq8les4nuvdvz49tk6aeh926t0ccsc/rewards/lambdavaloper1prrcl9674j4aqrgrzmys5e28lkcxmntxuvjpcl)
 ```
 [
   {
@@ -135,7 +135,7 @@ ${validatorAddr} 为验证节点的操作地址 操作地址的前缀为 lambdav
 ```
 `/distribution/validators/${validatorAddr}`
 ```
-例如 [http://47.93.196.236:13659/distribution/validators/lambdavaloper1prrcl9674j4aqrgrzmys5e28lkcxmntxuvjpcl](http://47.93.196.236:13659/distribution/validators/lambdavaloper1prrcl9674j4aqrgrzmys5e28lkcxmntxuvjpcl)
+例如 [http://bj1.testnet.lambdastorage.com:13659/distribution/validators/lambdavaloper1prrcl9674j4aqrgrzmys5e28lkcxmntxuvjpcl](http://bj1.testnet.lambdastorage.com:13659/distribution/validators/lambdavaloper1prrcl9674j4aqrgrzmys5e28lkcxmntxuvjpcl)
 返回结果
 
 ```
@@ -1384,7 +1384,7 @@ version：'1'
 ### 1  订单列表
 接口   `/market/matchorders/${address}/${page}/${limit}`
 
-例如 [http://47.93.196.236:13659/market/matchorders/lambda1k6rxrmly7hz0ewh7gth2dj48mv3xs9yz8ffauw/1/10](http://47.93.196.236:13659/market/matchorders/lambda1k6rxrmly7hz0ewh7gth2dj48mv3xs9yz8ffauw/1/10)
+例如 [http://bj1.testnet.lambdastorage.com:13659/market/matchorders/lambda1k6rxrmly7hz0ewh7gth2dj48mv3xs9yz8ffauw/1/10](http://bj1.testnet.lambdastorage.com:13659/market/matchorders/lambda1k6rxrmly7hz0ewh7gth2dj48mv3xs9yz8ffauw/1/10)
 
 返回结果
 
@@ -1428,7 +1428,7 @@ version：'1'
 ### 2 订单详情
 接口 `/market/matchorder/${Orderid}`
 
-[http://47.93.196.236:13659/market/matchorder/05F09566BA4397BC9EB378EC202676D3FFCAF660](http://47.93.196.236:13659/market/matchorder/05F09566BA4397BC9EB378EC202676D3FFCAF660)
+[http://bj1.testnet.lambdastorage.com:13659/market/matchorder/05F09566BA4397BC9EB378EC202676D3FFCAF660](http://bj1.testnet.lambdastorage.com:13659/market/matchorder/05F09566BA4397BC9EB378EC202676D3FFCAF660)
 
 ```
 {
@@ -1469,9 +1469,9 @@ version：'1'
 ### 3 获取市场的优质卖单
 `/market/sellorders/${marketName}/${orderType}/${statusType}/${page}/${limit}`
 
-例如 [http://47.93.196.236:13659/market/sellorders/lambdamarket/premium/active/1/10](http://47.93.196.236:13659/market/sellorders/lambdamarket/premium/active/1/10)
+例如 [http://bj1.testnet.lambdastorage.com:13659/market/sellorders/lambdamarket/premium/active/1/10](http://bj1.testnet.lambdastorage.com:13659/market/sellorders/lambdamarket/premium/active/1/10)
 
-orderType 值为[premium](http://47.93.196.236:13659/market/sellorders/lambdamarket/premium/1/10) 表示读取优质的卖单，all 为全部卖单
+orderType 值为[premium](http://bj1.testnet.lambdastorage.com:13659/market/sellorders/lambdamarket/premium/1/10) 表示读取优质的卖单，all 为全部卖单
 
 statusType 值active 表示活跃的卖单  unActive 表示卖光了的卖单
 

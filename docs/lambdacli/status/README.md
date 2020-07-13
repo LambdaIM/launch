@@ -36,7 +36,7 @@ After that, you can get remote node status as follows:
       "app": "0"
     },
     "id": "e02882af5bdafa5aec086c32b8398c268d2337f1",
-    "listen_addr": "47.93.196.236:26656",
+    "listen_addr": "bj1.testnet.lambdastorage.com:26656",
     "network": "lambda-chain-test4.8",
     "version": "0.4.8-goleveldb",
     "channels": "4020212223303800",

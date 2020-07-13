@@ -44,15 +44,15 @@ rm -rf ~/.lambda/config/config.toml ~/.lambda/config/genesis.json ~/.lambda/iden
 修改`~/.lambda/config/config.toml`文件，将文件中的seeds字段的值替换如下
 ```
 vim ~/.lambda/config/config.toml
-seeds = "3da3b249f4f1afd0efdd6f4676972fdc7af0ea6b@47.94.129.97:26656"
+seeds = "3da3b249f4f1afd0efdd6f4676972fdc7af0ea6b@bj2.testnet.lambdastorage.com:26656"
 ```
 
 测试网目前可选种子节点列表：
 ```
-e02882af5bdafa5aec086c32b8398c268d2337f1@47.93.196.236:26656
-3da3b249f4f1afd0efdd6f4676972fdc7af0ea6b@47.94.129.97:26656
-559f3aeb13b58e611c95fdc6b34446de81cc470d@39.105.148.217:26656
-9162e0c3494d8d32acd6c5bc48d1066f2cb362e6@182.92.66.63:26656
+e02882af5bdafa5aec086c32b8398c268d2337f1@bj1.testnet.lambdastorage.com:26656
+3da3b249f4f1afd0efdd6f4676972fdc7af0ea6b@bj2.testnet.lambdastorage.com:26656
+559f3aeb13b58e611c95fdc6b34446de81cc470d@bj3.testnet.lambdastorage.com:26656
+9162e0c3494d8d32acd6c5bc48d1066f2cb362e6@bj4.testnet.lambdastorage.com:26656
 ```
 
 **注意**

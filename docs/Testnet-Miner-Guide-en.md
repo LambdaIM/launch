@@ -55,13 +55,13 @@ cd lambda-storage-0.2.7_rc1-testnet
 ## 2Lambdacli-Deployment
 
 ```
-./lambdacli config node tcp://47.93.196.236:26657
+./lambdacli config node tcp://bj1.testnet.lambdastorage.com:26657
 
 Select validator IP as below：
-47.93.196.236
-47.94.129.97
-39.105.148.217
-182.92.66.63
+bj1.testnet.lambdastorage.com
+bj2.testnet.lambdastorage.com
+bj3.testnet.lambdastorage.com
+bj4.testnet.lambdastorage.com
 ```
 
 ```
@@ -69,13 +69,13 @@ Select validator IP as below：
 ./lambdacli config trust-node true
 ```
 ```
-./lambdacli config dht-gateway-address 39.105.148.217:13000
+./lambdacli config dht-gateway-address bj3.testnet.lambdastorage.com:13000
 
 可选节点IP如下:
-47.93.196.236
-47.94.129.97
-39.105.148.217
-182.92.66.63
+bj1.testnet.lambdastorage.com
+bj2.testnet.lambdastorage.com
+bj3.testnet.lambdastorage.com
+bj4.testnet.lambdastorage.com
 ```
 ## 3Add-Account
 Please replace [your-account-name]  with your custom account name. You need to set up your account and password without brackets. 
@@ -141,8 +141,8 @@ debug_log_traffic = "false"
 
 [kad]
 # DHT seed node address provided by lambda, multiple addresses can be configured
-# Optional DHT address：39.105.148.217:13000/47.94.129.97:13000/47.93.196.236:13000/182.92.66.63:13000
-bootstrap_addr = ["47.94.129.97:13000"]
+# Optional DHT address：bj3.testnet.lambdastorage.com:13000/bj2.testnet.lambdastorage.com:13000/bj1.testnet.lambdastorage.com:13000/bj4.testnet.lambdastorage.com:13000
+bootstrap_addr = ["bj2.testnet.lambdastorage.com:13000"]
 # time you would wait to connect dht seed node
 bootstrap_backoff_max = "30s"
 bootstrap_backoff_base = "1s"
