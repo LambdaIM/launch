@@ -1,6 +1,7 @@
-# 配置环境
+# DAPP应用开发指导
+## 配置环境
 
-## 配置客户端
+### 配置客户端
 
 ```plain
 wget http://download.lambdastorage.com/lambda/0.5.0/lambda-0.5.0-testnet.tar.gz
@@ -17,7 +18,7 @@ tar zxvf lambda-0.5.0-testnet.tar.gz && cd lambda-0.5.0-testnet
 ./lambdacli config node tcp://bj3.testnet.lambdastorage.com:26657
 ./lambdacli config node tcp://bj4.testnet.lambdastorage.com:26657
 ```
-## 创建用户并保存助记词
+### 创建用户并保存助记词
 
 *助记词是用来恢复帐户信息的需谨慎保存
 
@@ -57,11 +58,11 @@ Account:
 ```
 *lambda 区块链中的最小单位为u, 1lamb = 1000000ulamb
 
-# 发行资产
+## 发行资产
 
 创建一个pig币用作存储的支付, 资产最小单位也是u，创建资产需要抵押1000000lamb币。
 
-## 创建资产
+### 创建资产
 
 ```plain
 ./lambdacli tx asset create 100000000000upig 1000000000000ulamb --asset-name "pig Coin" --mint-type inflated_mint --total-supply 100000000000000 --inflation 1000000 --adjust-rate 0.5 --adjust-period 10000 --max-adjust-count 5 --genesis-height 10000  --from master  --broadcast-mode block
@@ -100,7 +101,7 @@ Response:
     - symbol = upig
     - amount = 100000000000
 ```
-## 查看资产
+### 查看资产
 
 ```plain
 ./lambdacli query account 
@@ -115,7 +116,7 @@ Account:
   AccountNumber: 0
   Sequence:      2
 ```
-## 转帐
+### 转帐
 
 ```plain
 ./lambdacli tx send  lambda1lxsnz2udquwhs7vm622m3rm552ghssvhqrefp8 100000000upig --from user1
@@ -128,7 +129,7 @@ Password to sign with 'master':
 Response:
   TxHash: 680CC553CD23CC6951865C97635691F1FA1D35A669E5A12BF83DFF025C5D2F0E
 ```
-## 查询交易
+### 查询交易
 
 ```plain
 ./lambdacli query tx 680CC553CD23CC6951865C97635691F1FA1D35A669E5A12BF83DFF025C5D2F0E -o json
@@ -207,7 +208,7 @@ Response:
   "timestamp": "2020-05-12T05:29:32Z"
 }
 ```
-## 资产API
+### 资产API
 
 测试网节点列表：
 
@@ -217,7 +218,7 @@ bj2.testnet.lambdastorage.com:13659
 bj3.testnet.lambdastorage.com:13659
 bj4.testnet.lambdastorage.com:13659
 ```
-### 查询资产
+#### 查询资产
 
 /auth/accounts/{address}
 
@@ -246,7 +247,7 @@ http://bj1.testnet.lambdastorage.com:13659/auth/accounts/lambda1v664znyhztfx3m0v
     }
 }
 ```
-### 查询交易
+#### 查询交易
 
 txs/{txhash}
 
@@ -515,9 +516,9 @@ http://bj1.testnet.lambdastorage.com:13659/txs
 
 [http://docs.lambda.im/api-reference/paths/](http://docs.lambda.im/api-reference/paths/)
 
-# 创建数据交易市场
+## 创建数据交易市场
 
-## 创建市场
+### 创建市场
 
 ```plain
  ./lambdacli tx dam market create pigmarket upig 1 --from master --broadcast-mode block
@@ -537,7 +538,7 @@ Response:
     - address = lambda1jdev3l38xwxxfq5fdpx6cva2agfxrkugrflur6
     - asset = upig
 ```
-## 授权矿工挖矿权限
+### 授权矿工挖矿权限
 
 ```plain
 lambdacli tx dam market authorize uabc --from master --pubkey ./pubkey.json
@@ -552,9 +553,9 @@ pubkey.json格式
   }
 }
 ```
-# 创建矿工
+## 创建矿工
 
-## 给矿工转币
+### 给矿工转币
 
 ```plain
 ./lambdacli tx send  lambda1lxsnz2udquwhs7vm622m3rm552ghssvhqrefp8 5000000utbb --from master
@@ -572,7 +573,7 @@ Account:
   AccountNumber: 2
   Sequence:    
 ```
-## 质押TBB声明存储容量
+### 质押TBB声明存储容量
 
 ```plain
 ./lambdacli tx staking delegate lambdavaloper1jdev3l38xwxxfq5fdpx6cva2agfxrkug4dkhew 1000000utbb --from user1 --broadcast-mode block
@@ -592,7 +593,7 @@ Response:
     - delegator = lambda1lxsnz2udquwhs7vm622m3rm552ghssvhqrefp8
     - destination-validator = lambdavaloper1jdev3l38xwxxfq5fdpx6cva2agfxrkug4dkhew
 ```
-## 创建LAMB矿工
+### 创建LAMB矿工
 
 ```plain
 ./lambdacli tx market create-miner --dht-id DgHL9h3pWVSGVtMf3W6bMg1cXX37NtoHrYXxtNjYArbH --mining-address lambda1dz24czwyku6hs8k2vqf855ujujchlhahv4ts5l --from user1
@@ -616,12 +617,12 @@ Response:
 
   Timestamp: 2020-07-07T04:30:28Z
 ```
-## 质押新资产
+### 质押新资产
 
 ```plain
 ./lambdacli tx dam miner pledge upig 1000G --order-price 1000000upig --from user1 --broadcast-mode block
 ```
-## 查看矿工质押
+### 查看矿工质押
 
 ```plain
 ./lambdacli query dam pledge-records lambda1lxsnz2udquwhs7vm622m3rm552ghssvhqrefp8
@@ -636,13 +637,13 @@ DigitalAssetRecord
   selfChallengeHeight: 0
   available:           true
 ```
-# 存储矿工接入(自建存储空间卖方)
+## 存储矿工接入(自建存储空间卖方)
 
 [http://docs.lambda.im/Testnet-Miner-Guide/](http://docs.lambda.im/Testnet-Miner-Guide/)
 
-# 购买空间
+## 购买空间
 
-## 查询矿工出售的空间
+### 查询矿工出售的空间
 
 ```plain
 ./lambdacli query dam pledge-records lambda1lxsnz2udquwhs7vm622m3rm552ghssvhqrefp8
@@ -660,7 +661,7 @@ DigitalAssetRecord
   selfChallengeHeight: 0
   available:           true
 ```
-## 购买空间
+### 购买空间
 
 从矿工质押的空间中购买1G空间时间为1个月：
 
@@ -686,7 +687,7 @@ Response:
     - matchOrderID = DBF382D80C392C00F83A0EB888243B2732FE6B1E
     - matchOrder = 0a28444246333832443830433339324330304638334130454238383832343342323733324645364231451204757069671a149372c8fe27338c648289684dac33aaea1261db882214f9a1312b8d071d78799bd295b88f74a2917841972a013130c0843d3a0c08a6bb90f80510e89d83bf01420c08a6d5aef90510e89d83bf014a0c08a6bb90f80510e89d83bf01520f0a0475706967120731303030303030
 ```
-## 查询订单
+### 查询订单
 
 ```plain
 ./lambdacli query dam all-match-orders lambda1jdev3l38xwxxfq5fdpx6cva2agfxrkugrflur6 1 100
@@ -706,9 +707,9 @@ Dam MatchOrder
   WithDrawTime:          2020-07-07 07:00:54.400609 +0000 UTC
   UserPay:               1000000upig
 ```
-# 存储业务
+## 存储业务
 
-## 配置lambda s3 gateway
+### 配置lambda s3 gateway
 
 初始化：
 
@@ -729,7 +730,7 @@ address = "127.0.0.1:9002"
 access_key = "accesskey"
 secret_key = "secretkey"
 ```
-## 运行lambda s3 gateway
+### 运行lambda s3 gateway
 
 ```plain
 ./storagecli gateway run --account user1 --broker.extra_order_id 420CFAFEA58BEEA4918CC84EB399381AF7E44EE6 --debug --daemonize --log.file /tmp/gateway.log
@@ -738,7 +739,7 @@ secret_key = "secretkey"
 
 --broker.extra_order_id 为用户的空间订单的ID
 
-## 使用aws cli接入lambda s3
+### 使用aws cli接入lambda s3
 
 安装[awscli](https://docs.aws.amazon.com/cli/latest/userguide/installing.html).
 
@@ -776,7 +777,7 @@ aws s3 --endpoint=http://localhost:9002/ ls s3://awstest
 ```plain
 aws s3 --endpoint=http://localhost:9002/ cp s3://awstest/your-file /tmp/new-file
 ```
-## 
+ 
 ## 使用python sdk 接入lambda s3
 
 安装boto3
