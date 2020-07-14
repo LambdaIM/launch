@@ -6,10 +6,11 @@
 
 包名：  
 Windows安装包: Wallet-Setup-0.5.55.exe  
-MD5         : 4b945f70631a1bd89cd5b7ce2956b554  
+MD5         : 20f1aa749bdeecb7d5e9d0a3f44245b7  
 
 Mac 安装包   : Wallet-0.5.55.dmg  
-MD5         : 682590d37956b58bad51983cc754ba8b  
+MD5         : be50b4510917c8297e07831527e35845  
+
 
 1. 新增做市商角色 
 2. 支持创建资产/资产市场、授权、订单购买等资产市场相关功能  
