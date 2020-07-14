@@ -39,7 +39,7 @@
                   "bj2.testnet.lambdastorage.com:12000",
                   "bj3.testnet.lambdastorage.com:12000",
                   "bj4.testnet.lambdastorage.com:12000",]
-        # time you would wait to connect dht seed node
+        
         db_path = "/root/.lambda_storage/kademlia"
         # this should listen at Public IP
         external_address = "200.200.200.200:14000"
@@ -51,7 +51,7 @@
         [storage]
         ## 用于生成apikey的种子内容，不能为空
         root_secret_seed = "fasdf"
-        ## 存储节点的名字，需要在矿池内部唯一，即连接同一矿工的多个storagenode的storage_name不能重复
+        ## 存储节点名称，需在矿池内部唯一，即连接同一矿工的多个storagenode的storage_name不能重复。存储节点启动后，请勿修改此名称
         storage_name = "machine1"
         ## minernode对内提供服务的地址，即它的server.private_address
         miner_address = "192.168.10.10:13001"
