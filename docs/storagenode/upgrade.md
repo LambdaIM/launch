@@ -12,10 +12,10 @@ storagenode upgrade [flags]
 ```
 ./storagenode upgrade
 current configured version : 0.2.3-2-g167793f
-build version              : 0.2.7_rc1-debug
+build version              : 0.2.7_rc2-debug
 
 Upgrade from version: 0.2.3 ...
-Version: 0.2.7_rc1-debug
+Version: 0.2.7_rc2-debug
 Mode: debug
 Commit: 030c696bc6829cfafb3d240d66058b16b41aa460
 Upgrade Complete

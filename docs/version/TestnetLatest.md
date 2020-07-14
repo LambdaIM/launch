@@ -1,4 +1,4 @@
-# 测试网lambda v0.5.0 - lambda storage v0.2.7_rc1
+# 测试网lambda v0.5.0 - lambda storage v0.2.7_rc2
 
 ## lambda testnet v0.5.0
 
@@ -19,9 +19,9 @@ MD5: 384d17df5fd4b8306214eb2421f0ba3c
 
 [http://download.lambdastorage.com/lambda/0.5.0/](http://download.lambdastorage.com/lambda/0.5.0/)
 
-## lambda storage v0.2.7_rc1
-包名: lambda-storage-0.2.7_rc1-testnet.tar.gz
-MD5: d2ff9ccf52f1fcd880fdfa71233db313
+## lambda storage v0.2.7_rc2
+包名: lambda-storage-0.2.7_rc2-testnet.tar.gz
+MD5: 0b861072877e4416300ea359802e52f4
 
 1. 新增资产声明和挖矿；
 2. 新增文件转让功能；
@@ -33,4 +33,4 @@ MD5: d2ff9ccf52f1fcd880fdfa71233db313
 下载地址： 
 [https://github.com/LambdaIM/launch/releases/tag/v0.5.0](https://github.com/LambdaIM/launch/releases/tag/v0.5.0)
 
-[http://download.lambdastorage.com/lambda-storage/0.2.7_rc1/](http://download.lambdastorage.com/lambda-storage/0.2.7_rc1/)
+[http://download.lambdastorage.com/lambda-storage/0.2.7_rc2/](http://download.lambdastorage.com/lambda-storage/0.2.7_rc2/)

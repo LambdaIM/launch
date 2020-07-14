@@ -1,11 +1,11 @@
-# storagenode0.2.7_rc1 配置 
+# storagenode0.2.7_rc2 配置 
 
 ### 1. storagenode初始化
 
 如果存储节点已初始化，请忽略此步骤
 
 ```
-./storagenode init 
+./storagenode init --testnet
 ```
 
 ### 2. 修改配置文件
@@ -20,7 +20,7 @@
         
         ```
         [build]
-        version = "0.2.7_rc1"
+        version = "0.2.7_rc2"
         commit = "030c696bc6829cfafb3d240d66058b16b41aa460"
         mode = "release"
         

@@ -14,7 +14,7 @@ All query commands has these global flags. Their unique flags will be introduced
 Examples
 ```
 ./minernode info  --miner-home /root/LambdaIM/storage/storage-feature_order_list_with_provider_status-984f41e-debug-03251653/.lambda_miner 
-               version: 0.2.7_rc1-4-gd8a77f8
+               version: 0.2.7_rc2-4-gd8a77f8
                 dht id: 2u8PSj2PGt7TdR2ThuHMfH4k6KeEv5avgc4gbdKn3LTH
 server.private_address: 172.11.159.11:14001
         server.address: 172.11.159.11:14000

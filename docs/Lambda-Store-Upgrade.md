@@ -24,15 +24,15 @@ mkdir -p ~/LambdaIM && cd ~/LambdaIM
 ```
 下载安装包
 ```
-wget https://github.com/LambdaIM/launch/releases/download/v0.5.0/lambda-storage-0.2.7_rc1-testnet.tar.gz
+wget https://github.com/LambdaIM/launch/releases/download/v0.5.0/lambda-storage-0.2.7_rc2-testnet.tar.gz
 ```
 解压安装包
 ```
-tar zxvf lambda-storage-0.2.7_rc1-testnet.tar.gz
+tar zxvf lambda-storage-0.2.7_rc2-testnet.tar.gz
 ```
 进入解压后的目录
 ```
-cd lambda-storage-0.2.7_rc1-testnet
+cd lambda-storage-0.2.7_rc2-testnet
 ```
 
 ### 停止minernode和storagenode

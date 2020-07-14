@@ -19,7 +19,7 @@
 ### 资产挖矿过程
 1. 提交资产挖矿声明  
    矿工每存储32GB数据会封装1个资产挖矿声明  
-   1挖矿声明 = 8存储算力  
+   1挖矿声明 = 32存储算力  
   
 2. 资产挖矿声明有效期  
    挖矿声明有效期默认为7天，过期后会自动重新提交    
@@ -152,6 +152,8 @@
 ./lambdacli tx dam user buy --duration 1month --size 100GB --ask-address lambdamineroper10gat77jd5ucz7gw0m3xac8jfj5l83r6c0mswdj --asset uxxb --from buyaccount
 
 ```
+资产空间上传步骤与lambda市场空间文件上传步骤一致，此处不再赘述。
+[文件上传和查看](http://docs.lambda.im/Testnet-Miner-Guide/#_4)
 
 ### 资产订单续期
 ``` 

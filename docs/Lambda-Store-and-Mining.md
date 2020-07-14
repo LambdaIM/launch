@@ -94,7 +94,7 @@ data_dir = [ "磁盘1", "磁盘2", "磁盘N"]
 操作文档参考：[矿工维护手册](Lambda-Miner-Maintain.md)
 
 ### 匹配订单续期
-`链0.5.0 - 存储0.2.7_rc1`版本 支持匹配订单续期功能。   
+`链0.5.0 - 存储0.2.7_rc2`版本 支持匹配订单续期功能。   
 1. 匹配订单未到期的，购买了空间的账户可使用`lambdacli tx market order-renewal`命令续期。  
 2. 匹配订单已过期的，不能再进行续期；  
 3. 同一匹配订单可多次续期；  
@@ -142,7 +142,7 @@ data_dir = [ "磁盘1", "磁盘2", "磁盘N"]
 ```
 检查订单使用空间命令：
 ./storagenode info  disk  --local-mode   
-               version:  0.2.7_rc1-13-gdbcabcf-debug
+               version:  0.2.7_rc2-13-gdbcabcf-debug
   storage.storage_name:  t4s5
       storage.data_dir:  [/data2/storage/store /data3/storage/store /data/storage/store /data4/store]
 
@@ -162,7 +162,7 @@ Disk                 |Total   |Used   |Free    |Order                           
 
 ./storagenode info  disk  --safe-cleanup 
              blockTime:  2020-04-12 14:01:27 UTC
-               version:  0.2.7_rc1-13-gdbcabcf-debug
+               version:  0.2.7_rc2-13-gdbcabcf-debug
   storage.storage_name:  t4s5
       storage.data_dir:  [/data2/storage/store /data3/storage/store /data/storage/store /data4/storage/store]
 
