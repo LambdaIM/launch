@@ -33,7 +33,7 @@ lambdacli query market sellorders -h
 
 Query markets sell order by orderType 
 ```
-lambdacli query market sellorders lambdamarket premium whole 1 100 --node-status
+lambdacli query market sellorders LambdaMarket premium whole 1 100 --node-status
 ```
 
 ### Description

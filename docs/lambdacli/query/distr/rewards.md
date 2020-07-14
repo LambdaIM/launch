@@ -14,7 +14,7 @@ Query all rewards earned by a delegator, optionally restrict to rewards from a s
 
 | Name,shorthand | Type   | Required | Default               | Description                                                  |
 | -------------- | ------ | -------- | --------------------- | ------------------------------------------------------------ |
-| -h, --help     |        | False    |                       | help for account                                             |
+| -h, --help     |        | False    |                       | help for rewards                                             |
 | --height       | Int    | False    |                       | Block height to query, omit to get most recent provable block|
 | --ledger       | String | False    |                       | Use a connected Ledger device                                |
 | --node         | String | False    | tcp://localhost:26657 | `<host>:<port>`to tendermint rpc interface for this chain    |

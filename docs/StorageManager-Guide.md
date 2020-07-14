@@ -7,12 +7,12 @@
 [http://download.lambdastorage.com/storage-manager/0.1.12/](http://download.lambdastorage.com/storage-manager/0.1.12/)
 
 钱包下载地址：  
-[https://github.com/LambdaIM/launch/releases/tag/Wallet0。5。53](https://github.com/LambdaIM/launch/releases/tag/Wallet0.5.53)  
-[http://download.lambdastorage.com/wallet/0.5.53/](http://download.lambdastorage.com/wallet/0.5.53/)
+[https://github.com/LambdaIM/launch/releases/tag/Wallet0.5.55](https://github.com/LambdaIM/launch/releases/tag/Wallet0.5.55)  
+[http://download.lambdastorage.com/wallet/0.5.55/](http://download.lambdastorage.com/wallet/0.5.55/)
 
 矿工和存储节点安装包：  
-[https://github.com/LambdaIM/launch/releases/tag/v0.4.9](https://github.com/LambdaIM/launch/releases/tag/v0.4.9)
-[http://download.lambdastorage.com/lambda-storage/0.2.6/](http://download.lambdastorage.com/lambda-storage/0.2.6/)
+[https://github.com/LambdaIM/launch/releases/tag/v0.5.0](https://github.com/LambdaIM/launch/releases/tag/v0.5.0)
+[http://download.lambdastorage.com/lambda-storage/0.2.7_rc2/](http://download.lambdastorage.com/lambda-storage/0.2.7_rc2/)
 
 使用矿工管理程序配合钱包即可添加配置矿工服务及存储节点服务，非常便利
 
@@ -160,7 +160,7 @@ miner.root_secret_seed
 
 ```
 [build]
-version = "0.2.6"
+version = "0.2.7_rc2"
 commit = "030c696bc6829cfafb3d240d66058b16b41aa460"
 mode = "release"
 
@@ -173,10 +173,12 @@ address = "192.168.10.10:13000"
 private_address = "192.168.10.10:13001"
 
 [kad]
-# DHT接入节点地址，存储网络提供，可填写多个，以 47.94.129.97:13000 为例
+# DHT接入节点地址，存储网络提供，可填写多个
 # 可填写自己质押的验证节点配置lambda.toml中的 kad.external_address
-# 可选官方dht地址：39.105.148.217:13000/47.94.129.97:13000/47.93.196.236:13000/182.92.66.63:13000
-bootstrap_addr = ["47.94.129.97:13000"]
+bootstrap_addr = ["bj1.testnet.lambdastorage.com:12000",
+                  "bj2.testnet.lambdastorage.com:12000",
+                  "bj3.testnet.lambdastorage.com:12000",
+                  "bj4.testnet.lambdastorage.com:12000",]
 # this should listen at Public IP
 ## 对外暴露的提供服务的地址
 external_address = "200.200.200.100:13000"
@@ -258,7 +260,7 @@ storage.root_secret_seed
 
 ```
 [build]
-version = "0.2.6"
+version = "0.2.7_rc2"
 commit = "030c696bc6829cfafb3d240d66058b16b41aa460"
 mode = "release"
 
@@ -272,9 +274,11 @@ private_address = "192.168.10.20:14001"
 
 [kad]
 # address you want kad to connect with
-# DHT接入节点地址，可以是自己质押的验证节点或minernode配置的kad.external_address，这里以 47.94.129.97:13000 为例
-# 可选官方dht地址：39.105.148.217:13000/47.94.129.97:13000/47.93.196.236:13000/182.92.66.63:13000
-bootstrap_addr = ["47.94.129.97:13000"]
+# DHT接入节点地址，可以是自己质押的验证节点或minernode配置的kad.external_address
+bootstrap_addr = ["bj1.testnet.lambdastorage.com:12000",
+                  "bj2.testnet.lambdastorage.com:12000",
+                  "bj3.testnet.lambdastorage.com:12000",
+                  "bj4.testnet.lambdastorage.com:12000",]
 # time you would wait to connect dht seed node
 db_path = "/root/.lambda_storage/kademlia"
 # this should listen at Public IP

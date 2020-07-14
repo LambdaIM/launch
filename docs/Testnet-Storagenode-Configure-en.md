@@ -17,7 +17,7 @@ After initializing "storagenode", a default configuration file `~/.lambda_storag
 
 
 ```
-version = "0.2.6"
+version = "0.2.7_rc2"
 commit = "df27600a6fc5a8c27c635d55b3ef4a51c2993715"
 mode = "release"
 
@@ -33,8 +33,10 @@ debug_log_traffic = "false"
 
 [kad]
 # DHT seed node address provided by lambda, multiple addresses can be configured
-# Optional DHT address：39.105.148.217:13000/47.94.129.97:13000/47.93.196.236:13000/182.92.66.63:13000
-bootstrap_addr = ["47.94.129.97:13000"]
+bootstrap_addr = ["bj1.testnet.lambdastorage.com:12000",
+                  "bj2.testnet.lambdastorage.com:12000",
+                  "bj3.testnet.lambdastorage.com:12000",
+                  "bj4.testnet.lambdastorage.com:12000",]
 # time you would wait to connect dht seed node
 bootstrap_backoff_max = "30s"
 bootstrap_backoff_base = "1s"

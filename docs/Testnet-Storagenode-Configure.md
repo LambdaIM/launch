@@ -1,11 +1,11 @@
-# storagenode0.2.6 配置 
+# storagenode0.2.7_rc2 配置 
 
 ### 1. storagenode初始化
 
 如果存储节点已初始化，请忽略此步骤
 
 ```
-./storagenode init 
+./storagenode init --testnet
 ```
 
 ### 2. 修改配置文件
@@ -20,7 +20,7 @@
         
         ```
         [build]
-        version = "0.2.6"
+        version = "0.2.7_rc2"
         commit = "030c696bc6829cfafb3d240d66058b16b41aa460"
         mode = "release"
         
@@ -34,9 +34,11 @@
         
         [kad]
         # address you want kad to connect with
-        # DHT接入节点地址，可以是自己质押的验证节点或minernode配置的kad.external_address，这里以 47.94.129.97:13000 为例
-        # 可选官方dht地址：39.105.148.217:13000/47.94.129.97:13000/47.93.196.236:13000/182.92.66.63:13000
-        bootstrap_addr = ["47.94.129.97:13000"]
+        # DHT接入节点地址，可以是自己质押的验证节点或minernode配置的kad.external_address
+        bootstrap_addr = ["bj1.testnet.lambdastorage.com:12000",
+                  "bj2.testnet.lambdastorage.com:12000",
+                  "bj3.testnet.lambdastorage.com:12000",
+                  "bj4.testnet.lambdastorage.com:12000",]
         # time you would wait to connect dht seed node
         db_path = "/root/.lambda_storage/kademlia"
         # this should listen at Public IP

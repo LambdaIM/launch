@@ -20,5 +20,5 @@ manage storage node
 ```
 ./minernode storage list 
 NAME                 DHT_ID                                             ADDRESS               TOTAL_SPACE          LEFT_SPACE
-t4s5                 HDk9FDoLV86wcgf7ihyFjogXNeWYTvfgJYRgfNyVc5m        172.17.159.132:15001  242 GiB              146 GiB
+t4s5                 HDk9FDoLV86wcgf7ihyFjogXNeWYTvfgJYRgfNyVc5m        172.11.159.11:15001  242 GiB              146 GiB
 ```

@@ -14,7 +14,7 @@ query asset params
 
 | Name,shorthand | Type   | Required | Default               | Description                                                  |
 | -------------- | ------ | -------- | --------------------- | ------------------------------------------------------------ |
-| -h, --help     |        | False    |                       | help for account                                             |
+| -h, --help     |        | False    |                       | help for params                                             |
 | --ledger       | String | False    |                       | Use a connected Ledger device                                |
 | --node         | String | False    | tcp://localhost:26657 | `<host>:<port>`to tendermint rpc interface for this chain    |
 | --trust-node   | String | False    | True                  | Don't verify proofs for responses                            |

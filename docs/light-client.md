@@ -53,7 +53,7 @@ Here we just list all APIs and introduce their functionality briefly.
     - `GET /bank/balances/{address}`: Get the account balances
     - `POST /bank/accounts/{address}/transfers`: Send coins from one account to another
     - `GET /auth/accounts/{address}`: Get the account information on blockchain
-    
+
 4. Staking module APIs
 
     - `GET /staking/delegators/{delegatorAddr}/delegations`: Get all delegations from a delegator
@@ -127,20 +127,55 @@ Here we just list all APIs and introduce their functionality briefly.
     - `GET /minting/parameters`: Minting module parameters
     - `GET /minting/inflation`: Current minting inflation value
     - `GET /minting/annual-provisions`: Current minting annual provisions value
-   
+
 7. Asset module APIs
 
     - `GET /asset/pledge/{address}`: Get the account's pledges
     - `GET /asset/pool"`: Get asset pool
     - `GET /asset/parameters`:  Get asset module parameters
     - `GET /asset/pairs/{asset}`: Get exchange pairs by the given asset
+    - `GET /asset/all`: Get all asset info
+    - `GET /asset/all`: Get all asset info
+    - `GET /asset/minted/all`: Get all minted asset info
+    - `GET /asset/mint/simulate`: Simulate asset mint period
     - `POST /asset/pledge`: Pledge token to get asset
     - `POST /asset/drop`: Drop asset to get token
+    - `POST /asset/create`: Create asset
 
 8. Gov module APIs
 
     - `POST /gov/proposals/software_upgrade`: Submit software upgrade proposal
 
-9. Upgrade module APIs
+9. Dam module APIs
+
+    - `Get /dam/markets`: Get all digital asset markets
+    - `Get /dam/market/{asset}`: Get digital asset market by asset name
+    - `Get /dam/miner/{address}`: Get digital asset miner by address
+    - `Get /dam/pool`: Get digital asset market pool
+    - `Get /dam/params`: Get dam module parameters
+    - `Get /dam/pledge_records/{address}`: Get asset pledge records by address
+    - `Get /dam/jailed_records/{address}`: Get jailed records by address
+    - `Get /dam/refunding_records/{address}`: Get refunding records by address
+    - `Get /dam/match_order/{orderID}`: Get match order by order ID
+    - `Get /dam/match_orders/{address}/{page}/{limit}`: Get match orders by address
+    - `Get /dam/match_orders/{asset}/{address}/{page}/{limit}`: Get match orders by address and asset
+    - `Get /dam/transfer_records/{orderID}`: Get transfer records by order ID
+    - `Get /dam/transfer_record/{orderID}/{address}`: Get transfer record by order ID and receiver's address
+    - `Get /dam/transfer_files_record/{orderID}/{address}/{start}/{end}`: Get a range of transfer files by order ID and receiver's address
+
+    - `Post /dam/market/create`: Create digital asset market
+    - `Post /dam/market/dismiss`: Dismiss a specific digital asset market
+    - `Post /dam/market/authorize`: Authorize mining public key
+    - `Post /dam/asset/pledge`: Pledge digital asset
+    - `Post /dam/asset/refund`: Refund digital asset
+    - `Post /dam/miner/activate`: Activate miner to rejoin asset mining
+    - `Post /dam/miner/deactivate`: Deactivate a miner to unavailable
+    - `Post /dam/miner/withdraw`: Withdraw match order's reward by order ID
+    - `Post /dam/miner/withdraw_count`: Withdraw a range of match order's reward
+    - `Post /dam/user/buy`: Create a buy order from digital asset market
+    - `Post /dam/user/renew`: Renew a match order
+    - `Post /dam/user/transfer`: Transfer ownership of file
+
+10. Upgrade module APIs
 
     - `GET /upgrade/info`: Get current software version and upgrade info in progress

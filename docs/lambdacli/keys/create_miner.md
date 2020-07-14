@@ -37,10 +37,16 @@ After that, you're done with creating a miner account key. The generated key fil
 
 ```json
 {
-  "privateKey": "15f6146d686b2df1813dd8e75c6c4cfb4f796ea8ebc02b543e05b17859074c78",
-  "publicKey": "022e804959097dfaa694627fc8743abf6e96875dfd3b9e3e72929b18bb171aab27",
-  "masterAddress": "lambda15z35mmuckjxdus9wjp658kvql75jrrnynhfh6c",
-  "address": "lambda1mkayje85385kf2vjm870vzpgcwwzldkk8elhvf"
+  "pub_key": {
+    "type": "tendermint/PubKeySecp256k1",
+    "value": "A8yMo684pcg6rSFzIlBF/G+ZzuElC7TdjGLeetlcNljW"
+  },
+  "priv_key": {
+    "type": "tendermint/PrivKeySecp256k1",
+    "value": "5abzq1fW527qsowb1oaFflfz1KL4xk0386z8853DnM8="
+  },
+  "masterAddress": "lambda1zevzfj7h7pee633gguckcq5keca6pnyztlsvrx",
+  "address": "lambda1e7l6f8j0rl7z0fgptlgsjdnhdjm2xcmy8p7ce9"
 }
 ```
 

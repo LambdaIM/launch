@@ -20,7 +20,7 @@ lambdacli version --help
 ```
 ./lambdacli version --long
 
-lambda_version: 0.4.9-goleveldb
+lambda_version: 0.4.8-goleveldb
 git commit: 5e0578efde04866b1086326d3e9533db02db54b3
 vendor hash:
 build tags:

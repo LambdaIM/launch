@@ -21,6 +21,7 @@ lambdacli keys <command>
 | [delete](delete.md)     | Delete the given key                                                                         |
 | [update](update.md)     | Change the password used to protect private key                                              |
 | [create-miner](create_miner.md)     | Create an raw private key(json formatted), it used for miners to run miner-node server.|
+| [pubkey-file](pubkey-file.md)     | Get public key file from private key file                       |
 | [repair](repair.md)     | repair keys db                       |
 
 ## Flags

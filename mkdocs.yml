@@ -8,6 +8,7 @@ nav:
     - 首页: index.md
     - 使用必知: must-known-cn.md
     - 应用开发指导: Application-Develop-Guide.md
+    - DAPP应用开发指导: DApp-Develop-Guide.md
     - 主网接入:
           - 验证节点接入: Mainnet-Validator-Guide.md
           - 矿工接入: Mainnet-Miner-Guide.md

@@ -28,10 +28,11 @@ lambdacli tx market create-market --help
 ## Examples
 
 ```
- ./lambdacli tx market create-market --name xxx-market \
+ lambdacli tx market create-market --name xxx-market \
     --profit lambda1v7rq4afpf47wfq4qymyaa9mvvvq69f7f6k7cv9 \
     --fee-rate 0.02 \
     --commission-rate 0.02 --from master
+
 ```
 
 Sample Output:

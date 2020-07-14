@@ -13,8 +13,8 @@ Create or query a Lamb CLI configuration file
 ```
 ./storagecli config
 [broker]
-  dht_gateway_addr = "182.92.242.59:13000"
-  validator_addr = "182.92.242.59:13659"
+  dht_gateway_addr = "182.91.242.11:13000"
+  validator_addr = "182.91.242.11:13659"
 
 [gateway]
   access_key = "lambda"

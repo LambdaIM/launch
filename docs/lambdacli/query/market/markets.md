@@ -26,7 +26,7 @@ After that, you will get all markets in chain
 ```
 Market
   marketAddress:        lambdamarketoper1thj5fv8d0dsh3aealhpxm9mvgxjfh87srk3887
-  name:                 lambdamarket
+  name:                 LambdaMarket
   owner:                lambda1thj5fv8d0dsh3aealhpxm9mvgxjfh87s224esr
   profit:               lambda1thj5fv8d0dsh3aealhpxm9mvgxjfh87s224esr
   feeRate:              0.020000000000000000

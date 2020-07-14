@@ -33,7 +33,7 @@ Run miner service
 |  --miner.root_secret_seed   |   | root secret key for generate apikey|
 | --node    | tcp://localhost:26657 |\<host\>:\<port\> to tendermint rpc interface for this chain |
 |  --server.address   | 0.0.0.0:13000 | listen address )|
-| --server.private_address    |172.17.159.132:13001 |private listen address |
+| --server.private_address    |172.11.159.11:13001 |private listen address |
 |  --status  |   | get daemon status|
 |  --stop  |   | stop daemon|
 
@@ -43,7 +43,7 @@ Run miner service
 Run miner service
 
 ```
-./minernode run --daemonize --node tcp://182.92.242.59:26657 --trust-node --log.level debug --log.file /root/LambdaIM/storage/storage-feature_order_list_with_provider_status-984f41e-debug-03251653/minernode.log --kad.bootstrap_addr 182.92.242.59:13000 --server.address 172.17.159.132:14000 --server.private_address 172.17.159.132:14001 --kad.external_address 182.92.242.59:14000 --miner.root_secret_seed minernoderootsecretseedramdon --debug
+./minernode run --daemonize --node tcp://182.91.242.11:26657 --trust-node --log.level debug --log.file /root/LambdaIM/storage/storage-feature_order_list_with_provider_status-984f41e-debug-03251653/minernode.log --kad.bootstrap_addr 182.91.242.11:13000 --server.address 172.11.159.11:14000 --server.private_address 172.11.159.11:14001 --kad.external_address 182.91.242.11:14000 --miner.root_secret_seed minernoderootsecretseedramdon --debug
 
 ```
 

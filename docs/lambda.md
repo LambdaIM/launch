@@ -296,3 +296,17 @@ backup provides 2 ways to backup node's consensus private key, user can set `--m
 ```
 
 recover provides 3 ways to recover node's consensus private key locally. If user set `--method seeds`, you need to input the seeds displayed when init the node. Otherwise, you can recover by a given text file or qr image file.
+
+## upgrade
+
+### Description
+
+Upgrade allows to upgrade lambda configurations to newest
+
+### Usage 
+
+```bash
+./lambda upgrade 
+```
+
+First check if configs and other files need to upgrade. If necessary, it will upgrade automatically

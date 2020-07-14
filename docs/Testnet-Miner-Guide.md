@@ -1,4 +1,4 @@
-# 矿工0.2.6接入教程
+# 矿工0.2.7_rc2接入教程
 
 1个miner下可注册多个storagenode
 
@@ -21,19 +21,19 @@ rm -rf ~/.lambda_miner ~/.lambda_storage ~/.lambda_storagecli
     ```
     2. 下载安装包
     ```
-    wget https://github.com/LambdaIM/launch/releases/download/v0.4.9/lambda-storage-0.2.6-testnet.tar.gz
+    wget https://github.com/LambdaIM/launch/releases/download/v0.5.0/lambda-storage-0.2.7_rc2-testnet.tar.gz
     ```
     如下载缓慢可使用下面的链接：
     ```
-    wget http://download.lambdastorage.com/lambda-storage/0.2.6/lambda-storage-0.2.6-testnet.tar.gz
+    wget http://download.lambdastorage.com/lambda-storage/0.2.7_rc2/lambda-storage-0.2.7_rc2-testnet.tar.gz
     ```
     3. 解压安装包
     ```
-    tar zxvf lambda-storage-0.2.6-testnet.tar.gz
+    tar zxvf lambda-storage-0.2.7_rc2-testnet.tar.gz
     ```
     4. 进入解压后的目录
     ```
-    cd lambda-storage-0.2.6-testnet
+    cd lambda-storage-0.2.7_rc2-testnet
     ```
 
 ### 2. 配置lambdacli
@@ -50,24 +50,24 @@ rm -rf ~/.lambda_miner ~/.lambda_storage ~/.lambda_storagecli
         
         === "node1"
             ```shell
-            ./lambdacli config node tcp://47.93.196.236:26657
+            ./lambdacli config node tcp://bj1.testnet.lambdastorage.com:26657
             ```
         === "node2"
             ```shell
-            ./lambdacli config node tcp://47.94.129.97:26657
+            ./lambdacli config node tcp://bj2.testnet.lambdastorage.com:26657
             ```
         === "node3"
             ```shell
-            ./lambdacli config node tcp://39.105.148.217:26657
+            ./lambdacli config node tcp://bj3.testnet.lambdastorage.com:26657
             ```
         === "node4"
             ```shell
-            ./lambdacli config node tcp://182.92.66.63:26657
+            ./lambdacli config node tcp://bj4.testnet.lambdastorage.com:26657
             ```    
               
     !!! abstract ""
         ```
-        ./lambdacli config chain-id lambda-chain-test4.9
+        ./lambdacli config chain-id lambda-chain-test5.0
         ./lambdacli config trust-node true
         ```
     
@@ -82,19 +82,19 @@ rm -rf ~/.lambda_miner ~/.lambda_storage ~/.lambda_storagecli
         
         === "dht1"
             ```shell
-            ./lambdacli config dht-gateway-address 47.93.196.236:13000
+            ./lambdacli config dht-gateway-address bj1.testnet.lambdastorage.com:12000
             ```
         === "dht2"
             ```shell
-            ./lambdacli config dht-gateway-address 47.94.129.97:13000
+            ./lambdacli config dht-gateway-address bj2.testnet.lambdastorage.com:12000
             ```
         === "dht3"
             ```shell
-            ./lambdacli config dht-gateway-address 39.105.148.217
+            ./lambdacli config dht-gateway-address bj3.testnet.lambdastorage.com:12000
             ```
         === "dht4"
             ```shell
-            ./lambdacli config dht-gateway-address 182.92.66.63:13000
+            ./lambdacli config dht-gateway-address bj4.testnet.lambdastorage.com:12000
             ```      
 
 ### 3. 添加矿工账户
@@ -169,7 +169,7 @@ rm -rf ~/.lambda_miner ~/.lambda_storage ~/.lambda_storagecli
 !!! example ""
     1. 初始化矿工
     ```
-    ./minernode init
+    ./minernode init --testnet
     ```
     会生成矿工配置文件`~/.lambda_miner/config/config.toml`  
     2. 修改配置文件
@@ -185,7 +185,7 @@ rm -rf ~/.lambda_miner ~/.lambda_storage ~/.lambda_storagecli
             ??? note "展开查看配置示例"
                 ```
                 [build]
-                version = "0.2.6"
+                version = "0.2.7_rc2"
                 commit = "030c696bc6829cfafb3d240d66058b16b41aa460"
                 mode = "release"
                 
@@ -198,10 +198,12 @@ rm -rf ~/.lambda_miner ~/.lambda_storage ~/.lambda_storagecli
                 private_address = "192.168.10.10:13001"
                 
                 [kad]
-                # DHT接入节点地址，存储网络提供，可填写多个，以 47.94.129.97:13000 为例
+                # DHT接入节点地址，存储网络提供，可填写多个
                 # 可填写自己质押的验证节点配置lambda.toml中的 kad.external_address
-                # 可选官方dht地址：39.105.148.217:13000/47.94.129.97:13000/47.93.196.236:13000/182.92.66.63:13000
-                bootstrap_addr = ["47.94.129.97:13000"]
+                bootstrap_addr = ["bj1.testnet.lambdastorage.com:12000",
+                  "bj2.testnet.lambdastorage.com:12000",
+                  "bj3.testnet.lambdastorage.com:12000",
+                  "bj4.testnet.lambdastorage.com:12000",]
                 # this should listen at Public IP
                 ## 对外暴露的提供服务的地址
                 external_address = "200.200.200.100:13000"
@@ -279,12 +281,12 @@ rm -rf ~/.lambda_miner ~/.lambda_storage ~/.lambda_storagecli
     
     !!! success "返回如下结果"
         ```text hl_lines="2"
-                       version: 0.2.6
+                       version: 0.2.7_rc2
                         dht id: G4xW3UHMfFnTmaRMZUJ7PKcfvr9YTTFyekcsRxKDZZD9 #创建矿工时会用到此dht-id
-        server.private_address: 172.17.159.130:15001
+        server.private_address: 172.11.159.11:15001
                 server.address: 0.0.0.0:26654
-          kad.external_address: 39.106.153.62:26654
-            kad.bootstrap_addr: [39.106.153.62:26650 172.17.159.130:26652]
+          kad.external_address: 39.106.153.11:26654
+            kad.bootstrap_addr: [39.106.153.11:26650 172.11.159.11:26652]
               Ensure-level = 0: 1/6 of disk-space would be used for data-replicating
         ```
         
@@ -344,7 +346,7 @@ rm -rf ~/.lambda_miner ~/.lambda_storage ~/.lambda_storagecli
 
 !!! example ""
     ```
-    ./storagenode init
+    ./storagenode init --testnet
     ```
     生成存储节点配置文件`~/.lambda_storage/config/config.toml`，参考如下第6步进行配置
 
@@ -558,7 +560,7 @@ rm -rf ~/.lambda_miner ~/.lambda_storage ~/.lambda_storagecli
     ```
     Password to sign with 'buy':
     sync orders begin, This may take some time...
-    http://182.92.242.59:13659/market/user/matchorders/lambda1ejuhsxthm7kpjz63eczlg28prrfje9vd22ma3x
+    http://182.91.242.11:13659/market/user/matchorders/lambda1ejuhsxthm7kpjz63eczlg28prrfje9vd22ma3x
     Order                                              Total                Used
     19FF9732F7E9069C689216173D3842612EDF02CC           6.0 GiB              101 MiB
     293B8613B1E26A79F6554472645FACB809F4BAE8           30 GiB               7.9 GiB
@@ -594,7 +596,7 @@ rm -rf ~/.lambda_miner ~/.lambda_storage ~/.lambda_storagecli
 !!! example ""
     初始化storagecli
     ```
-    ./storagecli init
+    ./storagecli init --testnet
     ```
     初始化`storagecli` 后会默认生成配置文件`~/.lambda_storagecli/config/user.toml`
 
@@ -610,12 +612,12 @@ rm -rf ~/.lambda_miner ~/.lambda_storage ~/.lambda_storagecli
                 ```
                 [broker]
                 # dht_gateway_addr为验证节点的dht服务 IP和端口；
-                # 可以是自己质押的验证节点配置的kad.external_address，这里以 47.94.129.97:13000 为例
-                # 可选官方dht地址：39.105.148.217:13000/47.94.129.97:13000/47.93.196.236:13000/182.92.66.63:13000
-                dht_gateway_addr = "39.105.148.217:13000" 
+                # 可以是自己质押的验证节点配置的kad.external_address
+                # 可选官方dht地址：bj1.testnet.lambdastorage.com:12000/bj2.testnet.lambdastorage.com:12000/bj3.testnet.lambdastorage.com:12000/bj4.testnet.lambdastorage.com:12000
+                dht_gateway_addr = "bj4.testnet.lambdastorage.com:12000" 
                 # validator_addr为验证节点IP和端口，可以是自己质押的验证节点rest-server服务指定的laddr地址
-                # 可选官方地址：39.105.148.217:13659/47.94.129.97:13659/47.93.196.236:13659
-                validator_addr = "39.105.148.217:13659"   
+                # 可选官方地址：bj1.testnet.lambdastorage.com:13659/bj2.testnet.lambdastorage.com:13659/bj3.testnet.lambdastorage.com:13659/bj4.testnet.lambdastorage.com:13659
+                validator_addr = "bj4.testnet.lambdastorage.com:13659"   
                 
                 [gateway]
                 # local listen address
@@ -742,7 +744,7 @@ rm -rf ~/.lambda_miner ~/.lambda_storage ~/.lambda_storagecli
         ```
         返回结果：
         ```
-        http://182.92.242.59:13659/market/user/matchorders/lambda1ejuhsxthm7kpjz63eczlg28prrfje9vd22ma3x
+        http://182.91.242.11:13659/market/user/matchorders/lambda1ejuhsxthm7kpjz63eczlg28prrfje9vd22ma3x
         file download keys nums 1
         ```
   
@@ -769,7 +771,7 @@ rm -rf ~/.lambda_miner ~/.lambda_storage ~/.lambda_storagecli
         ```
         返回结果：
         ```  
-        http://182.92.242.59:13659/market/user/matchorders/lambda1ejuhsxthm7kpjz63eczlg28prrfje9vd22ma3x
+        http://182.91.242.11:13659/market/user/matchorders/lambda1ejuhsxthm7kpjz63eczlg28prrfje9vd22ma3x
         file download keys nums 1
         duplicate token.
         found only one candicate
@@ -838,12 +840,12 @@ rm -rf ~/.lambda_miner ~/.lambda_storage ~/.lambda_storagecli
 !!! success "返回如下结果"
     ```
     
-                   version: 0.2.6
+                   version: 0.2.7_rc2
                     dht id: G4xW3UHMfFnTmaRMZUJ7PKcfvr9YTTFyekcsRxKDZZD9
-    server.private_address: 172.17.159.130:15001   successful
+    server.private_address: 172.11.159.11:15001   successful
             server.address: 0.0.0.0:26654    successful
-      kad.external_address: 39.106.153.62:26654    successful
-        kad.bootstrap_addr: [39.106.153.62:26650 172.17.159.130:26652]    successful successful
+      kad.external_address: 39.106.153.11:26654    successful
+        kad.bootstrap_addr: [39.106.153.11:26650 172.11.159.11:26652]    successful successful
           Ensure-level = 0: 1/6 of disk-space would be used for data-replicating
     ```
 ### 2. 测试storagenode服务
@@ -853,14 +855,14 @@ rm -rf ~/.lambda_miner ~/.lambda_storage ~/.lambda_storagecli
 
 !!! success "返回如下结果"
     ```
-                   version: 0.2.6
+                   version: 0.2.7_rc2
                     dht id: 3mta4YEgHB43RHYE83aWBouvFNNCtSc832siEwmcTUsZ
       storage.storage_name: sn1
-     storage.miner_address: 172.17.159.130:15001   successful
-    server.private_address: 172.17.159.130:16001   successful
+     storage.miner_address: 172.11.159.11:15001   successful
+    server.private_address: 172.11.159.11:16001   successful
             server.address: 0.0.0.0:26660    successful
-      kad.external_address: 39.106.153.62:26660    successful
-        kad.bootstrap_addr: [172.17.159.130:26650 172.17.159.130:26652]     successful successful 
+      kad.external_address: 39.106.153.11:26660    successful
+        kad.bootstrap_addr: [172.11.159.11:26650 172.11.159.11:26652]     successful successful 
     ```
 
 ### 3. 查看存储节点磁盘空间
@@ -870,7 +872,7 @@ rm -rf ~/.lambda_miner ~/.lambda_storage ~/.lambda_storagecli
 
 !!! success "返回如下结果"
     ```
-                   version:  0.2.6
+                   version:  0.2.7_rc2
       storage.storage_name:  sn1
           storage.data_dir:  [/lambda/data/xvdd/store /lambda/data/xvde/store /lambda/data/xvdc/中文test/store /lambda/.1lambda_storage/store]
 

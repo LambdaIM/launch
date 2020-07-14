@@ -14,12 +14,12 @@ All query commands has these global flags. Their unique flags will be introduced
 Examples
 ```
 ./minernode info  --miner-home /root/LambdaIM/storage/storage-feature_order_list_with_provider_status-984f41e-debug-03251653/.lambda_miner 
-               version: 0.2.6-4-gd8a77f8
+               version: 0.2.7_rc2-4-gd8a77f8
                 dht id: 2u8PSj2PGt7TdR2ThuHMfH4k6KeEv5avgc4gbdKn3LTH
-server.private_address: 172.17.159.132:14001
-        server.address: 172.17.159.132:14000
-  kad.external_address: 182.92.242.59:14000
-    kad.bootstrap_addr: [182.92.242.59:13000]
+server.private_address: 172.11.159.11:14001
+        server.address: 172.11.159.11:14000
+  kad.external_address: 182.91.242.11:14000
+    kad.bootstrap_addr: [182.91.242.11:13000]
          miner address: lambda12fldnycgpevw4gthq9w0zcfetpa9sn4d39wzlz (lambdamineroper12fldnycgpevw4gthq9w0zcfetpa9sn4d92z92l)
         mining address: lambda1kwk9qv7nncusukv7zx7j7j4mlt3eyrf6ecdwpu
       Ensure-level = 0: 1/6 of disk-space would be used for data-replicating

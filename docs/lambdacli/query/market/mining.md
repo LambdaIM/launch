@@ -25,7 +25,7 @@ lambdacli query market mining lambda15vlp0mcu3t3j589753gdzyfjf6amzprgmgt9f8
 Miner
   Operator Address:           lambdamineroper1k6rxrmly7hz0ewh7gth2dj48mv3xs9yznx96fn
   AllSize:                    1000.000000000000000000
-  UseSize:                    200.000000000000000000
+  UsedSize:                    200.000000000000000000
   MatchSize:                  100.000000000000000000
   DhtId:                      FBPupiu6Zt7TGjSJpnw1KQe7YGRXMcFLQwg5fgjNuZmR
   PeerId:

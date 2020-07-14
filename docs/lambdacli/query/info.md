@@ -27,7 +27,7 @@ output
   "current_version": {
     "version": "0",
     "height": "0",
-    "software": "0.4.9-goleveldb-release"
+    "software": "0.4.8-goleveldb-release"
   },
   "upgrade_in_progress": {
     "version": "0",

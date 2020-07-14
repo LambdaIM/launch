@@ -24,10 +24,10 @@ view service status
 ```
  ./minernode service list 
 NAME                 LISTEN PORT                  STATUS
-serverpub            172.17.159.132:14000         RUNNING
-serverpriv           172.17.159.132:14001         RUNNING
+serverpub            172.11.159.11:14000         RUNNING
+serverpriv           172.11.159.11:14001         RUNNING
 
 ./minernode service show serverpub 
 NAME                 LISTEN PORT                  STATUS
-serverpub            172.17.159.132:14000         RUNNING
+serverpub            172.11.159.11:14000         RUNNING
 ```

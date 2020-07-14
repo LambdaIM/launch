@@ -29,7 +29,7 @@ clear tokens /root/.lambda_storagecli/localdb/meta
 ./storagecli token sync buy
 Password to sign with 'buy':
 sync orders begin, This may take some time...
-http://182.92.242.59:13659/market/user/matchorders/lambda1sdxejrlwdjjuyjffcqxawh252kq28w8vgwlqgg
+http://182.91.242.11:13659/market/user/matchorders/lambda1sdxejrlwdjjuyjffcqxawh252kq28w8vgwlqgg
 Order                                              Total                Used
 A62C0765A24CB031686B06A6C1EB0F508E625F1E           15 GiB               7.8 GiB
 sync orders finish
@@ -74,7 +74,7 @@ storagecli token restore ACCOUNT  [flags]
 ## Examples
 ```
  LAMBDA_ORDER_ID=92F1918765F3654EE1E4F98BD64B96CB4DD4C0BC  ./storagecli token restore teshare --secret 8Le3ZHpTqX1NdNg6AKtCsm6YPHcxozRcr5Drybzofh3nUwR7kZiifdSRA4KAjn6bU3  
-http://182.92.242.59:13659/market/user/matchorders/lambda1ejuhsxthm7kpjz63eczlg28prrfje9vd22ma3x
+http://182.91.242.11:13659/market/user/matchorders/lambda1ejuhsxthm7kpjz63eczlg28prrfje9vd22ma3x
 file download keys nums 1
 ```
 

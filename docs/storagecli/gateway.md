@@ -34,7 +34,7 @@ run local gateway --account [account] --debug
 
 ```
 run as daemon:
-./storagecli gateway run --account testu --broker.extra_order_id 0A0250B4143BD1F69DFBEBD98ADDDFEF99397511  --broker.dht_gateway_addr 182.92.242.59:13000 --broker.validator_addr 182.92.242.59:13659 --gateway.access_key lambda --gateway.secret_key 12345678 --log.file gateway.log --debug --daemonize
+./storagecli gateway run --account testu --broker.extra_order_id 0A0250B4143BD1F69DFBEBD98ADDDFEF99397511  --broker.dht_gateway_addr 182.91.242.11:13000 --broker.validator_addr 182.91.242.11:13659 --gateway.access_key lambda --gateway.secret_key 12345678 --log.file gateway.log --debug --daemonize
 
 get daemon status:
 ./storagecli gateway run --account testu --broker.extra_order_id 0A0250B4143BD1F69DFBEBD98ADDDFEF99397511 --status
