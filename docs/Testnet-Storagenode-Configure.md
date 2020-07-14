@@ -39,7 +39,7 @@
                   "bj2.testnet.lambdastorage.com:12000",
                   "bj3.testnet.lambdastorage.com:12000",
                   "bj4.testnet.lambdastorage.com:12000",]
-        
+
         db_path = "/root/.lambda_storage/kademlia"
         # this should listen at Public IP
         external_address = "200.200.200.200:14000"
