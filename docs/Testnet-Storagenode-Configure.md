@@ -76,7 +76,7 @@
 
 例如预计使用2TB空间挖矿，日志输出到`/tmp/storagenode.log`，命令如下：
 ``` 
-./storagenode run --daemonize --daemonize --log.file /tmp/storagenode.log --storage.space_to_setup 2048
+./storagenode run --daemonize --log.file /tmp/storagenode.log --storage.space_to_setup 2048
 ```
 
 
