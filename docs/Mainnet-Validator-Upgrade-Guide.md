@@ -1,4 +1,4 @@
-# 主网Validator 0.3.3 升级教程
+# 主网Validator 0.5.1 升级教程
 
 ### 1. 下载安装包并解压
 `创建目录并进入`
@@ -9,15 +9,15 @@ mkdir -p ~/LambdaIM && cd ~/LambdaIM
 
 `下载安装包`
 ```
-wget https://github.com/LambdaIM/launch/releases/download/v0.3.3/lambda-0.3.3-release.tar.gz
+wget https://github.com/LambdaIM/launch/releases/download/v0.5.1/lambda-0.5.1-release.tar.gz
 
 如下载缓慢可使用下面的链接：
-wget http://download.lambdastorage.com/lambda/0.3.3/lambda-0.3.3-release.tar.gz
+wget http://download.lambdastorage.com/lambda/0.5.1/lambda-0.5.1-release.tar.gz
 ```
 
 `解压安装包`
 ```
-tar zxvf lambda-0.3.3-release.tar.gz && cd lambda-0.3.3-release
+tar zxvf lambda-0.5.1-release.tar.gz && cd lambda-0.5.1-release
 ```
 ### 2. 停止节点服务
 
@@ -26,39 +26,75 @@ kill `ps aux | grep lambda |grep -v grep| awk '{print $2}'`
 ```
 备注：如果无法停止，请使用`ps aux|grep lambda`命令查看进程号，然后 `kill 进程号`
 
-### 3. 启动节点  
-```
-nohup ./lambda start --p2p.laddr tcp://0.0.0.0:26656 --rpc.laddr tcp://0.0.0.0:26657 >> /tmp/lambda.log 2>&1 &
-```
-
-
-
-### 升级注意事项
-如在 `块高2433509(北京时间2020-03-28 12:10:18)`之前 未使用0.3.3版本进行升级，节点会共识出错，需要先清除历史区块数据，然后`使用社区提供的区块链数据包启动节点` 或 `使用新版安装包从第一个块重新开始同步（耗时较长）`。  
-
-注意：进行以下操作前 需要先停掉节点服务
-
-#### 清除历史数据
+### 3. 清除旧版数据
 ```
 ./lambda unsafe-reset-all
 ```
 
-#### (二选一)使用社区提供的区块链数据包启动节点
-下载数据压缩包lambda_0.3.3_data.tar.gz
+### 4. 节点配置升级
+1. 升级节点配置
 ``` 
-wget http://download.lambdastorage.com/lambda/0.3.3/lambda_0.3.3_data.tar.gz
+./lambda upgrade
 ```
-解压`lambda_0.3.3_data.tar.gz`到`~/.lambda/data/`目录下（解压过程耗时较长，请耐心等待）
-``` 
-tar -zxvf lambda_0.3.3_data.tar.gz -C ~/.lambda/data/
+会自动升级`lambda.toml`的配置，同时创建`identity`目录
+
+2. 更新节点`chain-id`
 ```
-启动节点
-```
-nohup ./lambda start --p2p.laddr tcp://0.0.0.0:26656 --rpc.laddr tcp://0.0.0.0:26657 >> /tmp/lambda.log 2>&1 &
+./lambdacli config chain-id lambda-chain-5.1
 ```
 
-#### (二选一)使用新版安装包重新同步
-清除历史数据后，直接使用新版lambda启动节点即可
+### 5. 配置lambda.toml
+修改配置文件
 ```
-nohup ./lambda start --p2p.laddr tcp://0.0.0.0:26656 --rpc.laddr tcp://0.0.0.0:26657 >> /tmp/lambda.log 2>&1 &
+vi ~/.lambda/config/lambda.toml
 ```
+```
+
+minimum-gas-prices = ""
+
+[log]
+level = "info"
+output_file = "stdout"
+
+# 服务需要监听的地址
+# 以本机内网IP为 192.168.10.30，端口映射的外网IP为 200.200.200.300 为例
+[server]
+# 对外提供服务的地址，推荐配置为内网地址做端口映射到外网IP
+address = "192.168.10.30:12000"
+private_address = "127.0.0.1:12001"
+debug_log_traffic = "false"
+
+[kad]
+# DHT接入节点地址，存储网络提供，可填写多个
+bootstrap_addr = [
+                  "zjk.mainnet.lambdastorage.com:12000",
+                  "hhht.mainnet.lambdastorage.com:12000",
+                  "bj.mainnet.lambdastorage.com:12000",
+                  "hk.mainnet.lambdastorage.com:12000",
+                  "tokyo1.mainnet.lambdastorage.com:12000",
+                  "tokyo2.mainnet.lambdastorage.com:12000",]
+bootstrap_backoff_max = "30s"
+bootstrap_backoff_base = "1s"
+db_path = "/root/.lambda/kademlia"
+external_address = "200.200.200.300:12000"
+alpha = 3
+
+[kad.routing_table_config]
+bucket_size = 20
+replacement_cache_size = 5
+
+[discov]
+discovery_interval = "3m0s"
+
+```
+
+### 6. 覆盖genesis.json文件
+```
+\cp -rf ./genesis.json ~/.lambda/config/genesis.json
+```
+
+### 7. 启动节点  
+```
+./lambda start --p2p.laddr tcp://0.0.0.0:26656 --rpc.laddr tcp://0.0.0.0:26657 --daemonize --log.file /tmp/lambda.log
+```
+
