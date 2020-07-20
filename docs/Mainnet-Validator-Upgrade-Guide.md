@@ -31,6 +31,13 @@ kill `ps aux | grep lambda |grep -v grep| awk '{print $2}'`
 ./lambda unsafe-reset-all
 ```
 
+**注意**
+
+不要删除~/.lambda/config下的`priv_validator_key.json`和`node_key.json`文件，
+如果丢失会导致节点无法再正常加入共识网络，请节点注意备份
+
+[备份和恢复节点签名文件](Mainnet-Validator-Keybackup.md)
+
 ### 4. 节点配置升级
 1. 升级节点配置
 ``` 
