@@ -8,17 +8,17 @@ MD5: 9583b0bf0f84f0707b4698ac93287ae1
 
 1. 新增数字资产，支持转账等操作；
 2. 新增交易市场，支持挂买卖单空间；
-3. 新增节点私钥备份导出功能；
-4. 新增存储挖矿；
+3. 新增存储挖矿和收益提取；
+4. 新增节点私钥备份导出功能；
 5. 新增矿工状态维护功能；
 6. 新增节点状态管理、服务查询等功能；
-7. 修复已知bug
+7. 新增链状态整体回退功能；
+8. 修复已知bug
 
 
 新节点接入参考：[主网Validator接入教程](http://docs.lambda.im/Mainnet-Validator-Guide/)   
 
 0.5.1节点升级参考：[主网Validator 0.5.1 升级教程](http://docs.lambda.im/Mainnet-Validator-Upgrade-Guide/)
-
 
 市场操作手册参考：[市场操作手册](http://docs.lambda.im/Market-Delegate-Operation-Guide/)
 
@@ -33,8 +33,13 @@ MD5: 9583b0bf0f84f0707b4698ac93287ae1
 MD5: 0b861072877e4416300ea359802e52f4
 
 1. 新增存储挖矿；
-2. 支持配置多路径存储；
+2. 支持多路径存储；
 3. 支持命令行和s3服务文件上传下载；
+4. s3服务页面支持文件上传下载；
+5. 支持文件断点续传；
+6. 新增命令查询订单和存储节点使用空间；
+7. 新增命令测试矿工和存储节点网络
+
 
 矿工和存储节点接入参考：[http://docs.lambda.im/Testnet-Miner-Guide/](http://docs.lambda.im/Testnet-Miner-Guide/) 
 
