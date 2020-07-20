@@ -19,19 +19,19 @@ rm -rf ~/.lambda_miner ~/.lambda_storage ~/.lambda_storagecli
     ```
     2. 下载安装包
     ```
-    wget https://github.com/LambdaIM/launch/releases/download/v0.5.1/lambda-storage-0.2.7_rc3-testnet.tar.gz
+    wget https://github.com/LambdaIM/launch/releases/download/v0.5.1/lambda-storage-0.2.7_rc3.tar.gz
     ```
     如下载缓慢可使用下面的链接：
     ```
-    wget http://download.lambdastorage.com/lambda-storage/0.2.7_rc3/lambda-storage-0.2.7_rc3-testnet.tar.gz
+    wget http://download.lambdastorage.com/lambda-storage/0.2.7_rc3/lambda-storage-0.2.7_rc3.tar.gz
     ```
     3. 解压安装包
     ```
-    tar zxvf lambda-storage-0.2.7_rc3-testnet.tar.gz
+    tar zxvf lambda-storage-0.2.7_rc3.tar.gz
     ```
     4. 进入解压后的目录
     ```
-    cd lambda-storage-0.2.7_rc3-testnet
+    cd lambda-storage-0.2.7_rc3
     ```
 
 ### 2. 配置lambdacli
