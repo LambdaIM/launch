@@ -14,7 +14,7 @@ MD5: 9583b0bf0f84f0707b4698ac93287ae1
 
 0.5.1节点升级参考：[主网Validator 0.5.1 升级教程](http://docs.lambda.im/Mainnet-Validator-Upgrade-Guide/)
 
-市场操作手册参考：[市场操作手册](./Market-Delegate-Operation-Guide.md)
+市场操作手册参考：[市场操作手册](http://docs.lambda.im/Market-Delegate-Operation-Guide/)
 
 下载地址：  
 [https://github.com/LambdaIM/launch/releases/tag/v0.5.1](https://github.com/LambdaIM/launch/releases/tag/v0.5.1)  
