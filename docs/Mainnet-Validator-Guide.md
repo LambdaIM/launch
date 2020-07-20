@@ -119,6 +119,7 @@ bootstrap_addr = [
 bootstrap_backoff_max = "30s"
 bootstrap_backoff_base = "1s"
 db_path = "/root/.lambda/kademlia"
+# 对外暴露的提供服务的地址
 external_address = "200.200.200.300:12000"
 alpha = 3
 
