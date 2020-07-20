@@ -82,7 +82,10 @@ e02882af5bdafa5aec086c32b8398c268d2337f1@bj1.testnet.lambdastorage.com:26656
 切换节点后需要重启节点服务
 
 ### 6. 配置lambda.toml
-修改`~/.lambda/config/lambda.toml`文件
+修改配置文件
+```
+vi ~/.lambda/config/lambda.toml
+```
 ```
 
 minimum-gas-prices = ""

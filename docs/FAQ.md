@@ -13,13 +13,15 @@ ERROR: couldn't create db: Error initializing DB: resource temporarily unavailab
 ```
 
 ### 重新升级报错
-重新升级时，使用unsafe-reset-all清除历史区块数据  
-重新启动仍然报以下错误，则检查data目录文件是否清除干净 
+重新升级时，使用`./lambda unsafe-reset-all`清除历史区块数据  
+重新启动仍然报以下错误，则检查`~/.lambda/data`目录下文件是否清除干净 
 ```
 panic Tendermint stat.AppHash does not match AppHash after replay. Got xxxxxxxxxxxxxx, expected xxxxxxxxxx.
 ```
 
+```
 ls -l  ~/.lambda/data  
+```
 保留priv_validator_state.json，删除application.db文件.
 ```
 drwxr-xr-x  11 xxxxxx  staff  352 Sep 15 08:57 application.db
