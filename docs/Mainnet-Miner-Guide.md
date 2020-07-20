@@ -44,24 +44,32 @@ rm -rf ~/.lambda_miner ~/.lambda_storage ~/.lambda_storagecli
         
         - `[nodeip]` 为自己质押的验证节点`公网IP`
          
-        可选的4个Lambda官方验证节点IP如下:  
+        可选的6个Lambda官方验证节点IP如下:  
         
         === "node1"
             ```shell
-            ./lambdacli config node tcp://bj1.testnet.lambdastorage.com:26657
+            ./lambdacli config node tcp://zjk.mainnet.lambdastorage.com:26657
             ```
         === "node2"
             ```shell
-            ./lambdacli config node tcp://bj2.testnet.lambdastorage.com:26657
+            ./lambdacli config node tcp://hhht.mainnet.lambdastorage.com:26657
             ```
         === "node3"
             ```shell
-            ./lambdacli config node tcp://bj3.testnet.lambdastorage.com:26657
+            ./lambdacli config node tcp://bj.mainnet.lambdastorage.com:26657
             ```
         === "node4"
             ```shell
-            ./lambdacli config node tcp://bj4.testnet.lambdastorage.com:26657
-            ```    
+            ./lambdacli config node tcp://hk.mainnet.lambdastorage.com:26657
+            ``` 
+        === "node5(国外)"
+            ```shell
+            ./lambdacli config node tcp://tokyo1.mainnet.lambdastorage.com:26657
+            ```
+        === "node6(国外)"
+            ```shell
+            ./lambdacli config node tcp://tokyo2.mainnet.lambdastorage.com:26657
+            ```       
               
     !!! abstract ""
         ```
@@ -80,20 +88,28 @@ rm -rf ~/.lambda_miner ~/.lambda_storage ~/.lambda_storagecli
         
         === "dht1"
             ```shell
-            ./lambdacli config dht-gateway-address bj1.testnet.lambdastorage.com:12000
+            ./lambdacli config dht-gateway-address zjk.mainnet.lambdastorage.com:12000
             ```
         === "dht2"
             ```shell
-            ./lambdacli config dht-gateway-address bj2.testnet.lambdastorage.com:12000
+            ./lambdacli config dht-gateway-address hhht.mainnet.lambdastorage.com:12000
             ```
         === "dht3"
             ```shell
-            ./lambdacli config dht-gateway-address bj3.testnet.lambdastorage.com:12000
+            ./lambdacli config dht-gateway-address bj.mainnet.lambdastorage.com:12000
             ```
         === "dht4"
             ```shell
-            ./lambdacli config dht-gateway-address bj4.testnet.lambdastorage.com:12000
-            ```      
+            ./lambdacli config dht-gateway-address hk.mainnet.lambdastorage.com:12000
+            ```  
+        === "dht5(国外)"
+            ```shell
+            ./lambdacli config dht-gateway-address tokyo1.mainnet.lambdastorage.com:12000
+            ```
+        === "dht6(国外)"
+            ```shell
+            ./lambdacli config dht-gateway-address tokyo2.mainnet.lambdastorage.com:12000
+            ```              
 
 ### 3. 添加矿工账户
 

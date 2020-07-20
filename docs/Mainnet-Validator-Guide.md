@@ -69,7 +69,7 @@ vim ~/.lambda/config/config.toml
 72e1dd22f2c3effc4e6ff842035f109480a997ae@hk.mainnet.lambdastorage.com:26656
 d3440b0b7a0ccf419f506a1242431813cf8a699c@hhht.mainnet.lambdastorage.com:26656
 98a0a749080b367d218f68b628b2db3d8d175af9@zjk.mainnet.lambdastorage.com:26656
-91fa14e2c8da164ff7969f2bbc0ba5c6e206da8a@zjk.mainnet.lambdastorage.com:26656 
+91fa14e2c8da164ff7969f2bbc0ba5c6e206da8a@bj.mainnet.lambdastorage.com:26656 
 ```
 
 国外种子节点推荐
