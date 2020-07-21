@@ -148,7 +148,7 @@
     - `[amount-of-utbb]` 为质押到节点的 utbb 数量，不得少于 `1TBB`（`1TBB=1000000utbb`）  
     - `[your-account-name]` 是您在第 3 步创建的账户名称  
     
-    可选Lambda官方节点地址(cv-moniker-1/2/3/4)：
+    可选Lambda官方节点地址(cv-moniker-1 / 2 / 3 / 4)：
     
     === "addr1"
         ```
