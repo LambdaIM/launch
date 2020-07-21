@@ -2,11 +2,6 @@
 
 1个miner下可注册多个storagenode   
 
-## 清除旧版数据(老用户执行)
-``` 
-rm -rf ~/.lambda_miner ~/.lambda_storage ~/.lambda_storagecli
-```
-如果以前的存储数据存放在其他目录（即`~/.lambda_storage/config/config.toml`中`db_dir`配置的目录），需要删除对应目录
 
 ## 一、配置矿工和存储节点
 
