@@ -55,7 +55,7 @@ rm ~/.lambda/config/config.toml ~/.lambda/config/genesis.json
 ### 5. 配置种子节点  
 `编辑~/.lambda/config/config.toml文件，将文件中的seeds字段的值替换如下`
 ```
-72e1dd22f2c3effc4e6ff842035f109480a997ae@seednodes1.oneweb.one:26656
+72e1dd22f2c3effc4e6ff842035f109480a997ae@hk.mainnet.lambdastorage.com:26656
 
 ```
 

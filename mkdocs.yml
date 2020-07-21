@@ -26,10 +26,11 @@ nav:
           - 同步节点: Testnet-Sync-Node.md
           - 验证节点挖矿手册: Lambda-Validator-Mining.md
           - 存储矿工挖矿手册: Lambda-Store-and-Mining.md
+          - 桌面钱包使用手册(测试网): Lambda-Wallet-Guide-Testnet.md
           - 存储网络文件备份和恢复: StorageFile-Backup.md
           - 测试网最新版本: version/TestnetLatest.md
     - 钱包:
-          - 桌面钱包使用手册: Lambda-Wallet-Guide.md
+          - 桌面钱包使用手册(主网): Lambda-Wallet-Guide.md
           - 桌面钱包稳定版本: version/WalletStable.md
           - 桌面钱包最新版本: version/WalletLatest.md
           - 手机钱包稳定版本: version/MobileWalletStable.md
