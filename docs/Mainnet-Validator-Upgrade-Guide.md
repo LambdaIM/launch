@@ -30,6 +30,9 @@ kill `ps aux | grep lambda |grep -v grep| awk '{print $2}'`
 ```
 ./lambda unsafe-reset-all
 ```
+```
+rm ~/.lambda/config/addrbook.json
+```
 
 **注意**
 
