@@ -69,7 +69,7 @@ vim ~/.lambda/config/config.toml
 72e1dd22f2c3effc4e6ff842035f109480a997ae@hk.mainnet.lambdastorage.com:26656
 d3440b0b7a0ccf419f506a1242431813cf8a699c@hhht.mainnet.lambdastorage.com:26656
 98a0a749080b367d218f68b628b2db3d8d175af9@zjk.mainnet.lambdastorage.com:26656
-91fa14e2c8da164ff7969f2bbc0ba5c6e206da8a@bj.mainnet.lambdastorage.com:26656 
+7bfaaba8ffcc2cf20304f8992db915b2604ed720@bj.mainnet.lambdastorage.com:26656 
 ```
 
 国外种子节点推荐
@@ -77,8 +77,8 @@ d3440b0b7a0ccf419f506a1242431813cf8a699c@hhht.mainnet.lambdastorage.com:26656
 vim ~/.lambda/config/config.toml
 
 节点列表
-9fb7c23867b63ee9e79f8bb0ff620863301ad0f2@tokyo1.mainnet.lambdastorage.com:26656 (推荐)
-dd3360f3a4334432af394a835662a2b21bf406e2@tokyo2.mainnet.lambdastorage.com:26656
+ea7d31b6fd17d06390445b5e2c2d40a3762c9ea3@tokyo1.mainnet.lambdastorage.com:26656 (推荐)
+2274be959a4598a789791edf811546c20b68495f@tokyo2.mainnet.lambdastorage.com:26656
 ```
 
 **注意**
