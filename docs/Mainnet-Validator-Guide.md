@@ -190,6 +190,28 @@ Validator 的操作地址也可通过命令获取
 ./lambdacli keys show [your-account-name] --bech val
 ```
 
+### 11. 查看节点运行状态
+#### 查看节点运行状态
+```
+./lambda status
+```
+返回结果如下即运行正常：
+``` 
+lambda.pid is running, pid is 5993
+```
+
+#### 停止节点 
+如需要停止节点，可使用以下命令： 
+```
+./lambda stop
+```
+返回结果如下即停止成功：
+``` 
+stop daemon process from lambda.pid:5993 successfully
+```
+
+
+
 [备份和恢复节点签名文件](Mainnet-Validator-Keybackup.md)
 
 **注意**

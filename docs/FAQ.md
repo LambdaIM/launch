@@ -6,7 +6,7 @@
 incompitable: Peer is on a different network. Got lambda-chain-xx, expected lambda-chain-xx.
 ```
 
-### 已经Lambda程序在运行
+### 已有Lambda程序在运行
 先停止已经在运行的程序，再重新运行
 ```
 ERROR: couldn't create db: Error initializing DB: resource temporarily unavailable.
