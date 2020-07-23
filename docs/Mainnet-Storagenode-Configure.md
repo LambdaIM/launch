@@ -30,7 +30,7 @@
         ```
         
         ??? note "展开查看配置说明"
-            ```shell hl_lines="27 39 40"
+            ```shell hl_lines="27 39 41"
             [build]
             version = "0.2.7_rc3"
             commit = "030c696bc6829cfafb3d240d66058b16b41aa460"

@@ -593,14 +593,14 @@
 
     !!! abstract ""
         
-        === "修改配置文件"  
-            参考如下说明手动修改配置文件  
+        === "修改配置"    
             ```
-            vi ~/.lambda_storagecli/config/user.toml
+            ./storagecli config broker.validator_addr [nodeip]:13659
             ```
+            - `[nodeip]` 为自己质押的验证节点`公网IP`
         
             ??? note "展开查看配置说明"
-                ```
+                ```shell hl_lines="8"
                 [broker]
                 # dht_gateway_addr为验证节点的dht服务 IP和端口；
                 # 可以是自己质押的验证节点配置的kad.external_address
