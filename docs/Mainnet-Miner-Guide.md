@@ -33,13 +33,14 @@
 
 !!! example ""
     !!! abstract ""
+        
+        设置或切换链接的验证节点
         ```
         ./lambdacli config node tcp://[nodeip]:26657
         ```  
         
         - `[nodeip]` 为自己质押的验证节点`公网IP`
          
-        如果当前链接的验证节点慢，可切换自己的验证节点
         [Lambda端口说明](Lambda-Node-Port.md)
               
     !!! abstract ""

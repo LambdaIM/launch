@@ -144,3 +144,23 @@ rest-server服务可提供给钱包、矿工和storagecli连接
 nohup ./lambdacli rest-server --node tcp://0.0.0.0:26657 --laddr tcp://0.0.0.0:13659 >> /tmp/lambdacli.log 2>&1 &
 ```
 
+### 10. 查看节点运行状态
+#### 查看节点运行状态
+```
+./lambda status
+```
+返回结果如下即运行正常：
+``` 
+lambda.pid is running, pid is 5993
+```
+
+#### 停止节点 
+如需要停止节点，可使用以下命令： 
+```
+./lambda stop
+```
+返回结果如下即停止成功：
+``` 
+stop daemon process from lambda.pid:5993 successfully
+```
+
