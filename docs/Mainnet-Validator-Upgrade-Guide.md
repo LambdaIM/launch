@@ -83,20 +83,15 @@ ea7d31b6fd17d06390445b5e2c2d40a3762c9ea3@tokyo1.mainnet.lambdastorage.com:26656 
 ```
 
 ### 6. 配置lambda.toml
-修改配置文件
-```
-vi ~/.lambda/config/lambda.toml
-```
-```
+需要修改配置文件`~/.lambda/config/lambda.toml`中的`kad.external_address`
 
+```shell hl_lines="24"
 minimum-gas-prices = ""
 
 [log]
 level = "info"
 output_file = "stdout"
 
-# 服务需要监听的地址
-# 以本机内网IP为 192.168.10.30，端口映射的外网IP为 200.200.200.300 为例
 [server]
 address = "0.0.0.0:12000"
 private_address = "127.0.0.1:12001"
@@ -114,7 +109,7 @@ bootstrap_addr = [
 bootstrap_backoff_max = "30s"
 bootstrap_backoff_base = "1s"
 db_path = "/root/.lambda/kademlia"
-# 对外暴露的提供服务的地址
+# 需要修改对外暴露的提供服务的地址，以外网IP为 200.200.200.300 为例
 external_address = "200.200.200.300:12000"
 alpha = 3
 
