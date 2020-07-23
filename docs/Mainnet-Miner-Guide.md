@@ -39,32 +39,7 @@
         
         - `[nodeip]` 为自己质押的验证节点`公网IP`
          
-        可选的6个Lambda官方验证节点IP如下（**注意**尽量用自己的节点IP，官方验证节点会限流）:  
         
-        === "node1"
-            ```shell
-            ./lambdacli config node tcp://zjk.mainnet.lambdastorage.com:26657
-            ```
-        === "node2"
-            ```shell
-            ./lambdacli config node tcp://hhht.mainnet.lambdastorage.com:26657
-            ```
-        === "node3"
-            ```shell
-            ./lambdacli config node tcp://bj.mainnet.lambdastorage.com:26657
-            ```
-        === "node4"
-            ```shell
-            ./lambdacli config node tcp://hk.mainnet.lambdastorage.com:26657
-            ``` 
-        === "node5(国外)"
-            ```shell
-            ./lambdacli config node tcp://tokyo1.mainnet.lambdastorage.com:26657
-            ```
-        === "node6(国外)"
-            ```shell
-            ./lambdacli config node tcp://tokyo2.mainnet.lambdastorage.com:26657
-            ```       
               
     !!! abstract ""
         ```
