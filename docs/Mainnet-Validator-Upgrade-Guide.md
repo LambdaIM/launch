@@ -85,7 +85,7 @@ ea7d31b6fd17d06390445b5e2c2d40a3762c9ea3@tokyo1.mainnet.lambdastorage.com:26656 
 ### 6. 配置lambda.toml
 需要修改配置文件`~/.lambda/config/lambda.toml`中的`kad.external_address`
 
-```shell hl_lines="24"
+```shell hl_lines="24 25"
 minimum-gas-prices = ""
 
 [log]
