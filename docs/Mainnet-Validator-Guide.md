@@ -53,7 +53,7 @@ rm ~/.lambda/config/config.toml ~/.lambda/config/genesis.json ~/.lambda/config/a
 ```
 
 ### 5. 配置种子节点  
-`编辑~/.lambda/config/config.toml文件，将文件中的seeds字段的值替换如下`
+编辑`~/.lambda/config/config.toml`文件，将文件中的seeds字段的值替换如下
 ```
 72e1dd22f2c3effc4e6ff842035f109480a997ae@hk.mainnet.lambdastorage.com:26656
 
@@ -63,9 +63,6 @@ rm ~/.lambda/config/config.toml ~/.lambda/config/genesis.json ~/.lambda/config/a
 
 国内种子节点推荐
 ```
-vim ~/.lambda/config/config.toml
-
-节点列表
 72e1dd22f2c3effc4e6ff842035f109480a997ae@hk.mainnet.lambdastorage.com:26656
 d3440b0b7a0ccf419f506a1242431813cf8a699c@hhht.mainnet.lambdastorage.com:26656
 98a0a749080b367d218f68b628b2db3d8d175af9@zjk.mainnet.lambdastorage.com:26656
@@ -74,9 +71,6 @@ d3440b0b7a0ccf419f506a1242431813cf8a699c@hhht.mainnet.lambdastorage.com:26656
 
 国外种子节点推荐
 ```
-vim ~/.lambda/config/config.toml
-
-节点列表
 ea7d31b6fd17d06390445b5e2c2d40a3762c9ea3@tokyo1.mainnet.lambdastorage.com:26656 (推荐)
 2274be959a4598a789791edf811546c20b68495f@tokyo2.mainnet.lambdastorage.com:26656
 ```
