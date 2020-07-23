@@ -138,3 +138,9 @@ discovery_interval = "3m0s"
 ./lambda start --p2p.laddr tcp://0.0.0.0:26656 --rpc.laddr tcp://0.0.0.0:26657 --daemonize --log.file /tmp/lambda.log
 ```
 
+### 9. 启动rest-server服务
+rest-server服务可提供给钱包和storagecli连接
+```
+nohup ./lambdacli rest-server --node tcp://0.0.0.0:26657 --laddr tcp://0.0.0.0:13659 >> /tmp/lambdacli.log 2>&1 &
+```
+
