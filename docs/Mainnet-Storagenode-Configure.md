@@ -30,7 +30,7 @@
         ```
         
         ??? note "展开查看配置说明"
-            ```
+            ```shell hl_lines="27 39 40"
             [build]
             version = "0.2.7_rc3"
             commit = "030c696bc6829cfafb3d240d66058b16b41aa460"
@@ -79,19 +79,13 @@
 
 启动storagenode
 ```
-./storagenode run --daemonize --log.file [log_file_path] --storage.space_to_setup [mining-space]
+./storagenode run --daemonize --log.file [log_file_path]
 ```
 说明：  
 ```
---storage.space_to_setup 设置为预计挖矿的空间大小，默认单位为GB。如预计使用400GB空间挖矿，则设置为400。如预计使用1TB空间挖矿，则设置为1024。
 --daemonize以后台方式启动   
 --log.file [log_file_path] 指定storagenode运行日志路径，不添加参数则无日志输出  
 可添加--log.level debug参数，日志开启debug可查看更详细日志输出，不添加此参数则默认输出INFO级别日志 
-```
-
-例如预计使用2TB空间挖矿，日志输出到`/tmp/storagenode.log`，命令如下：
-``` 
-./storagenode run --daemonize --log.file /tmp/storagenode.log --storage.space_to_setup 2048
 ```
 
 
