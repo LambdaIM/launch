@@ -68,7 +68,7 @@
               
     !!! abstract ""
         ```
-        ./lambdacli config chain-id lambda-chain-test5.1
+        ./lambdacli config chain-id lambda-chain-5.1
         ./lambdacli config trust-node true
         ```
     
