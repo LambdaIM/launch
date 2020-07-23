@@ -15,5 +15,5 @@
 ./lambdacli config node tcp://[nodeip]:26657
 ```  
         
-- `[nodeip]` 需要更换的验证节点`公网IP`
+- `[nodeip]` 为需要更换的验证节点`公网IP`
 

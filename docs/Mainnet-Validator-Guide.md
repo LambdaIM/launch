@@ -154,11 +154,11 @@ discovery_interval = "3m0s"
 提交上一步命令中返回的账户地址，用钱包签名并在质押系统内提交，我们会在收到后一定时间内转账
 
 ### 10. 创建 Validator  
-`创建Validator需要如下信息`
-* pubkey -- 通过命令`./lambda tendermint show-validator` 获取
-* moniker -- 这里的`moniker`名称是您的`Validator`名称，可以使用中文(与第2步的moniker可以不同),
-             如果您已经创建，后面的FAQ中也有修改该名称的命令介绍
-* your-account-name -- 您在第7步中设置的账户名称
+创建Validator需要如下信息  
+* pubkey -- 通过命令`./lambda tendermint show-validator` 获取  
+* moniker -- 这里的`moniker`名称是您的`Validator`名称，可以使用中文(与第2步的moniker可以不同),  
+             如果您已经创建，后面的FAQ中也有修改该名称的命令介绍  
+* your-account-name -- 您在第7步中设置的账户名称  
 
 `获取上述信息后，填充如下命令并执行（过程中会提示输入账号密码），即可创建Validator, 注意：所有参数不需要中括号`
 ```
@@ -192,7 +192,7 @@ Validator 的操作地址也可通过命令获取
 
 
 ### 11. 启动rest-server服务
-rest-server服务可提供给钱包和storagecli连接
+rest-server服务可提供给钱包、矿工和storagecli连接
 ```
 nohup ./lambdacli rest-server --node tcp://0.0.0.0:26657 --laddr tcp://0.0.0.0:13659 >> /tmp/lambdacli.log 2>&1 &
 ```
