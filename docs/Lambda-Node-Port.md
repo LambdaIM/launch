@@ -18,3 +18,10 @@
         
 - `[nodeip]` 为需要更换的验证节点`公网IP`
 
+### 节点恢复状态
+节点进程异常停止后，可通过以下命令修复状态并启动
+``` 
+./lambda start --p2p.laddr tcp://0.0.0.0:26656 --rpc.laddr tcp://0.0.0.0:26657 --daemonize --log.file /tmp/lambda.log --replay-last-block
+```
+
+

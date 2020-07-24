@@ -121,7 +121,7 @@
     --from [your-account-name] --broadcast-mode block -y
     ```
     
-    - `[validator-address]` 质押的节点操作地址（前缀lambdavaloper），可指定 自己的验证节点操作地址 或 Lambda官方节点操作地址，节点操作地址可通过浏览器查找 [http://explorer.lambda.im/#/](http://explorer.lambda.im/#/) 或询问节点  
+    - `[validator-address]` 质押的节点操作地址（前缀lambdavaloper），可指定 `自己的验证节点操作地址` 或 `Lambda社区节点操作地址`，节点操作地址可通过浏览器查找 [http://explorer.lambda.im/#/](http://explorer.lambda.im/#/) 或询问节点  
     - `[amount-of-utbb]` 为质押到节点的 utbb 数量，不得少于 `1TBB`（`1TBB=1000000utbb`）  
     - `[your-account-name]` 是您在第 3 步创建的账户名称  
     
