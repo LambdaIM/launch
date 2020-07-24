@@ -19,16 +19,14 @@
 - `[nodeip]` 为需要更换的验证节点`公网IP`
 
 ### 节点恢复状态
-1. 节点进程异常停止后，如果启动日志报错`Wrong Block.Header.AppHash.  Expected XXX, got XXX`
-
-可加上`--replay-last-block`参数修复状态并启动
+1. 节点进程异常停止后，如启动节点日志报错`Wrong Block.Header.AppHash.  Expected XXX, got XXX`
+可在启动命令后加上`--replay-last-block`参数，修复状态并启动：
 ``` 
 ./lambda start --p2p.laddr tcp://0.0.0.0:26656 --rpc.laddr tcp://0.0.0.0:26657 --daemonize --log.file /tmp/lambda.log --replay-last-block
 ```
 
 
-2. 如果启动节点后，日志中提示`pdp module db's version is different from app db's version: appDB=xxx moduleDB=xxx zeroVersion=0, please use lambda state fix recovery store state`
-
+2. 节点进程异常停止后，如启动节点日志报错`pdp module db's version is different from app db's version: appDB=xxx moduleDB=xxx zeroVersion=0, please use lambda state fix recovery store state`  
 则使用`./lambda reset --height [height]`，再启动节点即可
 此处`height`需要比`appDB`和`moduleDB`中较小那个数值小一个块高
 
