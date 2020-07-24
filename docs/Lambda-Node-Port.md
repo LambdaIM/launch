@@ -25,20 +25,18 @@
 ``` 
 ./lambda start --p2p.laddr tcp://0.0.0.0:26656 --rpc.laddr tcp://0.0.0.0:26657 --daemonize --log.file /tmp/lambda.log --replay-last-block
 ```
-
+  
 
 2. 节点进程异常停止后，如启动节点日志报错`pdp module db's version is different from app db's version: appDB=xxx moduleDB=xxx zeroVersion=0, please use lambda state fix recovery store state`  
 解决：  
 使用`./lambda reset --height [height]`，再启动节点即可  
 此处`height`需要比`appDB`和`moduleDB`中较小那个数值小一个块高
-
-例如报错：
-```
-pdp module db's version is different from app db's version: appDB=15333 moduleDB=15297 zeroVersion=0, please use lambda state fix recovery store state
-``` 
+  
+例如报错`pdp module db's version is different from app db's version: appDB=15333 moduleDB=15297 zeroVersion=0, please use lambda state fix recovery store state
+`  
 修复：  
 `./lambda reset --height 15296`  
-（appDB=15333，moduleDB=15297，moduleDB比appDB小，设定块高需要比moduleDB小1）
+（`appDB=15333，moduleDB=15297`，`moduleDB`比`appDB`小，则设定块高需要比`moduleDB`小1）
 
 启动节点：
 ``` 
