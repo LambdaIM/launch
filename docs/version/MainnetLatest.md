@@ -1,4 +1,4 @@
-# 主网lambda v0.5.1 - lambda storage v0.2.7_rc3
+# 主网lambda v0.5.1 - lambda storage v0.2.7
 
 ## lambda mainnet v0.5.1
 
@@ -26,24 +26,20 @@ MD5: 863f1540849add612fa902b296cb6d2f
 [https://github.com/LambdaIM/launch/releases/tag/v0.5.1](https://github.com/LambdaIM/launch/releases/tag/v0.5.1)  
 [http://download.lambdastorage.com/lambda/0.5.1/](http://download.lambdastorage.com/lambda/0.5.1/)
 
-## lambda storage v0.2.7_rc3
+## lambda storage v0.2.7
 
 **本版本用于主网**  
-包名: lambda-storage-0.2.7_rc3-testnet.tar.gz
+包名: lambda-storage-0.2.7.tar.gz  
 MD5: 3e6a020add44ac6e35d9a30773952241
 
-1. 新增存储挖矿；
-2. 支持多路径存储；
-3. 支持命令行和s3服务 文件上传下载；
-4. 支持订单续期；
-5. 支持文件分享和断点续传；
-6. 新增命令查询订单和存储节点使用空间；
-7. 新增命令测试矿工和存储节点网络。
+1. 修复已知bug
 
 
-矿工和存储节点接入参考：[http://docs.lambda.im/Testnet-Miner-Guide/](http://docs.lambda.im/Testnet-Miner-Guide/) 
+矿工和存储节点接入参考：[http://docs.lambda.im/Mainnet-Miner-Guide/](http://docs.lambda.im/Mainnet-Miner-Guide/)   
+
+0.2.7_rc3升级0.2.7参考文档：[storage0.2.7升级](http://docs.lambda.im/Mainnet-Store-Upgrade.md)  
 
 下载地址： 
-[https://github.com/LambdaIM/launch/releases/tag/v0.5.1](https://github.com/LambdaIM/launch/releases/tag/v0.5.1)
+[https://github.com/LambdaIM/launch/releases/tag/Storage0.2.7](https://github.com/LambdaIM/launch/releases/tag/Storage0.2.7)
 
-[http://download.lambdastorage.com/lambda-storage/0.2.7_rc3/](http://download.lambdastorage.com/lambda-storage/0.2.7_rc3/)
+[http://download.lambdastorage.com/lambda-storage/0.2.7/](http://download.lambdastorage.com/lambda-storage/0.2.7/)

@@ -1,7 +1,8 @@
-# 矿工0.2.7_rc3接入教程
+# 矿工0.2.7接入教程
 
 1个miner下可注册多个storagenode   
 
+0.2.7_rc3升级0.2.7可参考：[storage0.2.7升级](Mainnet-Store-Upgrade.md)  
 
 ## 一、配置矿工和存储节点
 
@@ -14,19 +15,19 @@
     ```
     2. 下载安装包
     ```
-    wget https://github.com/LambdaIM/launch/releases/download/v0.5.1/lambda-storage-0.2.7_rc3.tar.gz
+    wget https://github.com/LambdaIM/launch/releases/download/Storage0.2.7/lambda-storage-0.2.7.tar.gz
     ```
     如下载缓慢可使用下面的链接：
     ```
-    wget http://download.lambdastorage.com/lambda-storage/0.2.7_rc3/lambda-storage-0.2.7_rc3.tar.gz
+    wget http://download.lambdastorage.com/lambda-storage/0.2.7/lambda-storage-0.2.7.tar.gz
     ```
     3. 解压安装包
     ```
-    tar zxvf lambda-storage-0.2.7_rc3.tar.gz
+    tar zxvf lambda-storage-0.2.7.tar.gz
     ```
     4. 进入解压后的目录
     ```
-    cd lambda-storage-0.2.7_rc3
+    cd lambda-storage-0.2.7
     ```
 
 ### 2. 配置lambdacli
@@ -173,7 +174,7 @@
             ??? note "展开查看配置说明"
                 ```shell hl_lines="26"              
                 [build]
-                version = "0.2.7_rc3"
+                version = "0.2.7"
                 commit = "030c696bc6829cfafb3d240d66058b16b41aa460"
                 mode = "release"
                 
@@ -272,7 +273,7 @@
     
     !!! success "返回如下结果"
         ```text hl_lines="2"
-                       version: 0.2.7_rc3
+                       version: 0.2.7
                         dht id: G4xW3UHMfFnTmaRMZUJ7PKcfvr9YTTFyekcsRxKDZZD9 #创建矿工时会用到此dht-id
         server.private_address: 172.11.159.11:15001
                 server.address: 0.0.0.0:26654
@@ -831,7 +832,7 @@
 !!! success "返回如下结果"
     ```
     
-                   version: 0.2.7_rc3
+                   version: 0.2.7
                     dht id: G4xW3UHMfFnTmaRMZUJ7PKcfvr9YTTFyekcsRxKDZZD9
     server.private_address: 172.11.159.11:15001   successful
             server.address: 0.0.0.0:26654    successful
@@ -846,7 +847,7 @@
 
 !!! success "返回如下结果"
     ```
-                   version: 0.2.7_rc3
+                   version: 0.2.7
                     dht id: 3mta4YEgHB43RHYE83aWBouvFNNCtSc832siEwmcTUsZ
       storage.storage_name: sn1
      storage.miner_address: 172.11.159.11:15001   successful
@@ -863,7 +864,7 @@
 
 !!! success "返回如下结果"
     ```
-                   version:  0.2.7_rc3
+                   version:  0.2.7
       storage.storage_name:  sn1
           storage.data_dir:  [/lambda/data/xvdd/store /lambda/data/xvde/store /lambda/data/xvdc/中文test/store /lambda/.1lambda_storage/store]
 
