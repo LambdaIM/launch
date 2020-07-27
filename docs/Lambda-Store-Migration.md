@@ -13,7 +13,8 @@
 ### 迁移机器
 1. 下载存储安装包
 2. 将旧机器`~/.lambdacli`和`~/.lambda_miner`目录、矿工子账户json文件 覆盖至新机器`~/.lambdacli`和`~/.lambda_miner`
-3. 如公网IP有变化，需要将`~/.lambda_miner/config/config.toml`中 旧机器IP地址 修改为 新机器的IP地址，另外存储节点配置`~/.lambda_storage/config/config.toml`中`storage.miner_address`矿工服务IP也需要对应修改并重启存储节点服务
+3. 如公网IP有变化，需要将`~/.lambda_miner/config/config.toml`中 旧机器IP地址 修改为 新机器的IP地址，  
+   另外存储节点配置`~/.lambda_storage/config/config.toml`中`storage.miner_address`矿工服务IP也需要对应修改并重启存储节点服务
 4. 停掉旧机器的minernode程序，启动新机器的minernode程序
 
 ## 存储节点迁移
@@ -23,14 +24,14 @@
 配置目录[**重要、进行备份**]  
 `~/.lambda_storage`  
 
-如果存储节点`~/.lambda_storage/config/config.toml`中数据存储目录`storage.data_dir`不是默认值，需要备份对应目录
+如存储节点配置`~/.lambda_storage/config/config.toml`中数据存储目录`storage.data_dir`不是默认值，需要备份对应目录
 
 ### 迁移机器
 1. 下载存储安装包
 2. 停掉旧机器的storagenode程序
-3. 将旧机器`~/.lambda_storage`和 数据存储目录 覆盖至新机器
+3. 将旧机器`~/.lambda_storage`和 `数据存储目录` 覆盖至新机器
 4. 如果新机器数据存储目录有变化，需要对应修改`~/.lambda_storage/config/config.toml`中的`storage.data_dir`
-5. 将`~/.lambda_storage/config/config.toml`中 旧机器IP地址 修改为 新机器的IP地址
+5. 将`~/.lambda_storage/config/config.toml`中 旧机器IP地址 修改为 新机器IP
 6. 启动新机器的storagenode程序
 
 ### 迁移数据
