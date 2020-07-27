@@ -15,6 +15,7 @@ nav:
           - 矿工接入: Mainnet-Miner-Guide.md
           - 存储节点接入: Mainnet-Storagenode-Configure.md
           - 验证节点迁移: Lambda-Validator-Migration.md
+          - 存储迁移: Lambda-Store-Migration.md
           - 主网接入帮助: FAQ.md
           - 主网稳定版本: version/MainnetStable.md
           - 主网最新版本: version/MainnetLatest.md
