@@ -236,9 +236,12 @@ function getBytes(publicKeybech32) {
 
 ## 4转账交易举例
  
- [更多交易说明见](Wallet-API.md) 
+ [查看更多交易说明](Wallet-API.md) 
+
  发送交易分为三个部分
+
 ### 第一部分拼接交易的数据结构
+不同的交易类型，masgs 的结构会有差别
 ```
 {
     "account_number": "1",  //通过用户信息获取
@@ -266,6 +269,7 @@ function getBytes(publicKeybech32) {
 }
 ```
 每次发起交易前，均要通过账户信息接口获取最新的sequence
+
 chain_id 可以通过 节点信息接口 /node_info 获取
 
 ### 2对拼接好的数据进行签名
@@ -310,7 +314,9 @@ fa9bUlNRA3qa9PEYR2py6CgpQbbqVsuKhJRowMdlf90byj7M/2B1YQsu6EPAk1V/tLkKiNwEadkAKNFU
 ```
 ## 5 灵活的预估交易需要gas
 [更多交易说明见](Wallet-API.md) 
+
 以转账交易为例
+
 接口
 ```
 /bank/accounts/${senderAddress}/transfers
