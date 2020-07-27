@@ -50,7 +50,7 @@ kill `ps aux | grep 'minernode' |grep -v grep| awk '{print $2}'`
 ./minernode run --query-interval 5 --daemonize --log.file [log_file_path]
 ```
 
-如[your-account-name]_miner_key.json没有移动到~/.lambda_miner/config/default_miner_key.json，则加上--key-file参数启动：
+如`[your-account-name]_miner_key.json`没有移动到`~/.lambda_miner/config/default_miner_key.json`，则加上`--key-file`参数启动：
 ```
 ./minernode run --query-interval 5 --daemonize --log.file [log_file_path] --key-file [filepath/your-account-name]_miner_key.json
 ```
