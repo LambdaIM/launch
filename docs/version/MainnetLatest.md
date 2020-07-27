@@ -6,6 +6,7 @@
 包名: lambda-0.5.1-release.tar.gz   
 MD5: 863f1540849add612fa902b296cb6d2f  
 
+**更新内容** 
 1. 新增数字资产，支持转账等操作；
 2. 新增交易市场，支持市场质押和挂买卖单空间；
 3. 新增存储挖矿和收益提取；
@@ -30,9 +31,11 @@ MD5: 863f1540849add612fa902b296cb6d2f
 
 **本版本用于主网**  
 包名: lambda-storage-0.2.7.tar.gz  
-MD5: 3e6a020add44ac6e35d9a30773952241
+MD5: d49d3f9ad8815fb2b269a8af31911d6a
 
-1. 修复已知bug
+**更新内容** 
+1. 修复storagenode异常退出的问题
+2. 修复其他已知bug
 
 
 矿工和存储节点接入参考：[http://docs.lambda.im/Mainnet-Miner-Guide/](http://docs.lambda.im/Mainnet-Miner-Guide/)   

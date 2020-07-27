@@ -9,7 +9,7 @@
 
 新矿工和存储节点接入参考：[配置矿工和存储节点](Mainnet-Miner-Guide.md)  
 
-以下为 旧版0.2.7_rc3 升级到 0.2.7 步骤
+以下为 `0.2.7_rc3` 升级到 `0.2.7` 步骤
 
 
 ### 下载安装包并解压
@@ -72,12 +72,7 @@ kill `ps aux | grep 'storagenode' |grep -v grep| awk '{print $2}'`
 ```
 
 ### 重启minernode
-1.修改lambdacli配置
-```
-./lambdacli config chain-id lambda-chain-5.1
-```
-
-2.启动minernode：  
+启动minernode：  
 [log_file_path] 指定矿工日志完整路径
 ```
 ./minernode run --query-interval 5 --daemonize --log.file [log_file_path]
