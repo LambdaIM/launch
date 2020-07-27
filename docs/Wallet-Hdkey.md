@@ -234,3 +234,109 @@ function getBytes(publicKeybech32) {
 	}
 ```
 
+## 4转账交易举例
+ 
+ [更多交易说明见](Wallet-API.md) 
+ 发送交易分为三个部分
+### 第一部分拼接交易的数据结构
+```
+{
+    "account_number": "1",  //通过用户信息获取
+    "chain_id": "lambda-chain-test2.5", //链的版本号 通过最新的区块信息获取 
+    "fee": {//手续费
+        "amount": [{
+            "amount": "101745",
+            "denom": "ulamb" 
+        }],
+        "gas": "40698"  // gas 
+    },
+    "memo": "", //备注
+    "msgs": [{
+        "type": "cosmos-sdk/MsgSend", //交易类型
+        "value": {
+            "amount": [{
+                "amount": "1000000",   //交易的数量
+                "denom": "ulamb"    //交易的代币类型
+            }],
+            "from_address": "lambda1prrcl9674j4aqrgrzmys5e28lkcxmntx2gm2zt",  //发送地址
+            "to_address": "lambda1hynqrp2f80jqs86gu8nd5wwcnek2wwd3esszg0"   //接受地址
+        }
+    }],
+    "sequence": "125"  //通过获取用户信息接口获取
+}
+```
+每次发起交易前，均要通过账户信息接口获取最新的sequence
+chain_id 可以通过 节点信息接口 /node_info 获取
+
+### 2对拼接好的数据进行签名
+例如 对上面字符串签名的结果为的base64
+```
+fa9bUlNRA3qa9PEYR2py6CgpQbbqVsuKhJRowMdlf90byj7M/2B1YQsu6EPAk1V/tLkKiNwEadkAKNFUxZngGA==
+```
+### 3 拼接发送交易的数据
+```
+{
+    "tx": {
+        "msg": [{
+            "type": "cosmos-sdk/MsgSend",
+            "value": {
+                "amount": [{
+                    "amount": "1000000",
+                    "denom": "ulamb"
+                }],
+                "from_address": "lambda1prrcl9674j4aqrgrzmys5e28lkcxmntx2gm2zt",
+                "to_address": "lambda1hynqrp2f80jqs86gu8nd5wwcnek2wwd3esszg0"
+            }
+        }],
+        "fee": {
+            "amount": [{
+                "amount": "101745",
+                "denom": "ulamb"
+            }],
+            "gas": "40698"
+        },
+        "signatures": [{  
+            "signature": //签名的结果
+"fa9bUlNRA3qa9PEYR2py6CgpQbbqVsuKhJRowMdlf90byj7M/2B1YQsu6EPAk1V/tLkKiNwEadkAKNFUxZngGA==", //数据签名的base64格式
+            "pub_key": {
+                "type": "tendermint/PubKeySecp256k1",
+                "value": "AjmQ01Z+IoHuKLdPaFzV6IJQB88ahW2qv2rEw2H4B5dq"  //bip32生成的地址的公钥
+            }
+        }],
+        "memo": ""
+    },
+    "mode": "async"    发送交易的方式async 为异步，block 为同步
+}
+```
+## 5 灵活的预估交易需要gas
+[更多交易说明见](Wallet-API.md) 
+以转账交易为例
+接口
+```
+/bank/accounts/${senderAddress}/transfers
+类型 post
+发送数据类型 json
+```
+post 数据的格式
+```
+{
+    "base_req": {
+        "sequence": "208",
+        "from": "lambda163q4m634nq8les4nuvdvz49tk6ae**********",
+        "account_number": "6",
+        "chain_id": "lambda-chain-test4.0",
+        "simulate": true,
+        "memo": ""
+    },
+    "amount": [{
+        "amount": "1000000",
+        "denom": "ulamb"
+    }],
+    "from_address": "lambda163q4m634nq8les4nuvdvz49tk6ae**********",
+    "to_address": "lambda16cheh6j34ncyunwgfkq2940cs8222jka0fsp4k"
+}
+```
+返回结果
+```
+  {"gas_estimate":"28077"}
+```
