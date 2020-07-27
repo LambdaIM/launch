@@ -1,9 +1,9 @@
 # 矿工和存储节点迁移
 ## 矿工迁移
-### 默认矿工目录[重要]
-配置目录[**重要、进行备份**]
-`~/.lambdacli`
-`~/.lambda_miner`
+### 默认矿工目录[重要]  
+配置目录[**重要、进行备份**]  
+`~/.lambdacli`  
+`~/.lambda_miner`  
 
 ### 迁移机器
 1. 下载存储安装包
@@ -12,10 +12,10 @@
 
 ## 存储节点迁移
 ### 默认存储目录[重要]
-配置目录[**重要、进行备份**]
-`~/.lambda_storage`
+配置目录[**重要、进行备份**]  
+`~/.lambda_storage`  
 
-如果存储节点`~/.lambda_storage/config/config.toml`中数据存储目录`storage.data_dir`不是默认的，需要备份对应目录
+如果存储节点`~/.lambda_storage/config/config.toml`中数据存储目录`storage.data_dir`不是默认值，需要备份对应目录
 
 ### 迁移机器
 1. 下载存储安装包
