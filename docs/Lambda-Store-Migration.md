@@ -8,9 +8,11 @@
 `~/.lambdacli`  
 `~/.lambda_miner`  
 
+如矿工子账户json文件未移动到`~/.lambda_miner/config/default_miner_key.json`，也需要进行备份
+
 ### 迁移机器
 1. 下载存储安装包
-2. 将旧机器`~/.lambdacli`和`~/.lambda_miner`目录覆盖至新机器`~/.lambdacli`和`~/.lambda_miner`
+2. 将旧机器`~/.lambdacli`和`~/.lambda_miner`目录、矿工子账户json文件 覆盖至新机器`~/.lambdacli`和`~/.lambda_miner`
 3. 如公网IP有变化，需要将`~/.lambda_miner/config/config.toml`中 旧机器IP地址 修改为 新机器的IP地址，另外存储节点配置`~/.lambda_storage/config/config.toml`中`storage.miner_address`矿工服务IP也需要对应修改并重启存储节点服务
 4. 停掉旧机器的minernode程序，启动新机器的minernode程序
 
