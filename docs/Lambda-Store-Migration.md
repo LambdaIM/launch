@@ -1,4 +1,7 @@
 # 矿工和存储节点迁移
+
+注意：矿工或存储节点迁移机器后如IP有变化，可能会有一段时间连不上kad网络
+
 ## 矿工迁移
 ### 默认矿工目录[重要]  
 配置目录[**重要、进行备份**]  
@@ -8,9 +11,12 @@
 ### 迁移机器
 1. 下载存储安装包
 2. 将旧机器`~/.lambdacli`和`~/.lambda_miner`目录覆盖至新机器`~/.lambdacli`和`~/.lambda_miner`
-3. 停掉旧机器的minernode程序，启动新机器的minernode程序
+3. 如公网IP有变化，需要将`~/.lambda_miner/config/config.toml`中 旧机器IP地址 修改为 新机器的IP地址，另外存储节点配置`~/.lambda_storage/config/config.toml`中`storage.miner_address`矿工服务IP也需要对应修改并重启存储节点服务
+4. 停掉旧机器的minernode程序，启动新机器的minernode程序
 
 ## 存储节点迁移
+注意：不要修改存储节点名称
+
 ### 默认存储目录[重要]
 配置目录[**重要、进行备份**]  
 `~/.lambda_storage`  
@@ -22,7 +28,8 @@
 2. 停掉旧机器的storagenode程序
 3. 将旧机器`~/.lambda_storage`和 数据存储目录 覆盖至新机器
 4. 如果新机器数据存储目录有变化，需要对应修改`~/.lambda_storage/config/config.toml`中的`storage.data_dir`
-5. 启动新机器的storagenode程序
+5. 将`~/.lambda_storage/config/config.toml`中 旧机器IP地址 修改为 新机器的IP地址
+6. 启动新机器的storagenode程序
 
 ### 迁移数据
 将存储数据从盘A迁移到盘B
