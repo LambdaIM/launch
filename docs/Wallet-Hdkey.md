@@ -187,8 +187,11 @@ function verify(bytes, signature, publicKey) {
 ```
 调用，我们以上面生成的账户为例子进行签名和校验
 Mnemonic: squirrel can parade appear scatter frost resource pen pole category flame rigid uniform cost lava fall rebel rural tunnel involve beyond bomb august bitter
+
 publicKey: AmAn+0ZB8BYtfgNjeyY6iuPDTbHZh1BWSU90hDCDy7so
+
 privateKey: q+/iaUJQhM/eyttNigHxTBVHi/vjA+qjBV8xrvilROA=
+
 address: lambda1neqj4tcpvzms097zs0a0vjdntwsun3u7n72sna
 ```
 var crypto = require('./lib/crypto.js')
@@ -257,6 +260,7 @@ isverify true
 
 ### 第一部分拼接交易的数据结构用于签名
 不同的交易类型，msgs数组中的对象的结构会有差别
+
 手续费部分gas 可以填的大一点，amount 表示gas的价格可以填的小一点
 ```
 {
