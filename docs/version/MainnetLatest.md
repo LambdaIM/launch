@@ -31,7 +31,7 @@ MD5: 863f1540849add612fa902b296cb6d2f
 
 **本版本用于主网**    
 包名: lambda-storage-0.2.7.1.tar.gz  
-MD5: d49d3f9ad8815fb2b269a8af31911d6a
+MD5: f6fa3feedca31d624f8de700993c6067
 
 **更新内容**   
 1. storagecli新增countersign设置；  
