@@ -1,4 +1,8 @@
 # 钱包账户信息、签名、配置文件说明
+代码示例子 https://github.com/LambdaIM/walletdoccode
+
+加密解密部分详细说明 https://github.com/LambdaIM/walletdoccode/blob/master/Symmetric.md
+
 ## 1 地址、助记词、加密算法相关
       生成助记词 使用 bip39   钱包和区块链使用长度为256 的24个单词
 
@@ -193,13 +197,7 @@ var address = require('./lib/address.js')
 var Mnemonic = crypto.generateRandomMnemonic(256);
 var wallet = crypto.getKeysFromMnemonic(Mnemonic)
 
-console.log('Mnemonic:',Mnemonic)
-console.log('publicKey:',wallet.publicKey.toString('base64'))
-console.log('privateKey:',wallet.privateKey.toString('base64'))
 
-
-var lambdaaddress = address.getAddress(wallet.publicKey)
-console.log('address:',lambdaaddress)
 
 //转账交易的数据结构 数据的解释说明见下方
 var fee={
@@ -247,10 +245,6 @@ console.log('isverify',isverify)
 ```
 输出
 ```
-Mnemonic: craft man license tower click pause rich reason pride scatter brother entire mean dream food rice purity shine crisp spread useless cross resemble warrior
-publicKey: AyplUvRanT+xqaA6Ch3/2HFg9Ohpquo+yzOENysffNV4
-privateKey: saPdDmbCU63DSmQKxSSQUcDpCR1kAW6jT8jefhoRMBU=
-address: lambda14avupcu3d6yevg5aw32429rcn0ng4h7wqcx3mg
 signtxdata ln6wcZw5kur5H5tYA67zpBfyguP1bfD8rpDwnes0pyc6N5fD5n/GDXNfLUl6Bg0l38Yuiko8jVWD+WAMuXGGng==
 isverify true
 ```
@@ -292,7 +286,6 @@ isverify true
 ```
 每次发起交易前，均要通过账户信息接口获取最新的sequence、account_number
 
-chain_id 可以通过 节点信息接口 /node_info 获取
 http://bj1.testnet.lambdastorage.com:13659/auth/accounts/lambda1prrcl9674j4aqrgrzmys5e28lkcxmntx2gm2zt
 
 chain_id 通过node_info 接口获取
@@ -347,16 +340,6 @@ const axios = require('axios');
 var crypto = require('./lib/crypto.js')
 var address = require('./lib/address.js')
 
-var Mnemonic = crypto.generateRandomMnemonic(256);
-var wallet = crypto.getKeysFromMnemonic(Mnemonic)
-
-console.log('Mnemonic:',Mnemonic)
-console.log('publicKey:',wallet.publicKey.toString('base64'))
-console.log('privateKey:',wallet.privateKey.toString('base64'))
-
-
-var lambdaaddress = address.getAddress(wallet.publicKey)
-console.log('address:',lambdaaddress)
 var fee={
     "amount":[
         {
@@ -439,6 +422,7 @@ axios.post('http://bj1.testnet.lambdastorage.com:13659/txs', txsend)
 
 ## 4 灵活的预估交易需要gas
 [更多交易类型获取gas说明见](Wallet-API.md) 
+
 不同的交易类型，对应的获取gas的接口不同
 以转账交易为例
 
@@ -480,16 +464,6 @@ const axios = require('axios');
 var crypto = require('./lib/crypto.js')
 var address = require('./lib/address.js')
 
-var Mnemonic = crypto.generateRandomMnemonic(256);
-var wallet = crypto.getKeysFromMnemonic(Mnemonic)
-
-console.log('Mnemonic:',Mnemonic)
-console.log('publicKey:',wallet.publicKey.toString('base64'))
-console.log('privateKey:',wallet.privateKey.toString('base64'))
-
-
-var lambdaaddress = address.getAddress(wallet.publicKey)
-console.log('address:',lambdaaddress)
 var fee={
     "amount":[
         {
@@ -524,42 +498,6 @@ var txSendContent = {
 
 var MnemonicUser = `squirrel can parade appear scatter frost resource pen pole category flame rigid uniform cost lava fall rebel rural tunnel involve beyond bomb august bitter`
 var userWallet = crypto.getKeysFromMnemonic(MnemonicUser);
-
-var signtxdata = crypto.sign(Buffer.from(JSON.stringify(txSendContent)),userWallet.privateKey);
-
-console.log('signtxdata',signtxdata.toString('base64'))
-
-var isverify = crypto.verify(Buffer.from(JSON.stringify(txSendContent)),signtxdata,userWallet.publicKey)
-console.log('isverify',isverify)
-
-
-
-var txsend = {
-    "tx": {
-        "msg": msg,
-        "fee": fee,
-        "signatures": [{  
-            "signature": signtxdata.toString('base64'), //数据签名的base64格式
-            "pub_key": {
-                "type": "tendermint/PubKeySecp256k1",
-                "value": userWallet.publicKey.toString('base64')  //bip32生成的地址的公钥
-            }
-        }],
-        "memo": ""
-    },
-    "mode": "block"    //发送交易的方式async 为异步，block 为同步
-}
-
-console.log('txsend',JSON.stringify(txsend) )
-axios.post('http://bj1.testnet.lambdastorage.com:13659/txs', txsend)
-  .then(function (response) {
-      console.log('data')
-    console.log(response.data);
-  })
-  .catch(function (error) {
-    console.log('error')
-    console.log(error.data);
-  });
 
   var userlambdaaddress = address.getAddress(userWallet.publicKey)
 
@@ -602,7 +540,8 @@ axios.post(`http://bj1.testnet.lambdastorage.com:13659/bank/accounts/${userlambd
 
 
 ## 6 钱包配置文件加密解密说明
-以js为例子
+
+加密解密部分详细说明 https://github.com/LambdaIM/walletdoccode/blob/master/Symmetric.md
 
 ### 私钥加密的过程
 ```
@@ -676,8 +615,6 @@ exports.importPrivateKey = function decodePrivateKey(privatekey, usersalt, passw
 	  return privateKey;
 	};
 ```
-### 公钥格式化展示
-
 
 ### 配置文件的解释与说明
 ```
@@ -693,18 +630,17 @@ exports.importPrivateKey = function decodePrivateKey(privatekey, usersalt, passw
 ```
 const bech32 = require('bech32');
 var Amino = require('****/amino.js');
+//Amino库
+//https://github.com/tendermint/go-amino
+
 const PREFIX = 'lambdapub';
 Amino.RegisterConcrete(null, 'tendermint/PubKeySecp256k1');
 
 function getAddress(publicKey) {
 	  var PubKeyAmino = Amino.MarshalBinary('tendermint/PubKeySecp256k1', publicKey);
-//通过Amino 库处理公钥 
-//https://github.com/tendermint/go-amino
-	
 
 	  const words = bech32.toWords(PubKeyAmino);
         
-	
        //通过bech32 添加前缀
 	  return bech32.encode(PREFIX, words);
 	}
