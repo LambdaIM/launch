@@ -1,4 +1,4 @@
-# storage0.2.7升级
+# storage0.2.7.1升级
 
 * [下载安装包并解压](#下载安装包并解压)
 * [停止minernode和storagenode](#停止minernode和storagenode)
@@ -9,7 +9,7 @@
 
 新矿工和存储节点接入参考：[配置矿工和存储节点](Mainnet-Miner-Guide.md)  
 
-以下为 `0.2.7_rc3` 升级到 `0.2.7` 步骤
+以下为 `0.2.7_rc3`或`0.2.7` 升级到 `0.2.7.1` 步骤
 
 
 ### 下载安装包并解压
@@ -21,15 +21,15 @@ mkdir -p ~/LambdaIM && cd ~/LambdaIM
 ```
 下载安装包
 ```
-http://download.lambdastorage.com/lambda-storage/0.2.7/lambda-storage-0.2.7.tar.gz
+http://download.lambdastorage.com/lambda-storage/0.2.7.1/lambda-storage-0.2.7.1.tar.gz
 ```
 解压安装包
 ```
-tar zxvf lambda-storage-0.2.7.tar.gz
+tar zxvf lambda-storage-0.2.7.1.tar.gz
 ```
 进入解压后的目录
 ```
-cd lambda-storage-0.2.7
+cd lambda-storage-0.2.7.1
 ```
 
 ### 停止minernode和storagenode
