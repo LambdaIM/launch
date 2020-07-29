@@ -653,8 +653,11 @@
     ```
     
     注意：
+    
     当矿池达到物理瓶颈时上传成功率会下降。
+    
     需要分析资源瓶颈升级物理架构。
+    
     或使用 `./storagecli config broker.disable_countersign true` 减少传输量(上传用户放弃仲裁权益)。
 
 
