@@ -10,7 +10,7 @@ nav:
     - DAPP应用开发指导: DApp-Develop-Guide.md
     - 主网接入:
           - 验证节点接入: Mainnet-Validator-Guide.md
-          - 0.5.1节点升级: Mainnet-Validator-Upgrade-Guide.md
+          - 0.5.2节点升级: Mainnet-Validator-Upgrade-Guide.md
           - Lambda端口说明: Lambda-Node-Port.md
           - 矿工接入: Mainnet-Miner-Guide.md
           - 存储节点接入: Mainnet-Storagenode-Configure.md
