@@ -4,7 +4,7 @@
 
 **本版本用于主网**    
 包名: lambda-0.5.2-release.tar.gz   
-MD5: 863f1540849add612fa902b296cb6d2f  
+MD5: cc67dfacf91772e627d05b04f4efa1bd  
 
 **更新内容**   
 1. 优化存储证明验证逻辑；  
