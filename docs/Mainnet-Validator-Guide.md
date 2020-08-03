@@ -1,5 +1,12 @@
 # 主网Validator接入教程
 
+**注意**  
+节点接入前需要先同步当前服务器时间到最新时间
+``` 
+ntpdate -u ntp.api.bz
+```
+如服务器上无`ntpdate`命令，可使用`sudo yum install -y ntpdate`(CentOS)或`sudo apt-get install ntpdate -y`(Ubuntu)进行安装。
+
 ### 1. 下载安装包并解压
 `创建目录并进入`
 ```

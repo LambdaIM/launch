@@ -1,5 +1,12 @@
 # 测试网节点0.5.0 接入教程
 
+**注意**  
+节点接入前需要先同步当前服务器时间到最新时间
+``` 
+ntpdate -u ntp.api.bz
+```
+如服务器上无`ntpdate`命令，可使用`sudo yum install -y ntpdate`(CentOS)或`sudo apt-get install ntpdate -y`(Ubuntu)进行安装。
+
 节点机器配置及系统设置参考：[验证节点挖矿手册](Lambda-Validator-Mining.md)（节点务必阅读此文档，尤其是**系统设置**部分）  
 
 本次发布清除了测试网所有历史数据，测试币需要重新申领，节点接入需要按以下流程完整执行。  

@@ -1,5 +1,12 @@
 # 矿工0.2.7.1接入教程
 
+**注意**  
+矿工接入前需要先同步当前服务器时间到最新时间
+``` 
+ntpdate -u ntp.api.bz
+```
+如服务器上无`ntpdate`命令，可使用`sudo yum install -y ntpdate`(CentOS)或`sudo apt-get install ntpdate -y`(Ubuntu)进行安装。
+
 1个miner下可注册多个storagenode   
 
 0.2.7_rc3或0.2.7 升级0.2.7.1可参考：[storage0.2.7.1升级](Mainnet-Store-Upgrade.md)  
