@@ -16,7 +16,6 @@
 * [助记词导入到节点的程序包](#助记词导入到节点的程序包)
 * [导入账号](#导入账号)
 * [钱包首页说明](#钱包首页说明)
-* [领取测试网测试币](#领取测试网测试币)
 * [转账](#转账)
 * [导出账号配置文件](#导出账号配置文件)
 * [更换钱包链接的Validator节点](#更换钱包链接的Validator节点)
@@ -134,22 +133,6 @@ Repeat the passphrase:
 账号有了交易记录的效果图
 
 ![avatar](img/home@2x.png)
-
-## 领取测试网测试币
-
-登录钱包账户后，点击首页的活动链接
-![avatar](img/WXceshicoin1.png)
-跳转到 
-[http://faucet.lambda.im/](http://faucet.lambda.im/)
-![avatar](img/WXceshicoinget.png)
-输入 创建的lambda主网地址，例如 lambda163q4m634nq8les4nuvdvz49tk6aeh926t0**** 
-
-现在支持 领取测试网的LAMB和TBB,用以进行存储挖矿测试
-
-领取规则：  
-一个IP每天可以领取50000个LAMB,5个TBB；  
-一个lambda主网地址，可以领取10次LAMB和TBB
-
 
 
 ## 转账

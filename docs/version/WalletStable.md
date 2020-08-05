@@ -1,13 +1,24 @@
-# Wallet0.3.13
+# Wallet0.5.56
 
-1. lamb余额为0 手续费为0 质押失败和交易tbb失败的问题
-2. 合伙人反质押列表数据接口修复
-3. 验证节点转质押和解除质押 提示信息 中天数修改为动态读取
+钱包发布说明： 
+本版本用于主网    
 
-====
+包名：  
+Windows安装包: Wallet-Setup-0.5.56.exe  
+MD5         : cbb89a69f1f45bf8a6fb79dd98d00e68  
 
-1. lamb balance 0 handling fee 0 pledge failure and transaction TBB failure
-2. Partner Anti-pledge List Data Interface Repair
-3. Change the number of days in the reminder information of the verification node to read dynamically
+Mac 安装包   : Wallet-0.5.56.dmg  
+MD5         : 5d9ddb5781ab2c78c6d46c5112a485dd  
 
-下载地址：[https://github.com/LambdaIM/launch/releases/tag/Wallet0.3.13](https://github.com/LambdaIM/launch/releases/tag/Wallet0.3.13)
+
+1. 新增删除账户功能； 
+2. 支持打开s3服务上传下载文件；  
+3. 新增矿工子账户导入、导出；  
+4. 多语言、导入配置、文案优化；
+5. 新增订单续期、提取订单收益、提取挖矿收益等功能；
+6. 新增挖矿向导
+  
+
+下载地址：  
+[https://github.com/LambdaIM/launch/releases/tag/Wallet0.5.56](https://github.com/LambdaIM/launch/releases/tag/Wallet0.5.56)
+[http://download.lambdastorage.com/wallet/0.5.56/](http://download.lambdastorage.com/wallet/0.5.56/)

@@ -33,8 +33,9 @@ nav:
           - 测试网最新版本: version/TestnetLatest.md
     - 钱包:
           - 桌面钱包使用手册(主网): Lambda-Wallet-Guide.md
-          - 桌面钱包稳定版本: version/WalletStable.md
-          - 桌面钱包最新版本: version/WalletLatest.md
+          - 桌面钱包稳定版本(主网): version/WalletStable.md
+          - 桌面钱包最新版本(主网): version/WalletLatest.md
+          - 桌面钱包最新版本(测试网): version/WalletLatest-Testnet.md
           - 手机钱包稳定版本: version/MobileWalletStable.md
           - 手机钱包最新版本: version/MobileWalletLatest.md
     - 矿工管理程序:
