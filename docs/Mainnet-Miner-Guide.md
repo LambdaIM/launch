@@ -9,7 +9,7 @@ ntpdate -u ntp.api.bz
 
 1个miner下可注册多个storagenode   
 
-`0.2.7_rc3`/`0.2.7`/`0.2.7.1` 升级0.2.7.2可参考：[storage0.2.7.2升级](Mainnet-Store-Upgrade.md)  
+`0.2.7_rc3`/`0.2.7`/`0.2.7.1` 升级 `0.2.7.2` 可参考：[storage0.2.7.2升级](Mainnet-Store-Upgrade.md)  
 
 ## 一、配置矿工和存储节点
 
