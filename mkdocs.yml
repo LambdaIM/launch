@@ -6,9 +6,17 @@ site_description: Lambda文档
 site_author: Lambda Team
 nav:
     - 首页: index.md
-    - 使用必知: must-known-cn.md
-    - DAPP应用开发指导: DApp-Develop-Guide.md
-    - 主网接入:
+    - Lambda 入门: Lambda-Get-Start.md
+      - Lambda 文档导引: https://talk.lambdastorage.com/t/topic/511
+      - Lambda 使用必知: must-known-cn.md
+      - Lambda 主网钱包使用说明: must-known-cn.md
+    - Lambda 技术架构: Lambda-Tech-Arch.md
+    - Lambda 生态应用:
+        -
+    - Lambda技术架构及技术应用:
+        - Lambda 技术架构: Lambda-Tech-Arch.md
+    - 教程:
+    - Lambda API文档及开发者组件: DApp-Develop-Guide.md
           - 验证节点接入: Mainnet-Validator-Guide.md
           - 0.5.2节点升级: Mainnet-Validator-Upgrade-Guide.md
           - Lambda端口说明: Lambda-Node-Port.md
@@ -19,7 +27,7 @@ nav:
           - 主网接入帮助: FAQ.md
           - 主网稳定版本: version/MainnetStable.md
           - 主网最新版本: version/MainnetLatest.md
-    - 测试网接入:
+
           - 验证节点接入: Testnet-Validator-Guide.md
           - 矿工接入: Testnet-Miner-Guide.md
           - 存储节点接入: Testnet-Storagenode-Configure.md
