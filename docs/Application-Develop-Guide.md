@@ -1,15 +1,26 @@
 # 应用开发指导
 ## 配置环境
 
+### 下载安装包
+目前安装包仅支持Linux 环境
+```
+wget http://download.lambdastorage.com/lambda-storage/0.2.7_rc2/lambda-storage-0.2.7_rc2-testnet.tar.gz
+```
+
 ### 配置客户端
+配置客户端了链接的主网地址，以及区块链的chain-id
 
 ```   plain
-wget http://download.lambdastorage.com/lambda/0.5.0/lambda-0.5.0-testnet.tar.gz
 mkdir -p ~/LambdaIM && cd ~/LambdaIM
-tar zxvf lambda-0.5.0-testnet.tar.gz && cd lambda-0.5.0-testnet
+
+tar zxvf lambda-storage-0.2.7_rc2-testnet.tar.gz && cd lambda-storage-0.2.7_rc2-testnet
+
 ./lambdacli config node tcp://bj1.testnet.lambdastorage.com:26657
+
 ./lambdacli config chain-id lambda-chain-test4.9
+
 ./lambdacli config trust-node true
+
 ```
 * 测试网可选节点：
 ```   plain
@@ -18,7 +29,15 @@ tar zxvf lambda-0.5.0-testnet.tar.gz && cd lambda-0.5.0-testnet
 ./lambdacli config node tcp://bj3.testnet.lambdastorage.com:26657
 ./lambdacli config node tcp://bj4.testnet.lambdastorage.com:26657
 ```
+* 主网可以选择的节点
+```
+
+```
+
 ### 创建用户并保存助记词
+
+涉及账户相关算法说明 http://docs.lambda.im/Wallet-Hdkey/
+
 
 *助记词是用来恢复帐户信息的需谨慎保存
 
@@ -203,6 +222,11 @@ bj1.testnet.lambdastorage.com:13659
 bj2.testnet.lambdastorage.com:13659
 bj3.testnet.lambdastorage.com:13659
 bj4.testnet.lambdastorage.com:13659
+```
+
+主网节点列表
+```
+
 ```
 #### 查询资产
 
@@ -420,7 +444,8 @@ http://bj1.testnet.lambdastorage.com:13659/bank/accounts/lambda1jdev3l38xwxxfq5f
   {"gas_estimate":"28077"}
 ```
 ##### 对交易数据签名
-
+签名前的数据结构
+签名相关说明详细见 http://docs.lambda.im/Wallet-Hdkey/#2
 ```   json
 {
     "account_number": "485",  //通过用户信息获取
@@ -506,7 +531,13 @@ http://bj1.testnet.lambdastorage.com:13659/txs
 
 [http://docs.lambda.im/Testnet-Miner-Guide/](http://docs.lambda.im/Testnet-Miner-Guide/)
 
+## 购买资产市场的空间
+命令行购买资产市场空间
+
+调用链的api 购买资产市场空间
+
 ## 购买空间
+
 
 ### 查询矿工出售的空间
 
@@ -589,8 +620,12 @@ MatchOrder
 
 lambda storage目前提供了两个版本的 兼容部分s3接口的 gateway：
 
-* s3gateway  针对于单个订单的gateway，主要是方便用户迁移数据
-* lambgw       针对多个订单的gateway，适用于有更多业务需要的应用开发者
+* s3gateway  针对于单个订单的gateway，主要是方便用户迁移数据，将其他支持存储的数据，通过s3迁移到lambda
+* lambgw       针对多个订单的gateway，适用于有更多业务需要的应用开发者，也支持s3接口上传下载文件
+
+### 关于ui和订单的说明
+s3gateway 自带的UI是可用的，启动后可以创建Bucket
+lambgw  订单id映射为Bucket，不支持创建Bucket，目前再带的ui不可用，
 
 
 
@@ -604,6 +639,7 @@ lambda storage目前提供了两个版本的 兼容部分s3接口的 gateway：
 * 常驻服务
 * 接口更新订单信息
 * 身份管理
+
 
 
 
@@ -665,6 +701,14 @@ mkdir -p ~/LambdaIM && cd ~/LambdaIM
 tar zxvf lambda-storage-0.2.7_rc2-testnet.tar.gz && cd lambda-storage-0.2.7_rc2-testnet
 ./storagecli init
 ```
+默认链接的是主网
+
+链接测试网
+```
+./storagecli init --testnet
+```
+
+
 配置s3端口与访问KEY：
 
 ```   
@@ -676,12 +720,22 @@ address = "127.0.0.1:9002"
 access_key = "accesskey"
 secret_key = "secretkey"
 ```
+启动后访问 127.0.0.1:9002，如果页面正常载入，配置就对了，如果打不开页面，需要检查address配置的ip和端口号
+
+### 启动lambdas3 界面
+```
+./storagecli s3gw run --account user1 --broker.extra_order_id  ${匹配订单的id}  --debug
+```
+
+
+
 ### 运行lambgw
 
 ```   shell
 ./storagecli lambgw run --account user1 --daemonize --log.file /tmp/gateway.log
 ```
 --account 为购买空间的用户
+
 
 
 
@@ -735,3 +789,7 @@ aws s3 --endpoint=http://localhost:9002/ ls s3://ORDERID
 ```   plain
 aws s3 --endpoint=http://localhost:9002/ cp s3://ORDERID/your-file /tmp/new-file
 ```
+
+
+
+通过sdk调用api上传下载文件 https://docs.min.io/docs/javascript-client-quickstart-guide.html
