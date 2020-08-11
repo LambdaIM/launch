@@ -631,7 +631,7 @@ lambda storage目前提供了两个版本的 兼容部分s3接口的 gateway：
 
 ### 关于ui和订单的说明
 s3gateway 自带的UI是可用的，启动后可以创建Bucket
-lambgw  订单id映射为Bucket，不支持创建Bucket，目前再带的ui不可用，
+lambgw  订单id映射为Bucket，不支持创建Bucket，目前自带的ui不可用，
 
 s3gateway 的启动命令如下
 ```
