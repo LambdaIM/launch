@@ -10,7 +10,7 @@ nav:
         - 概览: Lambda-Get-Start.md
         - Lambda 文档导引: https://talk.lambdastorage.com/t/topic/511
         - Lambda 使用必知: must-known-cn.md
-        - Lambda 主网钱包使用说明: must-known-cn.md
+        #- Lambda 主网钱包使用说明: Lambda-Wallet-Guide.md
     - Lambda 技术架构:
         - 概览: Lambda-Tech-Arch.md
         - Lambda 技术架构: https://talk.lambdastorage.com/t/topic/527
@@ -51,7 +51,7 @@ nav:
             - 测试网最新版本: version/TestnetLatest.md
         - Lambda 钱包使用手册(主网): Lambda-Wallet-Guide.md
     - Lambda API文档及开发者组件:
-        - 概览: Lambda-ApI-Docs-Develop.md
+        - 概览: Lambda-API-Docs-Develop.md
         - DAPP应用开发指导: DApp-Develop-Guide.md
         - 钱包API接入文档: Wallet-API.md
         - S3Gateway API文档: S3-Gateway-API.md
