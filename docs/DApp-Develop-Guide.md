@@ -12,7 +12,7 @@ tar zxvf lambda-0.5.0-testnet.tar.gz && cd lambda-0.5.0-testnet
 ./lambdacli config chain-id lambda-chain-test5.0
 ./lambdacli config trust-node true
 ```
-*测试网可选节点：
+* 测试网可选节点：
 ```plain
 ./lambdacli config node tcp://bj1.testnet.lambdastorage.com:26657
 ./lambdacli config node tcp://bj2.testnet.lambdastorage.com:26657
@@ -23,7 +23,7 @@ tar zxvf lambda-0.5.0-testnet.tar.gz && cd lambda-0.5.0-testnet
 ### 创建用户并保存助记词
 
 
-*助记词是用来恢复帐户信息的需谨慎保存
+* 助记词是用来恢复帐户信息的需谨慎保存
 
 ```plain
 ./lambdacli keys add user1
@@ -59,7 +59,7 @@ Account:
   AccountNumber: 486
   Sequence:      0
 ```
-*lambda 区块链中的最小单位为u, 1lamb = 1000000ulamb
+* lambda 区块链中的最小单位为u, 1lamb = 1000000ulamb
 
 ## 发行资产
 

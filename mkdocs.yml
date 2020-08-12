@@ -37,7 +37,7 @@ nav:
             - 存储节点主网接入教程: Mainnet-Storagenode-Configure.md
             - 存储矿工和存储节点迁移: Lambda-Store-Migration.md
         - 主网接入通用文档:
-            - 桌面钱包使用手册(主网): Lambda-Wallet-Guide.md
+            - Lambda 钱包使用手册(主网): Lambda-Wallet-Guide.md
             - 主网接入帮助: FAQ.md
             - 主网最新版本: version/MainnetLatest.md
         - 验证节点测试网接入教程:
