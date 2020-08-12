@@ -1,6 +1,6 @@
 # 主网Validator 0.5.2 升级教程
 
-新节点接入可参考：[主网Validator接入教程](Mainnet-Validator-Guide.md)  
+主网新节点接入可参考：[主网Validator接入教程](Mainnet-Validator-Guide.md)  
 
 ### 1. 下载安装包并解压
 `创建目录并进入`
