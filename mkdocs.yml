@@ -16,12 +16,13 @@ nav:
         - Lambda 技术架构: https://talk.lambdastorage.com/t/topic/527
         - Lambda PDP 概述: https://talk.lambdastorage.com/t/topic/528
     - Lambda 生态应用:
+        - 概览: Lambda-Ecolo-App.md
         - Lambda 浏览器:
             - Lambda 主网浏览器: http://explorer.lambda.im/#/
             - Lambda 测试网浏览器: http://testbrowser.lambda.im/#/
         - Lambda 钱包:
             - Lambda 主网钱包最新版本: version/WalletStable.md
-            - Lambda 测试网钱包最新版本: version/WalletLatest.md
+            - Lambda 测试网钱包最新版本: version/WalletLatest-Testnet.md
             - Lambda 手机钱包最新版本: version/MobileWalletLatest.md
         - Lambda 主网状态&监控系统: http://stats.lambdastorage.com/d/xoBmUn6LWzxxx/mainnet-en?orgId=1&lang=en&netType=main
     - Lambda 存储挖矿教程:
