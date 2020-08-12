@@ -6,66 +6,76 @@ site_description: Lambda文档
 site_author: Lambda Team
 nav:
     - 首页: index.md
-    - 使用必知: must-known-cn.md
-    - DAPP应用开发指导: DApp-Develop-Guide.md
-    - 主网接入:
-          - 验证节点接入: Mainnet-Validator-Guide.md
-          - 0.5.2节点升级: Mainnet-Validator-Upgrade-Guide.md
-          - Lambda端口说明: Lambda-Node-Port.md
-          - 矿工接入: Mainnet-Miner-Guide.md
-          - 存储节点接入: Mainnet-Storagenode-Configure.md
-          - 验证节点迁移: Lambda-Validator-Migration.md
-          - 存储迁移: Lambda-Store-Migration.md
-          - 主网接入帮助: FAQ.md
-          - 主网稳定版本: version/MainnetStable.md
-          - 主网最新版本: version/MainnetLatest.md
-    - 测试网接入:
-          - 验证节点接入: Testnet-Validator-Guide.md
-          - 矿工接入: Testnet-Miner-Guide.md
-          - 存储节点接入: Testnet-Storagenode-Configure.md
-          #- 0.4.8节点升级: Testnet-Validator-Upgrade-Guide.md
-          #- Storage0.2.5升级: Lambda-Store-Upgrade.md
-          - 同步节点: Testnet-Sync-Node.md
-          - 验证节点挖矿手册: Lambda-Validator-Mining.md
-          - 存储矿工挖矿手册: Lambda-Store-and-Mining.md
-          - 桌面钱包使用手册(测试网): Lambda-Wallet-Guide-Testnet.md
-          - 存储网络文件备份和恢复: StorageFile-Backup.md
-          - 测试网最新版本: version/TestnetLatest.md
-    - 钱包:
-          - 桌面钱包使用手册(主网): Lambda-Wallet-Guide.md
-          - 桌面钱包稳定版本(主网): version/WalletStable.md
-          - 桌面钱包最新版本(主网): version/WalletLatest.md
-          - 桌面钱包最新版本(测试网): version/WalletLatest-Testnet.md
-          - 手机钱包稳定版本: version/MobileWalletStable.md
-          - 手机钱包最新版本: version/MobileWalletLatest.md
-    - 矿工管理程序:
-          - 使用手册: StorageManager-Guide.md
-          - 稳定版本: version/StorageManagerStable.md
-          - 最新版本: version/StorageManagerLatest.md
-    - API文档:
-          - 钱包API接入文档: Wallet-API.md
-          - S3Gateway API文档: S3-Gateway-API.md
-          - 区块链API文档: api-reference/paths.md
-#          - 浏览器API文档: http://59.110.68.178:8081/swagger/
-    - 使用文档:
-        - 质押操作手册: Delegate-Operation-Guide.md
-        - 市场质押操作手册: Market-Delegate-Operation-Guide.md
-        - 资产管理: Asset-Manage-Guide.md
-        - 社区治理: governance.md
-        - 命令行使用:
-            - lambdacli:
-                - lambdacli: lambdacli/README.md
-                - status: lambdacli/status/README.md
-                - query: lambdacli/query/README.md
-                - tx: lambdacli/tx/README.md
-                - keys: lambdacli/keys/README.md
-                - version: lambdacli/version/README.md
-            - minernode: minernode/README.md
-            - storagenode: storagenode/README.md
-            - storagecli: storagecli/README.md
-    - 浏览器:
-        - 主网浏览器: http://explorer.lambda.im/#/
-        - 测试网浏览器: http://testbrowser.lambda.im/#/
+    - Lambda 入门:
+        - 概览: Lambda-Get-Start.md
+        - Lambda 文档导引: https://talk.lambdastorage.com/t/topic/511
+        - Lambda 使用必知: must-known-cn.md
+        #- Lambda 主网钱包使用说明: Lambda-Wallet-Guide.md
+    - Lambda 技术架构:
+        - 概览: Lambda-Tech-Arch.md
+        - Lambda 技术架构: https://talk.lambdastorage.com/t/topic/527
+        - Lambda PDP 概述: https://talk.lambdastorage.com/t/topic/528
+    - Lambda 生态应用:
+        - 概览: Lambda-Ecolo-App.md
+        - Lambda 浏览器:
+            - Lambda 主网浏览器: http://explorer.lambda.im/#/
+            - Lambda 测试网浏览器: http://testbrowser.lambda.im/#/
+        - Lambda 钱包:
+            - Lambda 主网钱包最新版本: version/WalletStable.md
+            - Lambda 测试网钱包最新版本: version/WalletLatest-Testnet.md
+            - Lambda 手机钱包最新版本: version/MobileWalletLatest.md
+        - Lambda 主网状态&监控系统: http://stats.lambdastorage.com/d/xoBmUn6LWzxxx/mainnet-en?orgId=1&lang=en&netType=main
+    - Lambda 存储挖矿教程:
+        - 教程概览: Lambda-Store-Mining-Guide.md
+        - 验证节点主网接入教程:
+            - 验证节点挖矿手册: Lambda-Validator-Mining.md
+            - 验证节点主网接入教程: Mainnet-Validator-Guide.md
+            - 验证节点最新升级包: version/MainnetLatest.md
+        - 存储矿工主网接入教程:
+            - 存储矿工挖矿手册: Lambda-Store-and-Mining.md
+            - 存储矿工主网接入教程: Mainnet-Miner-Guide.md
+        - 存储节点主网接入教程:
+            - 存储节点主网接入教程: Mainnet-Storagenode-Configure.md
+            - 存储矿工和存储节点迁移: Lambda-Store-Migration.md
+        - 主网接入通用文档:
+            - 桌面钱包使用手册(主网): Lambda-Wallet-Guide.md
+            - 主网接入帮助: FAQ.md
+            - 主网最新版本: version/MainnetLatest.md
+        - 验证节点测试网接入教程:
+            - 验证节点接入: Testnet-Validator-Guide.md
+            - 同步节点接入: Testnet-Sync-Node.md
+        - 存储矿工测试网接入教程:
+            - 存储矿工挖矿手册: Lambda-Store-and-Mining-Testnet.md
+            - 存储矿工接入教程: Testnet-Miner-Guide.md
+        - 测试网接入通用文档:
+            - 存储网络文件备份和恢复: StorageFile-Backup.md
+            - 测试网最新版本: version/TestnetLatest.md
+#        - Lambda 钱包使用手册(主网): Lambda-Wallet-Guide.md
+    - Lambda API文档及开发者组件:
+        - 概览: Lambda-API-Docs-Develop.md
+        - DAPP应用开发指导: DApp-Develop-Guide.md
+        - 钱包API接入文档: Wallet-API.md
+        - S3Gateway API文档: S3-Gateway-API.md
+        - 区块链API文档: api-reference/paths.md
+        - Lambda端口说明: Lambda-Node-Port.md
+    - Lambda 使用文档:
+        - 概览: Lambda-User-Guide.md
+        - Lambda 质押操作手册: Delegate-Operation-Guide.md
+        - Lambda 存储市场质押操作手册: Market-Delegate-Operation-Guide.md
+        - Lambda 资产管理: Asset-Manage-Guide.md
+        - Lambda 社区治理: governance.md
+    - Lambda 命令行使用文档:
+        - 概览: Lambda-Cmd-Guide.md
+        - lambdacli:
+            - lambdacli: lambdacli/README.md
+            - status: lambdacli/status/README.md
+            - query: lambdacli/query/README.md
+            - tx: lambdacli/tx/README.md
+            - keys: lambdacli/keys/README.md
+            - version: lambdacli/version/README.md
+        - minernode: minernode/README.md
+        - storagenode: storagenode/README.md
+        - storagecli: storagecli/README.md
 theme:
   name: material
   language: zh

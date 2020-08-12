@@ -7,6 +7,8 @@ ntpdate -u ntp.api.bz
 ```
 如服务器上无`ntpdate`命令，可使用`sudo yum install -y ntpdate`(CentOS)或`sudo apt-get install ntpdate -y`(Ubuntu)进行安装。
 
+节点升级可参考：[主网Validator 0.5.2 升级教程](Mainnet-Validator-Upgrade-Guide.md)  
+
 ### 1. 下载安装包并解压
 `创建目录并进入`
 ```
@@ -128,6 +130,23 @@ discovery_interval = "3m0s"
 ```
 
 ### 7. 启动节点  
+#### 从零块高同步块（二选一）  
+```
+./lambda start --p2p.laddr tcp://0.0.0.0:26656 --rpc.laddr tcp://0.0.0.0:26657 --daemonize --log.file /tmp/lambda.log
+```
+
+#### 使用社区提供的区块链数据包启动节点（二选一）
+从零块高同步块耗时较长，可使用社区提供的区块链数据包启动节点  
+
+下载数据压缩包lambda_0.5.2_data.tar.gz
+``` 
+wget http://download.lambdastorage.com/lambda/0.5.2/lambda_0.5.2_data.tar.gz
+```
+解压`lambda_0.5.2_data.tar.gz`到`~/.lambda/data/`目录下（解压过程耗时较长，请耐心等待）
+``` 
+tar -zxvf lambda_0.5.2_data.tar.gz -C ~/.lambda/data/
+```
+启动节点
 ```
 ./lambda start --p2p.laddr tcp://0.0.0.0:26656 --rpc.laddr tcp://0.0.0.0:26657 --daemonize --log.file /tmp/lambda.log
 ```
