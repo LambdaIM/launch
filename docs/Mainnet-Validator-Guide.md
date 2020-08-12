@@ -7,6 +7,8 @@ ntpdate -u ntp.api.bz
 ```
 如服务器上无`ntpdate`命令，可使用`sudo yum install -y ntpdate`(CentOS)或`sudo apt-get install ntpdate -y`(Ubuntu)进行安装。
 
+节点升级可参考：[主网Validator 0.5.2 升级教程](Mainnet-Validator-Upgrade-Guide.md)  
+
 ### 1. 下载安装包并解压
 `创建目录并进入`
 ```
