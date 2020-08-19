@@ -177,7 +177,7 @@ ntpdate -u ntp.api.bz
             ./minernode config kad.external_address 200.200.200.100:13000          
             ```
             
-            2. (可选)修改metadb存储路径（默认路径为`/root/.lambda_miner`，以修改为`/data1/test`为例）
+            2. (可选)修改meta files路径（默认路径为`/root/.lambda_miner`，以修改为`/data1/test`为例）
             ```
             ./minernode config db.meta_dir /data1/test
             ```

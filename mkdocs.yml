@@ -21,7 +21,8 @@ nav:
             - Lambda 主网浏览器: http://explorer.lambda.im/#/
             - Lambda 测试网浏览器: http://testbrowser.lambda.im/#/
         - Lambda 钱包:
-            - Lambda 主网钱包最新版本: version/WalletStable.md
+            - Lambda 主网钱包最新版本: version/WalletLatest.md
+            - Lambda 主网钱包稳定版本: version/WalletStable.md
             - Lambda 测试网钱包最新版本: version/WalletLatest-Testnet.md
             - Lambda 手机钱包最新版本: version/MobileWalletLatest.md
         - Lambda 主网状态&监控系统: http://stats.lambdastorage.com/d/xoBmUn6LWzxxx/mainnet-en?orgId=1&lang=en&netType=main
