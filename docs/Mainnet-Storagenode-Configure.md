@@ -36,7 +36,7 @@ ntpdate -u ntp.api.bz
         ./storagenode config storage.data_dir /data1/test,/data2/test
         ```
         
-        4. (可选)修改metadb存储路径（默认路径为`/root/.lambda_storage/meta`，以修改为/data1/test/meta为例）
+        4. (可选)修改metadb存储路径（默认路径为`/root/.lambda_storage/meta`，以修改为`/data1/test/meta`为例）
         ```
         ./storagenode config storage.meta_dir /data1/test/meta
         ```
