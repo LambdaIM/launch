@@ -85,7 +85,7 @@ mv /root/.lambda_miner/{var,kademlia} /data1/test/
 ```
         
 #### 修改存储节点metadb路径
-默认路径为`/root/.lambda_storage/meta`，以修改为`/data1/test/meta`为例）
+默认路径为`/root/.lambda_storage/meta`，以修改为`/data1/test/meta`为例
 
 1. 移动`/root/.lambda_storage`下的`meta`到`/data1/test/`:
 ```
