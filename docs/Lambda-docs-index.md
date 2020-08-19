@@ -36,7 +36,7 @@ Lambda 主要角色由验证节点、存储矿工、存储做市商构成及他�
 
 3）保持节点稳定，持续获得区块打包奖励；
 
-验证节点详细收益模型参考 [《Lambda经济白皮书》](https://www.lambdastorage.com/doc/Lambda%E7%BB%8F%E6%B5%8E%E7%99%BD%E7%9A%AE%E4%B9%A6.pdf) 、[《Lambda 经济模型参数》](https://talk.lambdastorage.com/hc/zh-cn/articles/360011349758-Lambda-%E7%BB%8F%E6%B5%8E%E6%A8%A1%E5%9E%8B%E5%8F%82%E6%95%B0)。
+验证节点详细收益模型参考 [《Lambda经济白皮书》](https://www.lambdastorage.com/doc/Lambda%E7%BB%8F%E6%B5%8E%E7%99%BD%E7%9A%AE%E4%B9%A6.pdf) 、[《Lambda 经济模型参数》](https://lambdastorage.zendesk.com/hc/zh-cn/articles/360011349758-Lambda-%E7%BB%8F%E6%B5%8E%E6%A8%A1%E5%9E%8B%E5%8F%82%E6%95%B0)。
 
 ## 三、存储矿工（StorageMiner）
 存储矿工通过存储交易市场获得存储订单，并为客户保存数据，存储数据后即可形成存储算力，正常提交存储证明，即可获得存储挖矿奖励。任何人都可以通过申明容量后并提供存储空间，获得存储订单，生成存储算力成为一个矿工，简要过程为首先进行容量申明，即将来要提供多少存储空间，即质押TBB，每质押一个TBB即为申明了1TB的容量，申明容量后可以获得TBB的质押收益，申明容量后矿工启动矿机（[矿工接入文档](Lambda-Store-and-Mining.md)），生成算力。
@@ -74,7 +74,7 @@ Lambda 主要角色由验证节点、存储矿工、存储做市商构成及他�
 
 1）创建主网钱包地址，通过[主网钱包](https://www.lambdastorage.com/walletpages)生成；
 
-2）参照 [Lambda 钱包使用说明](Lambda-Wallet-Guide.mdx) 购买TBB 质押到选定的验证节点。
+2）参照 [Lambda 钱包使用说明](Lambda-Wallet-Guide.md) 购买TBB 质押到选定的验证节点。
 
 #### 2、质押挖矿收益
 
