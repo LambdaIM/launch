@@ -11,7 +11,7 @@ Lambda 主要角色由验证节点、存储矿工、存储做市商构成及他�
 如果此前对 Lambda 生态及经济模型有一定了解的用户，可通过此文档加深对 Lambda 共识网络的理解。如果您初次接触 Lambda 是新人，那么您可以同时参阅 [Lambda 钱包使用手册](Lambda-Wallet-Guide.md) 以了解如何在支持的平台上安装 Lambda 钱包。
 
 ## 一、验证节点（Validator）
-验证节点主要职能为维护共识网络、打包、出块、验证存储矿工提交的时空证明（POST），任何人都可以通过质押667个TBB成为验证节点，TBB可通过交易市场购买（目前kangbo.io支持TBB的交易），或使用钱包（[Lambda 主网钱包](https://www.lambdastorage.com/walletpages)）中的主网 LAMB 进行兑换 [查看兑换教程](Lambda-Wallet-Guide.md) 。
+验证节点主要职能为维护共识网络、打包、出块、验证存储矿工提交的时空证明（POST），任何人都可以通过质押667个TBB成为验证节点，TBB可通过交易市场购买（目前[kangbo.io](https://www.kangbo.io/)支持TBB的交易），或使用钱包（[Lambda 主网钱包](https://www.lambdastorage.com/walletpages)）中的主网 LAMB 进行兑换 [查看兑换教程](Lambda-Wallet-Guide.md) 。
 
 ## 二、如何成为验证节点？
 ### 1、验证节点前期准备
@@ -67,14 +67,14 @@ Lambda 主要角色由验证节点、存储矿工、存储做市商构成及他�
 
 3）可以获得用户支付的存储费用。
 
-存储矿工收益模型参考 [《Lambda经济白皮书》](https://www.lambdastorage.com/doc/Lambda%E7%BB%8F%E6%B5%8E%E7%99%BD%E7%9A%AE%E4%B9%A6.pdf) 、[《Lambda 经济模型参数》](https://talk.lambdastorage.com/hc/zh-cn/articles/360011349758-Lambda-%E7%BB%8F%E6%B5%8E%E6%A8%A1%E5%9E%8B%E5%8F%82%E6%95%B0)。
+存储矿工收益模型参考 [《Lambda经济白皮书》](https://www.lambdastorage.com/doc/Lambda%E7%BB%8F%E6%B5%8E%E7%99%BD%E7%9A%AE%E4%B9%A6.pdf) 、[《Lambda 经济模型参数》](https://lambdastorage.zendesk.com/hc/zh-cn/articles/360011349758-Lambda-%E7%BB%8F%E6%B5%8E%E6%A8%A1%E5%9E%8B%E5%8F%82%E6%95%B0)。
 
 ### 如何质押挖矿？
 #### 1、质押挖矿前期准备
 
 1）创建主网钱包地址，通过[主网钱包](https://www.lambdastorage.com/walletpages)生成；
 
-2）参照 [Lambda 钱包使用说明](Lambda-Wallet-Guide.md) 购买TBB 质押到选定的验证节点。
+2）参照 [Lambda 钱包使用说明](Lambda-Wallet-Guide.mdx) 购买TBB 质押到选定的验证节点。
 
 #### 2、质押挖矿收益
 
@@ -92,4 +92,4 @@ Lambda 主要角色由验证节点、存储矿工、存储做市商构成及他�
 3）市场运营商可以通过发行的资产与自有业务结合形成完整的业务生态，可以成为基于Lambda的链上链，可以自定义业务和自身资产的挖矿模型。
 
 ## 六、开发者（Developer）
-任何对 Lambda 生态应用或区块链爱好者都可以通过开发项目方所要求的项目，按开发阶段获取最高 3000000 LAMB 对应比例的开发奖励，开发项目可按照 [Lambda 开发者悬赏计划](https://talk.lambdastorage.com/t/topic/290)中所提到的项目进行开发，开发者可参考 [Lambda 源代码](https://github.com/LambdaIM) 及[开发者应用开发指导](Application-Develop-Guide.md) 文档进一步了解，文档中包含了 Lambda 源代码、开发组件、资产发行与存储交易市场等功能，并持续为开发者更新最新内容。
+任何对 Lambda 生态应用或区块链爱好者都可以通过开发项目方所要求的项目，按开发阶段获取最高 3000000 LAMB 对应比例的开发奖励，开发项目可按照 [Lambda 开发者悬赏计划](https://lambdastorage.zendesk.com/hc/zh-cn/articles/360007660258-Lambda-%E5%BC%80%E5%8F%91%E8%80%85%E6%82%AC%E8%B5%8F%E8%AE%A1%E5%88%92)中所提到的项目进行开发，开发者可参考 [Lambda 源代码](https://github.com/LambdaIM) 及[开发者应用开发指导](Application-Develop-Guide.md) 文档进一步了解，文档中包含了 Lambda 源代码、开发组件、资产发行与存储交易市场等功能，并持续为开发者更新最新内容。
