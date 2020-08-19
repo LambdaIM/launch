@@ -8,6 +8,9 @@ CPU：4核+
 
 
 ### 环境管理
+主网新矿工和存储节点接入参考：[配置矿工和存储节点](Mainnet-Miner-Guide.md) 
+测试网新矿工和存储节点接入参考：[配置矿工和存储节点](Testnet-Miner-Guide.md)
+
 #### 查看配置
 ```
 ./storagecli   config

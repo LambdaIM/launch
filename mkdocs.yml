@@ -8,7 +8,7 @@ nav:
     - 首页: index.md
     - Lambda 入门:
         - 概览: Lambda-Get-Start.md
-        - Lambda 文档导引: https://talk.lambdastorage.com/t/topic/511
+        - Lambda 文档导引: Lambda-docs-index.md
         - Lambda 使用必知: must-known-cn.md
         #- Lambda 主网钱包使用说明: Lambda-Wallet-Guide.md
     - Lambda 技术架构:

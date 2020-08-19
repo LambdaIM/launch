@@ -23,7 +23,7 @@ MD5: cc67dfacf91772e627d05b04f4efa1bd
 
 **本版本用于主网**    
 包名: lambda-storage-0.2.7.3.tar.gz  
-MD5: f9a82d950a183139ca215892ab43a8dd
+MD5: 34dba7f6c36fb1d6aeacce376c6fe88c
 
 **更新内容**   
 1. 新增恢复挖矿记录功能；

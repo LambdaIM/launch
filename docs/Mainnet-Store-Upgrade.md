@@ -71,6 +71,17 @@ kill `ps aux | grep 'storagenode' |grep -v grep| awk '{print $2}'`
 ./storagenode upgrade
 ```
 
+### （可选）修改矿工和存储db配置
+修改矿工metadb存储路径（默认路径为`/root/.lambda_miner`，以修改为/data1/test为例）
+```
+./minernode config db.meta_dir /data1/test
+```
+        
+修改存储metadb存储路径（默认路径为`/root/.lambda_storage/meta`，以修改为/data1/test/meta为例）
+```
+./storagenode config storage.meta_dir /data1/test/meta
+```
+
 ### 重启minernode
 启动minernode：  
 [log_file_path] 指定矿工日志完整路径
