@@ -223,23 +223,7 @@ ntpdate -u ntp.api.bz
                 
                 [db]
                 # db config
-                lru_cache = "0"
-                keep_log_file_num = "16"
-                write_buffer_size = "268435456"
-                recycle_log_file_num = "0"
-                target_file_size_base = "268435456"
-                max_write_buffer_number = "25"
-                max_bytes_for_level_base = "4294967296"
-                level_0_stop_writes_trigger = "24"
-                target_file_size_multiplier = "1"
-                max_background_compactions = "2"
-                max_bytes_for_level_multiplier = "2"
-                level_0_slowdown_writes_trigger = "17"
-                level_0_file_num_compaction_trigger = "8"
-                level_compaction_dynamic_level_bytes = "0"
-                compaction_algorithm = "0"
-                rate_bytes_per_sec = "67108864"
-                data_backup_path = ""
+                meta_dir = "/root/.lambda_miner"
                 ```
 
 #### 4.3 查看矿工子账户地址
