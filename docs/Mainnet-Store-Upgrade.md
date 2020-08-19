@@ -71,7 +71,7 @@ kill `ps aux | grep 'storagenode' |grep -v grep| awk '{print $2}'`
 ./storagenode upgrade
 ```
 
-### （可选）修改矿工和存储metadb路径
+### （可选）修改矿工和存储节点metadb路径
 #### 修改矿工metadb路径
 默认路径为`/root/.lambda_miner`，以修改为`/data1/test`为例
 
@@ -84,7 +84,7 @@ mv /root/.lambda_miner/{var,kademlia} /data1/test/
 ./minernode config db.meta_dir /data1/test
 ```
         
-#### 修改存储metadb路径
+#### 修改存储节点metadb路径
 默认路径为`/root/.lambda_storage/meta`，以修改为`/data1/test/meta`为例）
 
 1. 移动`/root/.lambda_storage`下的`meta`到`/data1/test/`:
