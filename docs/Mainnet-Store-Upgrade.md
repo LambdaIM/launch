@@ -72,21 +72,22 @@ kill `ps aux | grep 'storagenode' |grep -v grep| awk '{print $2}'`
 ```
 
 ### （可选）修改矿工和存储metadb路径
-1.修改矿工metadb存储路径（默认路径为`/root/.lambda_miner`，以修改为`/data1/test`为例）:
+1.修改矿工metadb存储路径（默认路径为`/root/.lambda_miner`，以修改为`/data1/test`为例）:  
+移动`/root/.lambda_miner`下的`var`、`kademlia`到`/data1/test/`:
 ```
-mv /root/.lambda_miner/var /data1/test/
+mv /root/.lambda_miner/{var,kademlia} /data1/test/
 ```
-```
-mv /root/.lambda_miner/kademlia /data1/test/
-```
+修改配置：
 ```
 ./minernode config db.meta_dir /data1/test
 ```
         
 2.修改存储metadb存储路径（默认路径为`/root/.lambda_storage/meta`，以修改为`/data1/test/meta`为例）:
+移动`/root/.lambda_storage`下的`meta`到`/data1/test/`:
 ```
 mv /root/.lambda_storage/meta /data1/test/
 ```
+修改配置：
 ```
 ./storagenode config storage.meta_dir /data1/test/meta
 ```
