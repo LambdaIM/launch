@@ -92,4 +92,4 @@ Lambda 主要角色由验证节点、存储矿工、存储做市商构成及他�
 3）市场运营商可以通过发行的资产与自有业务结合形成完整的业务生态，可以成为基于Lambda的链上链，可以自定义业务和自身资产的挖矿模型。
 
 ## 六、开发者（Developer）
-任何对 Lambda 生态应用或区块链爱好者都可以通过开发项目方所要求的项目，按开发阶段获取最高 3000000 LAMB 对应比例的开发奖励，开发项目可按照 [Lambda 开发者悬赏计划](https://lambdastorage.zendesk.com/hc/zh-cn/articles/360007660258-Lambda-%E5%BC%80%E5%8F%91%E8%80%85%E6%82%AC%E8%B5%8F%E8%AE%A1%E5%88%92)中所提到的项目进行开发，开发者可参考 [Lambda 源代码](https://github.com/LambdaIM) 及[开发者应用开发指导](Application-Develop-Guide.md) 文档进一步了解，文档中包含了 Lambda 源代码、开发组件、资产发行与存储交易市场等功能，并持续为开发者更新最新内容。
+任何对 Lambda 生态应用或区块链爱好者都可以通过开发项目方所要求的项目，按开发阶段获取最高 3000000 LAMB 对应比例的开发奖励，开发项目可按照 [Lambda 开发者悬赏计划](https://lambdastorage.zendesk.com/hc/zh-cn/articles/360007660258-Lambda-%E5%BC%80%E5%8F%91%E8%80%85%E6%82%AC%E8%B5%8F%E8%AE%A1%E5%88%92)中所提到的项目进行开发，开发者可参考 [Lambda 源代码](https://github.com/LambdaIM) 及[开发者应用开发指导](DApp-Develop-Guide.md) 文档进一步了解，文档中包含了 Lambda 源代码、开发组件、资产发行与存储交易市场等功能，并持续为开发者更新最新内容。
