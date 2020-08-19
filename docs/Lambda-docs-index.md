@@ -83,7 +83,7 @@ Lambda 主要角色由验证节点、存储矿工、存储做市商构成及他�
 2）质押挖矿收益模型参考 [《Lambda经济白皮书》](https://www.lambdastorage.com/doc/Lambda%E7%BB%8F%E6%B5%8E%E7%99%BD%E7%9A%AE%E4%B9%A6.pdf)。
 
 ## 五、存储市场（Market）
-任何人通过质押100万LAMB均可称为市场运营商，市场运营商可以定义市场规则《[市场质押操作手册》](Market-Delegate-Operation-Guide.md)，主要有几方面工作:
+任何人通过质押100万LAMB均可称为市场运营商，市场运营商可以定义市场规则[《市场质押操作手册》](Market-Delegate-Operation-Guide.md)，主要有几方面工作:
 
 1）市场运营商可以面向最终用户运营自有业务，如物联网数据交换平台，
 

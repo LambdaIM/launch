@@ -75,11 +75,11 @@ kill `ps aux | grep 'storagenode' |grep -v grep| awk '{print $2}'`
 #### 修改矿工metadb路径
 默认路径为`/root/.lambda_miner`，以修改为`/data1/test`为例
 
-移动`/root/.lambda_miner`下的`var`、`kademlia`到`/data1/test/`:
+1. 移动`/root/.lambda_miner`下的`var`、`kademlia`到`/data1/test/`:
 ```
 mv /root/.lambda_miner/{var,kademlia} /data1/test/
 ```
-修改配置：
+2. 修改配置：
 ```
 ./minernode config db.meta_dir /data1/test
 ```
@@ -87,30 +87,30 @@ mv /root/.lambda_miner/{var,kademlia} /data1/test/
 #### 修改存储metadb路径
 默认路径为`/root/.lambda_storage/meta`，以修改为`/data1/test/meta`为例）
 
-移动`/root/.lambda_storage`下的`meta`到`/data1/test/`:
+1. 移动`/root/.lambda_storage`下的`meta`到`/data1/test/`:
 ```
 mv /root/.lambda_storage/meta /data1/test/
 ```
-修改配置：
+2. 修改配置：
 ```
 ./storagenode config storage.meta_dir /data1/test/meta
 ```
 
 ### 重启minernode
-启动minernode：  
+启动`minernode`：  
 [log_file_path] 指定矿工日志完整路径
 ```
 ./minernode run --query-interval 5 --daemonize --log.file [log_file_path]
 ```
 
-如[your-account-name]_miner_key.json没有移动到~/.lambda_miner/config/default_miner_key.json，则加上--key-file参数启动：
+如`[your-account-name]_miner_key.json`没有移动到`~/.lambda_miner/config/default_miner_key.json`，则加上`--key-fil`e参数启动：
 ```
 ./minernode run --query-interval 5 --daemonize --log.file [log_file_path] --key-file [filepath/your-account-name]_miner_key.json
 ```
 
 ### 重启storagenode
-启动storagenode：
-[log_file_path] 指定storagenode运行日志路径
+启动`storagenode`：
+[log_file_path] 指定`storagenode`运行日志路径
 ```
 ./storagenode run --daemonize --log.file [log_file_path]
 ```
