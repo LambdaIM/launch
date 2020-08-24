@@ -30,7 +30,7 @@ storagenode info disk [flags]
 | Name, shorthand| Default   | Description | Required                                                                  |
 | --------------- | ----   | -------- | --------------------- 
 |--local-mode   |  | local mode, no contract extra remote service |
-|--safe-cleanup   |  | safe cleanup no longer valued order data |
+|--prune   |  | prune order data |
 
 ## Examples
 
@@ -48,7 +48,7 @@ Disk                 |Total   |Used   |Free    |Order                           
                      |        |       |        |F083BC34E5CC1E2E6DBD20F0A274A70252DCCBC3 |1.3 GiB  |false
 
 
-./storagenode info  disk  --safe-cleanup 
+./storagenode info  disk  --prune 
              blockTime:  2020-04-11 14:01:27 UTC
                version:  0.2.7_rc2-13-gdbcabcf-debug
   storage.storage_name:  t4s5
