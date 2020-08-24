@@ -160,7 +160,7 @@ Disk                 |Total   |Used   |Free    |Order                           
 
 6.清理过期订单空间
 ```
-清理过期订单空间命令：
+需要先停止storagenode进程(./storagenode run --stop)，再执行清理过期订单空间命令：
 --prune会把Mining的值不为✓的订单删除并且不影响挖矿/算力
 
 ./storagenode info  disk  --prune 
