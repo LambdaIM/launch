@@ -1,15 +1,26 @@
 # 应用开发指导
 ## 配置环境
 
+### 下载安装包
+目前安装包仅支持Linux 环境
+```
+wget http://download.lambdastorage.com/lambda-storage/0.2.7_rc2/lambda-storage-0.2.7_rc2-testnet.tar.gz
+```
+
 ### 配置客户端
+配置客户端了链接的主网地址，以及区块链的chain-id
 
 ```   plain
-wget http://download.lambdastorage.com/lambda/0.5.0/lambda-0.5.0-testnet.tar.gz
 mkdir -p ~/LambdaIM && cd ~/LambdaIM
-tar zxvf lambda-0.5.0-testnet.tar.gz && cd lambda-0.5.0-testnet
+
+tar zxvf lambda-storage-0.2.7_rc2-testnet.tar.gz && cd lambda-storage-0.2.7_rc2-testnet
+
 ./lambdacli config node tcp://bj1.testnet.lambdastorage.com:26657
+
 ./lambdacli config chain-id lambda-chain-test4.9
+
 ./lambdacli config trust-node true
+
 ```
 * 测试网可选节点：
 ```   plain
@@ -18,7 +29,17 @@ tar zxvf lambda-0.5.0-testnet.tar.gz && cd lambda-0.5.0-testnet
 ./lambdacli config node tcp://bj3.testnet.lambdastorage.com:26657
 ./lambdacli config node tcp://bj4.testnet.lambdastorage.com:26657
 ```
+* 主网可以选择的节点
+```
+需要自己链接验证节点所要验证节点地址和端口号
+或自己搭建运行验证节点程序并同步数据
+
+```
+
 ### 创建用户并保存助记词
+
+涉及生成账户相关、签名相关算法说明 http://docs.lambda.im/Wallet-Hdkey/
+
 
 *助记词是用来恢复帐户信息的需谨慎保存
 
@@ -116,6 +137,7 @@ Response:
   TxHash: 680CC553CD23CC6951865C97635691F1FA1D35A669E5A12BF83DFF025C5D2F0E
 ```
 ### 查询交易
+需要注意的是，logs中的success为true，说明交易成功了
 
 ```   plain
 ./lambdacli query tx 680CC553CD23CC6951865C97635691F1FA1D35A669E5A12BF83DFF025C5D2F0E -o json
@@ -204,7 +226,13 @@ bj2.testnet.lambdastorage.com:13659
 bj3.testnet.lambdastorage.com:13659
 bj4.testnet.lambdastorage.com:13659
 ```
-#### 查询资产
+
+主网节点列表
+```
+需要自己链接验证节点所要验证节点地址和端口号
+或自己搭建运行验证节点程序并同步数据
+```
+#### 查询 账户资产
 
 /auth/accounts/{address}
 
@@ -420,7 +448,8 @@ http://bj1.testnet.lambdastorage.com:13659/bank/accounts/lambda1jdev3l38xwxxfq5f
   {"gas_estimate":"28077"}
 ```
 ##### 对交易数据签名
-
+签名前的数据结构
+签名相关说明详细见 http://docs.lambda.im/Wallet-Hdkey/#2
 ```   json
 {
     "account_number": "485",  //通过用户信息获取
@@ -506,9 +535,17 @@ http://bj1.testnet.lambdastorage.com:13659/txs
 
 [http://docs.lambda.im/Testnet-Miner-Guide/](http://docs.lambda.im/Testnet-Miner-Guide/)
 
+## 购买资产市场的空间（仅限测试网）
+
+在浏览器中可以找到一个矿工的矿工操作地址
+```
+lambdacli tx dam user buy --duration 1month --size 101GB --ask-address lambdamineroper1zm99mael4ef9u9qcyjnwsrp59sua9943y6w23e --asset uxxb --from user1
+```
+lambdamineroper1zm99mael4ef9u9qcyjnwsrp59sua9943y6w23e 为矿工操作地址
 ## 购买空间
 
-### 查询矿工出售的空间
+
+### 查询矿工出售的空间 （购买lambda市场的空间）
 
 ```   plain
 ./lambdacli query market miner-sellorders  lambda1r3my74gqyt8zfgqu358nv86nqncxu34cs0ek44 1 100
@@ -589,8 +626,17 @@ MatchOrder
 
 lambda storage目前提供了两个版本的 兼容部分s3接口的 gateway：
 
-* s3gateway  针对于单个订单的gateway，主要是方便用户迁移数据
-* lambgw       针对多个订单的gateway，适用于有更多业务需要的应用开发者
+* s3gateway  针对于单个订单的gateway，主要是方便用户迁移数据，将其他支持存储的数据，通过s3迁移到lambda
+* lambgw       针对多个订单的gateway，适用于有更多业务需要的应用开发者，也支持s3接口上传下载文件
+
+### 关于ui和订单的说明
+s3gateway 自带的UI是可用的，启动后可以创建Bucket
+lambgw  订单id映射为Bucket，不支持创建Bucket，目前自带的ui不可用，
+
+s3gateway 的启动命令如下
+```
+./storagecli s3gw run --account user1 --broker.extra_order_id  ${匹配订单的id}  --debug
+```
 
 
 
@@ -604,6 +650,7 @@ lambda storage目前提供了两个版本的 兼容部分s3接口的 gateway：
 * 常驻服务
 * 接口更新订单信息
 * 身份管理
+
 
 
 
@@ -665,6 +712,14 @@ mkdir -p ~/LambdaIM && cd ~/LambdaIM
 tar zxvf lambda-storage-0.2.7_rc2-testnet.tar.gz && cd lambda-storage-0.2.7_rc2-testnet
 ./storagecli init
 ```
+默认链接的是主网
+
+链接测试网
+```
+./storagecli init --testnet
+```
+
+
 配置s3端口与访问KEY：
 
 ```   
@@ -676,12 +731,16 @@ address = "127.0.0.1:9002"
 access_key = "accesskey"
 secret_key = "secretkey"
 ```
+启动后访问 127.0.0.1:9002，如果页面正常载入，配置就对了，如果打不开页面，需要检查address配置的ip和端口号
+
+
 ### 运行lambgw
 
 ```   shell
 ./storagecli lambgw run --account user1 --daemonize --log.file /tmp/gateway.log
 ```
 --account 为购买空间的用户
+
 
 
 
@@ -734,4 +793,68 @@ aws s3 --endpoint=http://localhost:9002/ ls s3://ORDERID
 
 ```   plain
 aws s3 --endpoint=http://localhost:9002/ cp s3://ORDERID/your-file /tmp/new-file
+```
+
+### api 上传文件
+
+各语言sdk下载  https://docs.min.io/docs/javascript-client-quickstart-guide.html
+
+```
+var Minio = require('minio')
+
+var minioClient = new Minio.Client({
+  endPoint: '127.0.0.1',
+  port: 8091,
+  accessKey: 'lambda1',
+  secretKey: '123456781',
+  signature_version: 's3v4',
+  useSSL: false,
+});
+
+// 读取Buckets 列表
+minioClient.listBuckets(function (err, buckets) {
+  if (err) return console.log(err)
+  console.log('buckets :', buckets)
+})
+
+//创建bucket
+minioClient.makeBucket('mybucket', '', function (err) {
+  if (err) return console.log('Error creating bucket.', err)
+  console.log('Bucket created successfully  ')
+})
+
+//上传文件
+var fs = require('fs')
+var file = './README.md'
+var fileStream = fs.createReadStream(file)
+var fileStat = fs.stat(file, function (err, stats) {
+  if (err) {
+    return console.log(err)
+  }
+  minioClient.putObject('mybucket', 'README.md', fileStream, stats.size, function (err, etag) {
+    console.log('-----')
+    return console.log(err, etag) // err should be null
+  })
+})
+
+//下载文件
+var size = 0;
+var data = '';
+minioClient.getObject('mybucket', 'README.md', function (err, dataStream) {
+  if (err) {
+    return console.log(err)
+  }
+  var myWriteStream = fs.createWriteStream('./README2.md')
+  dataStream.pipe(myWriteStream);
+  dataStream.on('data', function (chunk) {
+    size += chunk.length
+  })
+  dataStream.on('end', function () {
+    console.log('End. Total size = ' + size)
+  })
+  dataStream.on('error', function (err) {
+    console.log(err)
+  })
+
+})
 ```
