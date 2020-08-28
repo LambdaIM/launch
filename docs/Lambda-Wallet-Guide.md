@@ -541,11 +541,11 @@ TBB可用于质押
 ![avatar](img/Withdrawmarketrevenuemodel.png)
 
 ## 创建资产与做市商相关操作
-在钱包的设置页面切换到做市商角色
-![avatar](img/Authorization/role.png)
+点击顶部菜单的市场按钮，进入市场页面
+![avatar](img/asset/asset1.png)
+选择角色中的做市商，然后点击进入资产市场
 ### 创建资产
-然后在钱包首页点击资产标签
-![avatar](img/Authorization/asset.png)
+![avatar](img/asset/asset2.png)
 做市商需要先创建资产，后创建市场并关联之前创建的资产
 
 点击创建资产按钮，打开创建资产对话框
@@ -565,10 +565,13 @@ TBB可用于质押
 最大减产次数：最多减产几次
 减产周期：例如周期是1000，表示1000个块高减产一次
 初次增发块高：第一次增发的时候，块高是多少
+矿工奖励占比：奖励中分给矿工的占比，剩余的分给质押的用户
 ```
 
 填写完成后，点下一步，确认填写的信息和手续费，完成交易后资产就创建成功了
-### 创建授权市场
+### 创建资产市场
+点击切换到资产市场页面
+![avatar](img/asset/asset3.png)
 点击创建市场，打开创建市场对话框
 ![avatar](img/Authorization/create3.png)
 
@@ -578,40 +581,41 @@ TBB可用于质押
 例如3000lamb=1TBB
 
 点击下一步，确认填写的信息和手续费，完成交易，市场就创建成功了
-### 解散授权市场
-将标签页面切换到授权市场，找到自己创建的市场，点击解散市场
-![avatar](img/Authorization/market.png)
-弹窗解散市场对话框，点击下一步，确认手续费后，完成交易后，市场就解散了
+### 解散资产市场
+
+点击解散资产市场，弹窗解散市场对话框，
+
+当一个市场没有矿工质押，也没有用户质押时，才可以解散
+
+点击下一步，确认手续费后，完成交易后，市场就解散了
 ![avatar](img/Authorization/Disbanded.png)
 
-### 授权矿工挖矿
-点击授权，弹出授权窗口
-![avatar](img/Authorization/Minerauthorization.png)
-需要注意的是这里公钥支持两种加密算法secp256k1，ed25519 生成的公钥
+### 授权用户购买资产市场空间
+点击授权，弹出授权操作窗口
 
-对于使用钱包的用户，可以在设置页面复制账户的公钥，填进去也是可以的
-例如
- 钱包配置文件中格式化后的的公钥 lambdapub1addwnpepqwdrgj5xqkn3uydvyu6glz4l6ju34lx2ec0j2lzlxgd2mjgh0xyns7djzpe
+这里可以添加用户授权购买市场空间，也可以取消用户购买市场空间的授权
 
-secp256k1算法生成的 的公钥 A5o0SoYFpx4RrCc0j4q/1Lka/MrOHyV8XzIarckXeYk4
 
-edd25519 算法生成的公钥 K7cURUPuZroE666ZTWGme2ciQ69PfjKxyaK1hXTMDgk=
-
-输入授权人公钥，点击下一步，确认手续费后，完成交易，市场就解散了，
-需要说明的是确认页面看到的公钥，是解码后的原始公钥，和输入的公钥长度不一样
+![avatar](img/asset/asset4.png)
 
 
 
 ## 资产质押与矿工相关操作
-在授权市场中挖矿，需要先成为lambda矿工
-在顶部菜单挖矿向导中，在验证节点质押后，创建子账户，初始化矿工身份，就可以在授权市场中质押了
-![avatar](img/Authorization/assetminer.png)
+在资产市场中挖矿，需要先成为lambda矿工
+在顶部菜单挖矿向导中，在验证节点质押后，创建子账户，初始化矿工身份，就可以在资产市场中质押了
+![avatar](img/asset/asset5.png)
 
 点击质押弹出质押窗口
 
-![avatar](img/Authorization/pledge.png)
+![avatar](img/asset/asset6.png)
 
 输入要质押的空间大小，点击下一步，确认质押空间大小，设置手续费，完成交易即可质押成功
+
+需要注意的是在一个市场中初次质押时候填写的价格为实际有效的价格，之后再次补充质押，价格填1即可
+
+
+点击在质押列表，切换到质押列表页面
+![avatar](img/asset/asset7.png)
 点击赎回按钮，弹出赎回对话框
 ![avatar](img/Authorization/redeem.png)
 
@@ -621,22 +625,14 @@ edd25519 算法生成的公钥 K7cURUPuZroE666ZTWGme2ciQ69PfjKxyaK1hXTMDgk=
 ### 提取授权市场订单收益
 
 在钱包首页，点击提取授权市场订单收益，弹出对话框
-![avatar](img/Authorization/minermenu.png)
+![avatar](img/asset/asse9.png)
 选择资产类别，在填写页码，例如1、2、3、4
 ![avatar](img/Authorization/miner1.png)
 交易完成即可提取这个这个资产对应的市场的订单收益
 
 
-## 授权市场维护与验证节点相关操作
 
-验证节点可以维护授权市场，验证节点可以移除矿工
-点击移除矿工弹出 移除矿工对话框
-![avatar](img/Authorization/market-va.png)
-填写矿工的lambda 地址
-![avatar](img/Authorization/Deleteminer.png)
-点击下一步，确认矿工lambda地址和手续费，完成交易即可移除矿工
-
-## 购买授权空间与空间用户相关操作
+## 购买资产空间与空间用户相关操作
 打开钱包后，点击首页的资产标签，即可看到各种资产的余额
 ![avatar](img/Authorization/userspace0.png)
 
