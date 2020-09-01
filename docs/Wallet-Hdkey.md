@@ -3,6 +3,14 @@
 
 加密解密部分详细说明 https://github.com/LambdaIM/walletdoccode/blob/master/Symmetric.md
 
+
+```
+主网的地址： 39.107.247.86:13659
+
+测试网的地址： bj1.testnet.lambdastorage.com:13659
+```
+
+
 ## 1 地址、助记词、加密算法相关
       生成助记词 使用 bip39   钱包和区块链使用长度为256位的助记词（24个单词）
 
