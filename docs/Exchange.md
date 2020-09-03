@@ -27,7 +27,7 @@
 https://github.com/LambdaIM/walletdoccode/blob/master/lib/address.js
 
 
-## 二查询地址余额[GET]
+## 二、查询地址余额[GET]
 
   接口 http://URL/bank/balances/{address}
 
@@ -44,7 +44,7 @@ https://github.com/LambdaIM/walletdoccode/blob/master/lib/address.js
 	"amount": "201000000"
 }]
   ```
-## 三查询地址nonce[GET]
+## 三、查询地址nonce[GET]
 
 接口 http://URL/auth/accounts/{address}
 
@@ -72,12 +72,12 @@ https://github.com/LambdaIM/walletdoccode/blob/master/lib/address.js
 	} 
 }
 ```
-## 四转帐 [POST]
+## 四、转帐 [POST]
 接口 http://URL/txs
 
 发送交易分为三个部分
 
-### 1拼接交易的数据结构用于签名
+### 1 拼接交易的数据结构用于签名
 不同的交易类型，msgs数组中的对象的结构会有差别
 ```
 {
@@ -114,7 +114,7 @@ http://bj1.testnet.lambdastorage.com:13659/auth/accounts/lambda1prrcl9674j4aqrgr
 chain_id 通过node_info 接口获取
 http://bj1.testnet.lambdastorage.com:13659/node_info
 
-### 2对拼接好的数据结构进行签名
+### 2 对拼接好的数据结构进行签名
 数据签名相关代码举例 https://github.com/LambdaIM/walletdoccode/blob/master/lib/crypto.js
 
 例如 对第1步数据结构签名，结果转为base64格式
