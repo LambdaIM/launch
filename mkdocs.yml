@@ -60,6 +60,7 @@ nav:
     - Lambda API文档及开发者组件:
         - 概览: Lambda-API-Docs-Develop.md
         - DAPP应用开发指导: DApp-Develop-Guide.md
+        - 交易所对接文档: Exchange.md
         - 钱包API接入文档: Wallet-API.md
         - S3Gateway API文档: S3-Gateway-API.md
         - 区块链API文档: api-reference/paths.md
