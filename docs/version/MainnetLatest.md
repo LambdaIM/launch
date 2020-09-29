@@ -7,8 +7,9 @@
 MD5: cc67dfacf91772e627d05b04f4efa1bd  
 
 **更新内容**   
-1. 优化存储证明验证逻辑；  
-2. 修复已知bug。  
+1. 优化业务存储结构；  
+2. 数字资产发行新增预挖矿阶段；
+3. 资产市场授权变更。  
 
 
 新节点接入参考：[主网Validator接入教程](http://docs.lambda.im/Mainnet-Validator-Guide/)   
