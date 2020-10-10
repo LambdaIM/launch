@@ -604,12 +604,7 @@ lambda storage目前提供了两个版本的 兼容部分s3接口的 gateway：
 * 常驻服务
 * 接口更新订单信息
 * 身份管理
-
-
-
-不支持：
-
-* S3  multipart api, 可以通过客户端参数调整multipart_threshold来避免使用
+* multipart api
 
 
 
@@ -683,7 +678,7 @@ secret_key = "secretkey"
 ```
 --account 为购买空间的用户
 
-
+lambgw使用参考：[S3Gateway API文档](S3-Gateway-API.md)
 
 #### 查看lambgw 的api调用日志
 
