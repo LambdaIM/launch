@@ -742,7 +742,7 @@ Dam MatchOrder
 
 ## 存储业务
 
-### 配置lambda s3 gateway
+### 配置lambgw
 
 
 初始化：
@@ -765,15 +765,14 @@ access_key = "accesskey"
 secret_key = "secretkey"
 ```
 
-### 运行lambda s3 gateway
+### 运行lambgw
 
-
-```plain
-./storagecli gateway run --account user1 --broker.extra_order_id 420CFAFEA58BEEA4918CC84EB399381AF7E44EE6 --debug --daemonize --log.file /tmp/gateway.log
+```   shell
+./storagecli lambgw run --account user1 --daemonize --log.file /tmp/gateway.log
 ```
 --account 为购买空间的用户
 
---broker.extra_order_id 为用户的空间订单的ID
+lambgw使用参考：[S3Gateway API文档](S3-Gateway-API.md)
 
 
 ### 使用aws cli接入lambda s3
