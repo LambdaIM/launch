@@ -11,7 +11,7 @@
 [http://download.lambdastorage.com/wallet/0.5.55/](http://download.lambdastorage.com/wallet/0.5.55/)
 
 矿工和存储节点安装包：  
-[https://github.com/LambdaIM/launch/releases/tag/v0.5.0](https://github.com/LambdaIM/launch/releases/tag/v0.5.0)
+[https://github.com/LambdaIM/launch/releases/tag/v0.5.3](https://github.com/LambdaIM/launch/releases/tag/v0.5.3)
 [http://download.lambdastorage.com/lambda-storage/0.2.7_rc2/](http://download.lambdastorage.com/lambda-storage/0.2.7_rc2/)
 
 使用矿工管理程序配合钱包即可添加配置矿工服务及存储节点服务，非常便利

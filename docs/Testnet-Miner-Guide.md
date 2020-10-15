@@ -29,7 +29,7 @@ rm -rf ~/.lambda_miner ~/.lambda_storage ~/.lambda_storagecli
     ```
     2. 下载安装包
     ```
-    wget https://github.com/LambdaIM/launch/releases/download/v0.5.0/lambda-storage-0.2.7_rc2-testnet.tar.gz
+    wget https://github.com/LambdaIM/launch/releases/download/v0.5.3/lambda-storage-0.2.7_rc2-testnet.tar.gz
     ```
     如下载缓慢可使用下面的链接：
     ```
@@ -75,7 +75,7 @@ rm -rf ~/.lambda_miner ~/.lambda_storage ~/.lambda_storagecli
               
     !!! abstract ""
         ```
-        ./lambdacli config chain-id lambda-chain-test5.0
+        ./lambdacli config chain-id lambda-chain-test5.3
         ./lambdacli config trust-node true
         ```
     

@@ -41,7 +41,7 @@ mkdir -p ~/LambdaIM && cd ~/LambdaIM
 ```
 Download the package 
 ```
-wget https://github.com/LambdaIM/launch/releases/download/v0.5.0/lambda-storage-0.2.7_rc2-testnet.tar.gz
+wget https://github.com/LambdaIM/launch/releases/download/v0.5.3/lambda-storage-0.2.7_rc2-testnet.tar.gz
 ```
 Extract the installation package 
 ```
@@ -65,7 +65,7 @@ bj4.testnet.lambdastorage.com
 ```
 
 ```
-./lambdacli config chain-id lambda-chain-test4.9
+./lambdacli config chain-id lambda-chain-test5.3
 ./lambdacli config trust-node true
 ```
 ```

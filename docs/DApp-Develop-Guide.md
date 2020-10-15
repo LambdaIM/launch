@@ -5,11 +5,11 @@
 ### 配置客户端
 
 ```plain
-wget http://download.lambdastorage.com/lambda/0.5.0/lambda-0.5.0-testnet.tar.gz
+wget http://download.lambdastorage.com/lambda/0.5.3/lambda-0.5.3-testnet.tar.gz
 mkdir -p ~/LambdaIM && cd ~/LambdaIM
-tar zxvf lambda-0.5.0-testnet.tar.gz && cd lambda-0.5.0-testnet
+tar zxvf lambda-0.5.3-testnet.tar.gz && cd lambda-0.5.3-testnet
 ./lambdacli config node tcp://bj1.testnet.lambdastorage.com:26657
-./lambdacli config chain-id lambda-chain-test5.0
+./lambdacli config chain-id lambda-chain-test5.3
 ./lambdacli config trust-node true
 ```
 * 测试网可选节点：
@@ -129,7 +129,7 @@ Account:
 ```
 输出结果：
 ```plain
-{"chain_id":"lambda-chain-test5.0","account_number":"485","sequence":"1","fee":{"amount":null,"gas":"200000"},"msgs":[{"type":"cosmos-sdk/MsgSend","value":{"from_address":"lambda1jdev3l38xwxxfq5fdpx6cva2agfxrkugrflur6","to_address":"lambda1lxsnz2udquwhs7vm622m3rm552ghssvhqrefp8","amount":[{"denom":"upig","amount":"100000000"}]}}],"memo":""}
+{"chain_id":"lambda-chain-test5.3","account_number":"485","sequence":"1","fee":{"amount":null,"gas":"200000"},"msgs":[{"type":"cosmos-sdk/MsgSend","value":{"from_address":"lambda1jdev3l38xwxxfq5fdpx6cva2agfxrkugrflur6","to_address":"lambda1lxsnz2udquwhs7vm622m3rm552ghssvhqrefp8","amount":[{"denom":"upig","amount":"100000000"}]}}],"memo":""}
 confirm transaction before signing and broadcasting [Y/n]: y
 Password to sign with 'master':
 Response:
@@ -366,8 +366,8 @@ http://bj1.testnet.lambdastorage.com:13659/node_info
   },
   "id": "e02882af5bdafa5aec086c32b8398c268d2337f1",
   "listen_addr": "bj1.testnet.lambdastorage.com:26656",
-  "network": "lambda-chain-test5.0", //chain-id
-  "version": "0.5.0-goleveldb",
+  "network": "lambda-chain-test5.3", //chain-id
+  "version": "0.5.3-goleveldb",
   "channels": "4020212223303800",
   "moniker": "cv-moniker-1",
   "other": {
@@ -431,7 +431,7 @@ http://bj1.testnet.lambdastorage.com:13659/bank/accounts/lambda1jdev3l38xwxxfq5f
         "sequence": "7", //填写该值
         "from": "lambda1jdev3l38xwxxfq5fdpx6cva2agfxrkugrflur6",//帐户
         "account_number": "485", //填写该值
-        "chain_id": "lambda-chain-test5.0", //chain-id需填写
+        "chain_id": "lambda-chain-test5.3", //chain-id需填写
         "simulate": true,
         "memo": ""
     },
@@ -452,7 +452,7 @@ http://bj1.testnet.lambdastorage.com:13659/bank/accounts/lambda1jdev3l38xwxxfq5f
 ```json
 {
     "account_number": "485",  //通过用户信息获取
-    "chain_id": "lambda-chain-test5.0", //链的版本号 通过最新的区块信息获取 
+    "chain_id": "lambda-chain-test5.3", //链的版本号 通过最新的区块信息获取 
     "fee": {//手续费
         "amount": [{
             "amount": "101745",
