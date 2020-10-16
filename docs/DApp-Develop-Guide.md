@@ -748,9 +748,9 @@ Dam MatchOrder
 初始化：
 
 ```plain
-wget http://download.lambdastorage.com/lambda-storage/0.2.7_rc2/lambda-storage-0.2.7_rc2-testnet.tar.gz
+wget http://download.lambdastorage.com/lambda-storage/0.3.0-rc1/lambda-storage-0.3.0-rc1-testnet.tar.gz
 mkdir -p ~/LambdaIM && cd ~/LambdaIM
-tar zxvf lambda-storage-0.2.7_rc2-testnet.tar.gz && cd lambda-storage-0.2.7_rc2-testnet
+tar zxvf lambda-storage-0.3.0-rc1-testnet.tar.gz && cd lambda-storage-0.3.0-rc1-testnet
 ./storagecli init
 ```
 配置s3端口与访问KEY：

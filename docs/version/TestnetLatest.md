@@ -1,4 +1,4 @@
-# 测试网lambda v0.5.3 - lambda storage v0.2.7_rc2
+# 测试网lambda v0.5.3 - lambda storage v0.3.0-rc1
 
 ## lambda testnet v0.5.3
 
@@ -20,20 +20,19 @@ MD5: c07e25c07cf4358d0aced12233281d80
 
 [http://download.lambdastorage.com/lambda/0.5.3/](http://download.lambdastorage.com/lambda/0.5.3/)
 
-## lambda storage v0.2.7_rc2
+## lambda storage v0.3.0-rc1
 
 **本版本用于测试网**  
-包名: lambda-storage-0.2.7_rc2-testnet.tar.gz  
-MD5: 0b861072877e4416300ea359802e52f4
+包名: lambda-storage-0.3.0-rc1-testnet.tar.gz  
+MD5: 03cb1b4a446f56e9e4ac71f246ddb08d
 
-1. 新增资产声明和挖矿；
-2. 新增文件转让功能；
-3. 存储相关功能重构；
-4. 修复已知bug。
+1. 支持资产订单文件上传；
+2. 支持文件转让；
+3. 修复已知bug。
 
 矿工和存储节点接入参考：[http://docs.lambda.im/Testnet-Miner-Guide/](http://docs.lambda.im/Testnet-Miner-Guide/) 
 
 下载地址： 
 [https://github.com/LambdaIM/launch/releases/tag/v0.5.3](https://github.com/LambdaIM/launch/releases/tag/v0.5.3)
 
-[http://download.lambdastorage.com/lambda-storage/0.2.7_rc2/](http://download.lambdastorage.com/lambda-storage/0.2.7_rc2/)
+[http://download.lambdastorage.com/lambda-storage/0.3.0-rc1/](http://download.lambdastorage.com/lambda-storage/0.3.0-rc1/)

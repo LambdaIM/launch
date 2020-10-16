@@ -1,5 +1,5 @@
 # 钱包API接入文档说明
-参考钱包版本： [Wallet0.5.55](https://github.com/LambdaIM/launch/releases/tag/Wallet0.5.55)
+参考钱包版本： [Wallet0.5.57](https://github.com/LambdaIM/launch/releases/tag/Wallet0.5.57)
 
 钱包账户信息文档文档： [钱包账户信息、签名、配置文件说明](Wallet-Hdkey.md) 
 

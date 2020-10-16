@@ -1,4 +1,4 @@
-# storagenode0.2.7_rc2 配置 
+# storagenode0.3.0-rc1 配置 
 
 **注意**  
 存储接入前需要先同步当前服务器时间到最新时间
@@ -27,7 +27,7 @@ ntpdate -u ntp.api.bz
         
         ```
         [build]
-        version = "0.2.7_rc2"
+        version = "0.3.0-rc1"
         commit = "030c696bc6829cfafb3d240d66058b16b41aa460"
         mode = "release"
         

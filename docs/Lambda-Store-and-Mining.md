@@ -145,7 +145,7 @@ data_dir = [ "磁盘1", "磁盘2", "磁盘N"]
 ```
 检查订单使用空间命令：
 ./storagenode info  disk  --local-mode   
-               version:  0.2.7_rc2-13-gdbcabcf-debug
+               version:  0.3.0-rc1-13-gdbcabcf-debug
   storage.storage_name:  t4s5
       storage.data_dir:  [/data2/storage/store /data3/storage/store /data/storage/store /data4/store]
 
@@ -165,7 +165,7 @@ Disk                 |Total   |Used   |Free    |Order                           
 
 ./storagenode info  disk  --prune 
              blockTime:  2020-04-12 14:01:27 UTC
-               version:  0.2.7_rc2-13-gdbcabcf-debug
+               version:  0.3.0-rc1-13-gdbcabcf-debug
   storage.storage_name:  t4s5
       storage.data_dir:  [/data2/storage/store /data3/storage/store /data/storage/store /data4/storage/store]
 

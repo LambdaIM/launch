@@ -41,15 +41,15 @@ mkdir -p ~/LambdaIM && cd ~/LambdaIM
 ```
 Download the package 
 ```
-wget https://github.com/LambdaIM/launch/releases/download/v0.5.3/lambda-storage-0.2.7_rc2-testnet.tar.gz
+wget https://github.com/LambdaIM/launch/releases/download/v0.5.3/lambda-storage-0.3.0-rc1-testnet.tar.gz
 ```
 Extract the installation package 
 ```
-tar zxvf lambda-storage-0.2.7_rc2-testnet.tar.gz
+tar zxvf lambda-storage-0.3.0-rc1-testnet.tar.gz
 ```
 Enter the content after extracting
 ```
-cd lambda-storage-0.2.7_rc2-testnet
+cd lambda-storage-0.3.0-rc1-testnet
 ```
 
 ## 2Lambdacli-Deployment
@@ -124,7 +124,7 @@ lambdavaloper1r340rrv9fs95gqy5087e2mtz82vvwrglt6amx3
 After initializing "minernode", a default configuration file `~/.lambda_miner/config/config.toml` is generated, and then modified: config.toml
 
 ```
-version = "0.2.7_rc2"
+version = "0.3.0-rc1"
 commit = "34453f30e9aa2f281c827d9b4883b0b677eb170f"
 mode = "release"
 
@@ -213,7 +213,7 @@ Miner Address: lambda1wgdcvew36nqwm2d5gj6yxraayjvnhfpf5rrfww  //矿工子账户�
 ```
 ./minernode info
 Return Value：
-                version: 0.2.7_rc2
+                version: 0.3.0-rc1
                 dht id: CdZsGtfsXVjMgt51EnaGAqr78YmgFxYsCAn4ubR1Dpgo //dht-id will be used when create-miner
         server.address: 0.0.0.0:14000
   kad.external_address: 182.91.242.11:14000
