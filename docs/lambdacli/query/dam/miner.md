@@ -24,22 +24,20 @@ Query digital asset miner by address
 
 ## Examples
 ```
-./lambdacli query dam miner lambda10gat77jd5ucz7gw0m3xac8jfj5l83r6cm5ufc0
+./lambdacli query dam miner lambdamineroper105jf3p5qkrnq973xmc6e9f8asly79sv74c5y3x
 DigitalAssetMiner
   address:            lambdamineroper10gat77jd5ucz7gw0m3xac8jfj5l83r6c0mswdj
-  totalSize:          1000.000000000000000000
+  totalSize:          100000.000000000000000000
   assetSet:
   [
   DigitalAssetRecord
   assetName:           uabc
   orderPrice:          3000000
-  power:               0
-  miningSize:          1000.000000000000000000
+  power:               10
+  miningSize:          100000.000000000000000000
   matchSize:           100.000000000000000000
-  pledgeAsset:         10000000
-  lastRewardHeight:    0
-  selfChallengeHeight: 0
-  available:           true
+  pledgeAsset:         1000000000
+  selfPledgeAsset:     1000000000
 
   ]
   jailedRecords:

@@ -32,4 +32,5 @@ lambdacli query --help
 | [asset](asset/README.md)                             |  Querying commands for the asset module                                            |
 | [gov](./gov/README.md)                             |  Querying commands for the gov module                                            |
 | [market](market/README.md)                             |  Querying commands for the market module                                            |
+| [dam](dam/README.md)                             |  Querying commands for the dam module                                            |
 

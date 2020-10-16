@@ -93,23 +93,24 @@ Response:
     - address = lambda105jf3p5qkrnq973xmc6e9f8asly79sv7phcrym
 ```
 
-# lambdacli tx dam market authorize
+# lambdacli tx dam market authorize-user
 
 ## Introduction
 
-Authorize mining public key for a specific digital asset market
+Authorize a user is allowed to buy order in a specific digital asset market
 
 ## Usage
 
 ```
-lambdacli tx dam market authorize [asset] [flags]
+lambdacli tx dam market authorize-user [asset] [userAddr] [flags]
 ```
 
 - `asset`: market related to this asset
+- `userAddr`: authorized user's address
 
 Print help messages:
 ```
-lambdacli tx dam market authorize --help
+lambdacli tx dam market authorize-user --help
 ```
 
 ## Unique Flags
@@ -117,36 +118,80 @@ lambdacli tx dam market authorize --help
 | Name, shorthand     | type   | Required | Default  | Description                                                         |
 | --------------------| -----  | -------- | -------- | ------------------------------------------------------------------- |
 | --from | string | true     | ""       |  Name or address of private key with which to sign |
-| --pubkey | string | true     | ""       |  key path to load pubkey to authorize digital asset mining |
 
 ## Examples
 
 ```
-lambdacli tx dam market authorize uabc --from master --pubkey ../pubkey.json
+lambdacli tx dam market authorize-user uabc lambda16dmwfy5fg5t2fcyekmu7r2q350avdpwq07shel
 ```
 
-pubkey.json
-```
-{
-  "pub_key": {
-    "type": "tendermint/PubKeyEd25519",
-    "value": "Pyd/mJPIdBhtUDNerCZORLPv5Ovjf8/ujlNA+X5tMgE="
-  }
-}
-```
 
 Output:
 
 ```
 Response:
-  Height: 182
-  TxHash: B2AF9FDB7BBAEBEAEA72CA30129397D199AE8753CD880A81B312EE85AE4A4540
+  Height: 17047
+  TxHash: AC790CEDB74759141366B586B8152EA625B3BB6027ABBB6D0244898C4C70C48B
   Raw Log: [{"msg_index":"0","success":true,"log":""}]
   Logs: [{"msg_index":0,"success":true,"log":""}]
   GasWanted: 200000
-  GasUsed: 18360
+  GasUsed: 12895
   Tags:
-    - action = authorizeMiningPubKey
+    - action = authorizeUser
     - address = lambda105jf3p5qkrnq973xmc6e9f8asly79sv7phcrym
+    - user = lambda16dmwfy5fg5t2fcyekmu7r2q350avdpwq07shel
+    - asset = uabc
+    - isAllowed = true
+```
+
+# lambdacli tx dam market forbid-user
+
+## Introduction
+
+Forbid a user from buying order in a specific digital asset market
+
+## Usage
+
+```
+lambdacli tx dam market forbid-user [asset] [userAddr] [flags]
+```
+
+- `asset`: market related to this asset
+- `userAddr`: authorized user's address
+
+Print help messages:
+```
+lambdacli tx dam market forbid-user --help
+```
+
+## Unique Flags
+
+| Name, shorthand     | type   | Required | Default  | Description                                                         |
+| --------------------| -----  | -------- | -------- | ------------------------------------------------------------------- |
+| --from | string | true     | ""       |  Name or address of private key with which to sign |
+
+## Examples
+
+```
+lambdacli tx dam market forbid-user uabc lambda16dmwfy5fg5t2fcyekmu7r2q350avdpwq07shel
+```
+
+
+Output:
+
+```
+Response:
+  Height: 17081
+  TxHash: EE4A13D86849E0679A0BA84ADC02293383518E2ACB65994E90C46F8D8403835D
+  Raw Log: [{"msg_index":"0","success":true,"log":""}]
+  Logs: [{"msg_index":0,"success":true,"log":""}]
+  GasWanted: 200000
+  GasUsed: 11791
+  Tags:
+    - action = authorizeUser
+    - address = lambda105jf3p5qkrnq973xmc6e9f8asly79sv7phcrym
+    - user = lambda16dmwfy5fg5t2fcyekmu7r2q350avdpwq07shel
+    - asset = uabc
+    - isAllowed = false
 ```
 

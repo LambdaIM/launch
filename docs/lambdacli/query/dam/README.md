@@ -20,13 +20,21 @@ lambdacli query dam --help
 | Name                            | Description                                                   |
 | --------------------------------| --------------------------------------------------------------|
 | [params](params.md)     | Query dam params |
+| [pool](pool.md)   | Query dam pool                |
 | [markets](markets.md)   | Query all digital asset market                 |
 | [market](market.md)     | Query digital asset market by asset name |
-| [pool](pool.md)   | Query dam pool                |
+| [authorized-users](authorized-users.md)     | Query authorized users by asset |
+| [authorized-user](authorized-user.md)     | Query authorized info by address asset|
 | [miner](miner.md)   |   Query digital asset miner by address                |
 | [pledge-records](pledge-records.md)   |  Query all pledge records by address                |
 | [jailed-records](jailed-records.md)   |  Query all jailed records by address                |
-| [refunding-records](refunding-records.md)   |  Query all refunding records by address                |
+| [delegations](delegations.md)   | Query user's all delegations made by one delegator |
+| [delegation]( delegation.md)   |  Query user's asset delegation made by one delegator to one miner  |
+| [delegations-to](delegations-to.md)   |  Query all delegations to one digital asset miner |
+| [asset-delegations-to](asset-delegations-to.md)   |  Query all delegations to one digital asset miner by asset  |
+| [refunding-delegation](refunding-delegation.md)   | Query refunding delegation made by delegator from miner |
+| [refunding-delegations](refunding-delegations.md)   |  Query all refunding delegations made by delegator  |
+| [refunding-delegations-from](refunding-delegations-from.md)   |  Query all refunding delegations from miner  |
 | [match-order](match-order.md)   |  Query match order by order ID               |
 | [all-match-orders](all-match-orders.md)   |  Query all match orders by address              |
 | [asset-match-orders](asset-match-orders.md)   |  Query all match orders related to the given asset by address               |

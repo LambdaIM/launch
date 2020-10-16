@@ -22,6 +22,7 @@ lambdacli tx asset --help
 | [pledge](pledge.md)             | pledge token to asset                                         |
 | [drop](drop.md)                 | drop asset and return tokens                                  |
 | [create](create.md)             | create new asset                                              |
+| [invest](invest.md)             | invest amount of asset to paticipate pre-sell stage           |
 | [mint](mint.md)                 | mint, inflate asset                                           |
 | [destroy](destroy.md)           | destroy asset                                                 |
 | [ruin](ruin.md)                 | ruin asset                                                    |
