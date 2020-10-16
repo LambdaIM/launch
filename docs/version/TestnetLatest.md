@@ -5,14 +5,14 @@
 包名: lambda-0.5.3-testnet.tar.gz  
 MD5: 384d17df5fd4b8306214eb2421f0ba3c
   
-1. 新增数字资产，支持创建、转账、销毁等操作；  
-2. 新增数字资产市场创建、空间购买、文件转让等功能；
-3. 新增数字资产挖矿；
+1. 优化业务存储结构；
+2. 数字资产发行新增预挖矿阶段；
+3. 资产市场授权规则变更；
 4. 修复已知bug。
 
 新节点接入参考：[http://docs.lambda.im/Testnet-Validator-Guide/](http://docs.lambda.im/Testnet-Validator-Guide/)  
 
-数字资产和市场操作手册：[http://docs.lambda.im/DigitMarket-Delegate-Operation-Guide/](http://docs.lambda.im/DigitMarket-Delegate-Operation-Guide/)
+数字资产管理手册：[http://docs.lambda.im/Testnet-Asset-Manage-Guide/](http://docs.lambda.im/Testnet-Asset-Manage-Guide/)
 
 下载地址：  
 [https://github.com/LambdaIM/launch/releases/tag/v0.5.3](https://github.com/LambdaIM/launch/releases/tag/v0.5.3)
