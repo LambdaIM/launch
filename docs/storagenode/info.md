@@ -36,7 +36,7 @@ storagenode info disk [flags]
 
 ```
 ./storagenode info  disk  --local-mode   
-               version:  0.2.7_rc2-13-gdbcabcf-debug
+               version:  0.3.0-rc1-13-gdbcabcf-debug
   storage.storage_name:  t4s5
       storage.data_dir:  [/data2/storage/store /data3/storage/store /data/storage/store /data4/store]
 
@@ -50,7 +50,7 @@ Disk                 |Total   |Used   |Free    |Order                           
 
 ./storagenode info  disk  --prune 
              blockTime:  2020-04-11 14:01:27 UTC
-               version:  0.2.7_rc2-13-gdbcabcf-debug
+               version:  0.3.0-rc1-13-gdbcabcf-debug
   storage.storage_name:  t4s5
       storage.data_dir:  [/data2/storage/store /data3/storage/store /data/storage/store /data4/storage/store]
 
@@ -119,7 +119,7 @@ show storage network info
 ETj21L2dWgxPfCr5ocRDYeRXb9rREjWM5B2gox6UatYP
 
 ./storagenode info network --test
-               version: 0.2.7_rc2-debug
+               version: 0.3.0-rc1-debug
                 dht id: ETj21L2dWgxPfCr5ocRDYeRXb9rREjWM5B2gox6UatYP
   storage.storage_name: t4
  storage.miner_address: 172.11.159.11:14001 	 successful

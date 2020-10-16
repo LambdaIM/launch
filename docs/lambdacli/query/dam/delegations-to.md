@@ -1,22 +1,22 @@
-# lambdacli query dam pledge-records
+# lambdacli query dam delegations-to
 
 ## Description
 
-Query all pledge records by address
+Query all delegations to one digital asset miner
 
 ## Usage:
 
 ```
- lambdacli query dam pledge-records [address] [flags]
+lambdacli query dam delegations-to [minerAddr] [flags]
 ```
 
-- `address`: pledge records of the address
+- `minerAddress`: digital asset miner's address
 
 ## Flags
 
 | Name,shorthand | Type   | Required | Default               | Description                                                  |
 | -------------- | ------ | -------- | --------------------- | ------------------------------------------------------------ |
-| -h, --help     |        | False    |                       | help for pledge-records                                             |
+| -h, --help     |        | False    |                       | help for asset-match-orders                    |
 | --ledger       | String | False    |                       | Use a connected Ledger device                                |
 | --node         | String | False    | tcp://localhost:26657 | `<host>:<port>`to tendermint rpc interface for this chain    |
 | --trust-node   | String | False    | True                  | Don't verify proofs for responses                            |
@@ -24,14 +24,11 @@ Query all pledge records by address
 
 ## Examples
 ```
-./lambdacli query dam pledge-records lambdamineroper10gat77jd5ucz7gw0m3xac8jfj5l83r6c0mswdj
-DigitalAssetRecord
-  assetName:           uabc
-  orderPrice:          3000000
-  power:               10
-  miningSize:          100000.000000000000000000
-  matchSize:           100.000000000000000000
-  pledgeAsset:         1000000000
-  selfPledgeAsset:     1000000000
+./lambdacli query dam delegations-to lambdamineroper10gat77jd5ucz7gw0m3xac8jfj5l83r6c0mswdj
+Dam Delegation:
+  Delegator: lambda10gat77jd5ucz7gw0m3xac8jfj5l83r6cm5ufc0
+  Miner:     lambdamineroper10gat77jd5ucz7gw0m3xac8jfj5l83r6c0mswdj
+  Asset:     uabc
+  Amount:    1000000000
 ```
 

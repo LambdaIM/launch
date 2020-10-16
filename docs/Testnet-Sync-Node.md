@@ -1,4 +1,4 @@
-# 测试网0.5.0同步节点 接入教程
+# 测试网0.5.3同步节点 接入教程
 
 ### 1. 下载安装包并解压
 创建目录并进入
@@ -7,22 +7,22 @@ mkdir -p ~/LambdaIM && cd ~/LambdaIM
 ```
 下载安装包
 ```
-wget https://github.com/LambdaIM/launch/releases/download/v0.5.0/lambda-0.5.0-testnet.tar.gz
+wget https://github.com/LambdaIM/launch/releases/download/v0.5.3/lambda-0.5.3-testnet.tar.gz
 
 如下载缓慢可使用下面的链接：
-wget http://download.lambdastorage.com/lambda/0.5.0/lambda-0.5.0-testnet.tar.gz
+wget http://download.lambdastorage.com/lambda/0.5.3/lambda-0.5.3-testnet.tar.gz
 ```
 
 解压安装包
 ```
-tar zxvf lambda-0.5.0-testnet.tar.gz && cd lambda-0.5.0-testnet
+tar zxvf lambda-0.5.3-testnet.tar.gz && cd lambda-0.5.3-testnet
 ```
 
 ### 2. 初始化节点  
 将下面命令中的[your-moniker]替换成您自定义的节点名称，不用加中括号`  
 `注意：这里的 your-moniker 必须使用英文，用于P2P网络
 ```
-./lambda init [your-moniker] --chain-id lambda-chain-test4.9
+./lambda init [your-moniker] --chain-id lambda-chain-test5.3
 ```
 如果初始化报错，可能是由于有老版本的配置数据导致，可以通过下面的命令清除错误数据
 ```

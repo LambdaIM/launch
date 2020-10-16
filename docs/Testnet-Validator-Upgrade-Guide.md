@@ -1,9 +1,9 @@
-# 测试网Validator 0.5.0 升级教程
+# 测试网Validator 0.5.3 升级教程
 
 节点机器配置及系统设置参考：[验证节点挖矿手册](Lambda-Validator-Mining.md)（节点务必阅读此文档，尤其是**系统设置**部分）  
-新节点接入参考[测试网节点0.5.0 接入教程](Testnet-Validator-Guide.md)
+新节点接入参考[测试网节点0.5.3 接入教程](Testnet-Validator-Guide.md)
 
-测试网节点从0.4.7版本升级到0.5.0版本参考如下步骤
+测试网节点从0.4.7版本升级到0.5.3版本参考如下步骤
 
 ### 1. 下载安装包并解压
 `创建目录并进入`
@@ -14,15 +14,15 @@ mkdir -p ~/LambdaIM && cd ~/LambdaIM
 
 `下载安装包`
 ```
-wget https://github.com/LambdaIM/launch/releases/download/v0.5.0/lambda-0.5.0-testnet.tar.gz
+wget https://github.com/LambdaIM/launch/releases/download/v0.5.3/lambda-0.5.3-testnet.tar.gz
 
 如下载缓慢可使用下面的链接：
-wget http://download.lambdastorage.com/lambda/0.5.0/lambda-0.5.0-testnet.tar.gz
+wget http://download.lambdastorage.com/lambda/0.5.3/lambda-0.5.3-testnet.tar.gz
 ```
 
 `解压安装包`
 ```
-tar zxvf lambda-0.5.0-testnet.tar.gz && cd lambda-0.5.0-testnet
+tar zxvf lambda-0.5.3-testnet.tar.gz && cd lambda-0.5.3-testnet
 ```
 ### 2. 停止节点服务
 
@@ -37,7 +37,7 @@ kill `ps aux | grep lambda |grep -v grep| awk '{print $2}'`
 ```
 **注意**：  
 1. 成功停止节点服务后，禁止使用v0.4.7版本的lambda程序做任何操作。  
-2. 保证后续执行的lambda、lambdacli程序均为v0.5.0版本。  
+2. 保证后续执行的lambda、lambdacli程序均为v0.5.3版本。  
 
 ### 3. 覆盖genesis.json文件
 ```
@@ -47,7 +47,7 @@ kill `ps aux | grep lambda |grep -v grep| awk '{print $2}'`
 ### 4. 修改lambdacli配置
 要确保机器已开启端口26656, 26657
 ```
-./lambdacli config chain-id lambda-chain-test4.9
+./lambdacli config chain-id lambda-chain-test5.3
 ```
 
 ### 5. 备份和恢复db
@@ -81,8 +81,8 @@ nohup ./lambdacli rest-server --node tcp://0.0.0.0:26657 --laddr tcp://0.0.0.0:1
 **查看/tmp/lambda.log日志正常，即节点升级成功。不需要再执行后面的操作。**
 
 ### 矿工服务重启
-测试网升级0.5.0后，矿工需要修改配置并重启minernode服务才能保证挖矿正常。   
-参考文档：[矿工服务重启](Lambda-Miner-Restart.md) 或升级矿工服务到0.2.7_rc2[矿工服务升级](Lambda-Store-Upgrade.md)
+测试网升级0.5.3后，矿工需要修改配置并重启minernode服务才能保证挖矿正常。   
+参考文档：[矿工服务重启](Lambda-Miner-Restart.md) 或升级矿工服务到0.3.0-rc1[矿工服务升级](Lambda-Store-Upgrade.md)
 
 ==============
 
@@ -97,13 +97,13 @@ nohup ./lambdacli rest-server --node tcp://0.0.0.0:26657 --laddr tcp://0.0.0.0:1
 ```
 
 #### 使用社区提供的区块链数据包启动节点
-下载数据压缩包lambda_0.5.0_data.tar.gz
+下载数据压缩包lambda_0.5.3_data.tar.gz
 ``` 
-wget http://download.lambdastorage.com/lambda/0.5.0/lambda_0.5.0_data.tar.gz
+wget http://download.lambdastorage.com/lambda/0.5.3/lambda_0.5.3_data.tar.gz
 ```
-解压`lambda_0.5.0_data.tar.gz`到`~/.lambda/`目录下（解压过程耗时较长，请耐心等待）
+解压`lambda_0.5.3_data.tar.gz`到`~/.lambda/`目录下（解压过程耗时较长，请耐心等待）
 ``` 
-tar -zxvf lambda_0.5.0_data.tar.gz -C ~/.lambda/
+tar -zxvf lambda_0.5.3_data.tar.gz -C ~/.lambda/
 ```
 启动节点
 ```
