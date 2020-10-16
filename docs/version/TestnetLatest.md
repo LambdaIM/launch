@@ -2,8 +2,9 @@
 
 ## lambda testnet v0.5.3
 
+**本版本用于测试网**  
 包名: lambda-0.5.3-testnet.tar.gz  
-MD5: 384d17df5fd4b8306214eb2421f0ba3c
+MD5: c07e25c07cf4358d0aced12233281d80
   
 1. 优化业务存储结构；
 2. 数字资产发行新增预挖矿阶段；
@@ -20,7 +21,9 @@ MD5: 384d17df5fd4b8306214eb2421f0ba3c
 [http://download.lambdastorage.com/lambda/0.5.3/](http://download.lambdastorage.com/lambda/0.5.3/)
 
 ## lambda storage v0.2.7_rc2
-包名: lambda-storage-0.2.7_rc2-testnet.tar.gz
+
+**本版本用于测试网**  
+包名: lambda-storage-0.2.7_rc2-testnet.tar.gz  
 MD5: 0b861072877e4416300ea359802e52f4
 
 1. 新增资产声明和挖矿；
