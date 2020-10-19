@@ -40,7 +40,8 @@
 1. 停止storagenode程序；
 2. 将 旧盘存储数据 移动至新盘目录；
 3. 修改`~/.lambda_storage/config/config.toml`中的`storage.data_dir`；
-4. 重新启动storagenode程序。
+4. 重建索引`storagenode info index --rebuild`
+5. 重新启动storagenode程序。
 
 举个例子：
 ``` 
@@ -52,6 +53,9 @@ mkdir -p /data3/test/
 mv ~/.lambda_storage/store /data3/test/
 mv ~/.lambda_storage/mining /data3/test/
 mv /data1/test /data4/test
+
+重建索引
+./storagenode info index --rebuild
 
 修改存储数据目录配置
 ./storagenode config storage.data_dir /data3/test,/data4/test
