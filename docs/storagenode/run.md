@@ -28,8 +28,16 @@ storagenode run [flags]
 | --status  | | get daemon status |
 | --stop  |  | stop daemon |
 | --storage.data_dir   | /root/.lambda_storage | dirs for storage and mining |
+| --storage.keepalive_interval  | 5s | local keepalive interval to miner node |
+| --storage.meta_dir   | /root/.lambda_storage/meta | dir for meta files |
 | --storage.miner_address  |  | minernode address |
+| --storage.order_cache_refresh_interval | 5m0s | local order cached refresh interval |
 | --storage.root_secret_seed  |  | root secret key for generate apikey |
+| --storage.setup_expire_check_batch  | 110 | check expired setup count every interval  |
+| --storage.setup_pending_retry_batch  | 88 | retry pending setup count every interval  |
+| --storage.setup_pending_retry_threshold  | 60 | retry pending setup maximum times  |
+| --storage.setup_resolve_batch  | 88 | resolve setup count every interval |
+| --storage.space_to_setup  |  | total space(GB) for mining, if set will ignore/overwrite storage.setup flags |
 | --storage.storage_name  |  | storage name to represent current node |
 
 
