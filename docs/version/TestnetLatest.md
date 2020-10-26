@@ -24,7 +24,7 @@ MD5: c07e25c07cf4358d0aced12233281d80
 
 **本版本用于测试网**  
 包名: lambda-storage-0.3.0-rc1-testnet.tar.gz  
-MD5: 03cb1b4a446f56e9e4ac71f246ddb08d
+MD5: 6b3d9738d99861d9c97b5dcde189d8b5
 
 1. 支持资产订单文件上传；
 2. 支持文件转让；

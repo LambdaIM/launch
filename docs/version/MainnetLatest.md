@@ -23,7 +23,7 @@ MD5: cc67dfacf91772e627d05b04f4efa1bd
 
 **本版本用于主网**    
 包名: lambda-storage-0.2.9.tar.gz  
-MD5: 5083f63bd59bc1cf86d41a44716349b7
+MD5: 941e500de42fb225be40ad42f930359d
 
 **更新内容**   
 1. 挖矿缓存页问题修复；
