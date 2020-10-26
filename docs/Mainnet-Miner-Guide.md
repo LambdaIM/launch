@@ -1,4 +1,4 @@
-# 矿工0.2.8接入教程
+# 矿工0.2.9接入教程
 
 **注意**  
 矿工接入前需要先同步当前服务器时间到最新时间
@@ -9,7 +9,7 @@ ntpdate -u ntp.api.bz
 
 1个miner下可注册多个storagenode   
 
-旧版本升级 `0.2.8` 可参考：[storage0.2.8升级](Mainnet-Store-Upgrade.md)  
+旧版本升级 `0.2.9` 可参考：[storage0.2.9升级](Mainnet-Store-Upgrade.md)  
 
 ## 一、配置矿工和存储节点
 
@@ -22,19 +22,19 @@ ntpdate -u ntp.api.bz
     ```
     2. 下载安装包
     ```
-    wget https://github.com/LambdaIM/launch/releases/download/Storage0.2.8/lambda-storage-0.2.8.tar.gz
+    wget https://github.com/LambdaIM/launch/releases/download/Storage0.2.9/lambda-storage-0.2.9.tar.gz
     ```
     如下载缓慢可使用下面的链接：
     ```
-    wget http://download.lambdastorage.com/lambda-storage/0.2.8/lambda-storage-0.2.8.tar.gz
+    wget http://download.lambdastorage.com/lambda-storage/0.2.9/lambda-storage-0.2.9.tar.gz
     ```
     3. 解压安装包
     ```
-    tar zxvf lambda-storage-0.2.8.tar.gz
+    tar zxvf lambda-storage-0.2.9.tar.gz
     ```
     4. 进入解压后的目录
     ```
-    cd lambda-storage-0.2.8
+    cd lambda-storage-0.2.9
     ```
 
 ### 2. 配置lambdacli
@@ -185,7 +185,7 @@ ntpdate -u ntp.api.bz
             ??? note "展开查看配置说明"
                 ```shell hl_lines="26"              
                 [build]
-                version = "0.2.8"
+                version = "0.2.9"
                 commit = "030c696bc6829cfafb3d240d66058b16b41aa460"
                 mode = "release"
                 
@@ -268,7 +268,7 @@ ntpdate -u ntp.api.bz
     
     !!! success "返回如下结果"
         ```text hl_lines="2"
-                       version: 0.2.8
+                       version: 0.2.9
                         dht id: G4xW3UHMfFnTmaRMZUJ7PKcfvr9YTTFyekcsRxKDZZD9 #创建矿工时会用到此dht-id
         server.private_address: 172.11.159.11:15001
                 server.address: 0.0.0.0:26654
@@ -835,7 +835,7 @@ ntpdate -u ntp.api.bz
 !!! success "返回如下结果"
     ```
     
-                   version: 0.2.8
+                   version: 0.2.9
                     dht id: G4xW3UHMfFnTmaRMZUJ7PKcfvr9YTTFyekcsRxKDZZD9
     server.private_address: 172.11.159.11:15001   successful
             server.address: 0.0.0.0:26654    successful
@@ -850,7 +850,7 @@ ntpdate -u ntp.api.bz
 
 !!! success "返回如下结果"
     ```
-                   version: 0.2.8
+                   version: 0.2.9
                     dht id: 3mta4YEgHB43RHYE83aWBouvFNNCtSc832siEwmcTUsZ
       storage.storage_name: sn1
      storage.miner_address: 172.11.159.11:15001   successful
@@ -867,7 +867,7 @@ ntpdate -u ntp.api.bz
 
 !!! success "返回如下结果"
     ```
-                   version:  0.2.8
+                   version:  0.2.9
       storage.storage_name:  sn1
           storage.data_dir:  [/lambda/data/xvdd/store /lambda/data/xvde/store /lambda/data/xvdc/中文test/store /lambda/.1lambda_storage/store]
 
