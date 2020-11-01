@@ -80,7 +80,6 @@ d3440b0b7a0ccf419f506a1242431813cf8a699c@hhht.mainnet.lambdastorage.com:26656
 
 国外种子节点推荐
 ```
-ea7d31b6fd17d06390445b5e2c2d40a3762c9ea3@tokyo1.mainnet.lambdastorage.com:26656 (推荐)
 2274be959a4598a789791edf811546c20b68495f@tokyo2.mainnet.lambdastorage.com:26656
 ```
 
@@ -111,7 +110,6 @@ bootstrap_addr = [
                   "hhht.mainnet.lambdastorage.com:12000",
                   "bj.mainnet.lambdastorage.com:12000",
                   "hk.mainnet.lambdastorage.com:12000",
-                  "tokyo1.mainnet.lambdastorage.com:12000",
                   "tokyo2.mainnet.lambdastorage.com:12000",]
 bootstrap_backoff_max = "30s"
 bootstrap_backoff_base = "1s"

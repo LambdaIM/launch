@@ -84,10 +84,6 @@ ntpdate -u ntp.api.bz
             ```  
         === "dht5(国外)"
             ```shell
-            ./lambdacli config dht-gateway-address tokyo1.mainnet.lambdastorage.com:12000
-            ```
-        === "dht6(国外)"
-            ```shell
             ./lambdacli config dht-gateway-address tokyo2.mainnet.lambdastorage.com:12000
             ```              
 
@@ -205,7 +201,6 @@ ntpdate -u ntp.api.bz
                   "hhht.mainnet.lambdastorage.com:12000",
                   "bj.mainnet.lambdastorage.com:12000",
                   "hk.mainnet.lambdastorage.com:12000",
-                  "tokyo1.mainnet.lambdastorage.com:12000",
                   "tokyo2.mainnet.lambdastorage.com:12000",]
                 # this should listen at Public IP
                 ## 对外暴露的提供服务的地址
@@ -600,11 +595,11 @@ ntpdate -u ntp.api.bz
                 [broker]
                 # dht_gateway_addr为验证节点的dht服务 IP和端口；
                 # 可以是自己质押的验证节点配置的kad.external_address
-                # 可选官方dht地址：zjk.mainnet.lambdastorage.com:12000/hhht.mainnet.lambdastorage.com:12000/bj.mainnet.lambdastorage.com:12000/hk.mainnet.lambdastorage.com:12000/tokyo1.mainnet.lambdastorage.com:12000/tokyo2.mainnet.lambdastorage.com:12000
-                dht_gateway_addr = "tokyo1.mainnet.lambdastorage.com:12000" 
+                # 可选官方dht地址：zjk.mainnet.lambdastorage.com:12000/hhht.mainnet.lambdastorage.com:12000/bj.mainnet.lambdastorage.com:12000/hk.mainnet.lambdastorage.com:12000/tokyo2.mainnet.lambdastorage.com:12000
+                dht_gateway_addr = "tokyo2.mainnet.lambdastorage.com:12000" 
                 # validator_addr为验证节点IP和端口，可以是自己质押的验证节点rest-server服务指定的laddr地址
-                # 可选官方地址：zjk.mainnet.lambdastorage.com:13659/hhht.mainnet.lambdastorage.com:13659/bj.mainnet.lambdastorage.com:13659/hk.mainnet.lambdastorage.com:13659/tokyo1.mainnet.lambdastorage.com:13659/tokyo2.mainnet.lambdastorage.com:13659
-                validator_addr = "tokyo1.mainnet.lambdastorage.com:13659"   
+                # 可选官方地址：zjk.mainnet.lambdastorage.com:13659/hhht.mainnet.lambdastorage.com:13659/bj.mainnet.lambdastorage.com:13659/hk.mainnet.lambdastorage.com:13659/tokyo2.mainnet.lambdastorage.com:13659
+                validator_addr = "tokyo2.mainnet.lambdastorage.com:13659"   
                 
                 [gateway]
                 # local listen address

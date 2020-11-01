@@ -64,7 +64,6 @@ ntpdate -u ntp.api.bz
                       "hhht.mainnet.lambdastorage.com:12000",
                       "bj.mainnet.lambdastorage.com:12000",
                       "hk.mainnet.lambdastorage.com:12000",
-                      "tokyo1.mainnet.lambdastorage.com:12000",
                       "tokyo2.mainnet.lambdastorage.com:12000",]
     
             db_path = "/root/.lambda_storage/kademlia"
