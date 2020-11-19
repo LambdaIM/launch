@@ -1,4 +1,4 @@
-# 主网lambda v0.5.2 - lambda storage v0.2.9
+# 主网lambda v0.5.2 - lambda storage v0.3.0
 
 ## lambda mainnet v0.5.2
 
@@ -19,22 +19,23 @@ MD5: cc67dfacf91772e627d05b04f4efa1bd
 [https://github.com/LambdaIM/launch/releases/tag/v0.5.2](https://github.com/LambdaIM/launch/releases/tag/v0.5.2)  
 [http://download.lambdastorage.com/lambda/0.5.2/](http://download.lambdastorage.com/lambda/0.5.2/)
 
-## lambda storage v0.2.9
+## lambda storage v0.3.0
 
 **本版本用于主网**    
-包名: lambda-storage-0.2.9.tar.gz  
-MD5: 941e500de42fb225be40ad42f930359d
+包名: lambda-storage-0.3.0.tar.gz  
+MD5: 3209d4c91c9d591df2d28afe377676cb
 
 **更新内容**   
-1. 挖矿缓存页问题修复；
-2. 挖矿恢复优化及bug修复。   
+1. 支持文件转让；
+2. 挖矿优化；
+3. 修复已知bug。   
 
 
 新矿工和存储节点接入参考：[http://docs.lambda.im/Mainnet-Miner-Guide/](http://docs.lambda.im/Mainnet-Miner-Guide/)   
 
-矿工和存储升级0.2.9参考文档：[storage0.2.9升级](http://docs.lambda.im/Mainnet-Store-Upgrade/)  
+矿工和存储升级0.3.0参考文档：[storage0.3.0升级](http://docs.lambda.im/Mainnet-Store-Upgrade/)  
 
 下载地址：   
-[https://github.com/LambdaIM/launch/releases/tag/Storage0.2.9](https://github.com/LambdaIM/launch/releases/tag/Storage0.2.9)
+[https://github.com/LambdaIM/launch/releases/tag/Storage0.3.0](https://github.com/LambdaIM/launch/releases/tag/Storage0.3.0)
 
-[http://download.lambdastorage.com/lambda-storage/0.2.9/](http://download.lambdastorage.com/lambda-storage/0.2.9/)
+[http://download.lambdastorage.com/lambda-storage/0.3.0/](http://download.lambdastorage.com/lambda-storage/0.3.0/)
