@@ -11,7 +11,9 @@
 1. 下载lambda程序
 2. 运行 `./lambda init [name]`
 3. 将旧机器`~/.lambda/config`目录覆盖至新机器`~/.lambda/config`
-4. 停掉旧机器的lambda程序，启动新机器的lambda程序，重新同步区块（**注意：一定要先停掉旧机器lambda服务，以免出现双签情况**）
+4. （二选一）停掉旧机器的lambda程序，启动新机器的lambda程序，重新同步区块  
+（二选一）停掉旧机器的lambda程序，[使用社区提供的区块链数据包启动节点](http://docs.lambda.im/Mainnet-Validator-Guide/#_2)(目前主网区块较多，建议用此方式进行同步更快速)  
+（**注意：一定要先停掉旧机器lambda服务，以免出现双签情况**）
 5. 如果节点被惩罚，参考重新加入共识网络
 
 # 迁移数据
