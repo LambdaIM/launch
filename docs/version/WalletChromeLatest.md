@@ -1,9 +1,9 @@
 # LAMB-Wallet-Chrome0.6.8
 
-钱包发布说明：   
+Chrome浏览器插件钱包发布说明：   
 **本版本用于主网**    
 
-包名        :  LAMB-Wallet-Chrome.zip
+包名        :  LAMB-Wallet-Chrome.zip  
 MD5         : 3eadb64bd2ff6fdb94b57358bb9e7328  
 
 1. 支持多语言
