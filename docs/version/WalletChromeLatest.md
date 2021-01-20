@@ -9,7 +9,7 @@ MD5         : 3eadb64bd2ff6fdb94b57358bb9e7328
 1. 支持多语言
   
   
-安装文档参考：[Chrome 插件钱包安装指南](LAMB-Wallet-Chrome.md)
+安装文档参考：[Chrome 插件钱包安装指南](../LAMB-Wallet-Chrome.md)
 
 
 下载地址：  
