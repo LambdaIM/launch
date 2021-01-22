@@ -7,8 +7,8 @@
 [http://download.lambdastorage.com/storage-manager/0.1.12/](http://download.lambdastorage.com/storage-manager/0.1.12/)
 
 钱包下载地址：  
-[https://github.com/LambdaIM/launch/releases/tag/Wallet0.5.57](https://github.com/LambdaIM/launch/releases/tag/Wallet0.5.57)  
-[http://download.lambdastorage.com/wallet/0.5.57/](http://download.lambdastorage.com/wallet/0.5.57/)
+[https://github.com/LambdaIM/launch/releases/tag/Wallet0.6.66](https://github.com/LambdaIM/launch/releases/tag/Wallet0.6.66)  
+[http://download.lambdastorage.com/wallet/0.6.66/](http://download.lambdastorage.com/wallet/0.6.66/)
 
 矿工和存储节点安装包：  
 [https://github.com/LambdaIM/launch/releases/tag/v0.6.0](https://github.com/LambdaIM/launch/releases/tag/v0.6.0)
