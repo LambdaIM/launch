@@ -1,4 +1,4 @@
-# 矿工0.3.0-rc1接入教程
+# 矿工0.3.2接入教程
 
 **注意**  
 矿工接入前需要先同步当前服务器时间到最新时间
@@ -29,19 +29,19 @@ rm -rf ~/.lambda_miner ~/.lambda_storage ~/.lambda_storagecli
     ```
     2. 下载安装包
     ```
-    wget https://github.com/LambdaIM/launch/releases/download/v0.5.3/lambda-storage-0.3.0-rc1-testnet.tar.gz
+    wget https://github.com/LambdaIM/launch/releases/download/v0.6.0/lambda-storage-0.3.2-testnet.tar.gz
     ```
     如下载缓慢可使用下面的链接：
     ```
-    wget http://download.lambdastorage.com/lambda-storage/0.3.0-rc1/lambda-storage-0.3.0-rc1-testnet.tar.gz
+    wget http://download.lambdastorage.com/lambda-storage/0.3.2/lambda-storage-0.3.2-testnet.tar.gz
     ```
     3. 解压安装包
     ```
-    tar zxvf lambda-storage-0.3.0-rc1-testnet.tar.gz
+    tar zxvf lambda-storage-0.3.2-testnet.tar.gz
     ```
     4. 进入解压后的目录
     ```
-    cd lambda-storage-0.3.0-rc1-testnet
+    cd lambda-storage-0.3.2-testnet
     ```
 
 ### 2. 配置lambdacli
@@ -193,7 +193,7 @@ rm -rf ~/.lambda_miner ~/.lambda_storage ~/.lambda_storagecli
             ??? note "展开查看配置示例"
                 ```
                 [build]
-                version = "0.3.0-rc1"
+                version = "0.3.2"
                 commit = "030c696bc6829cfafb3d240d66058b16b41aa460"
                 mode = "release"
                 
@@ -289,7 +289,7 @@ rm -rf ~/.lambda_miner ~/.lambda_storage ~/.lambda_storagecli
     
     !!! success "返回如下结果"
         ```text hl_lines="2"
-                       version: 0.3.0-rc1
+                       version: 0.3.2
                         dht id: G4xW3UHMfFnTmaRMZUJ7PKcfvr9YTTFyekcsRxKDZZD9 #创建矿工时会用到此dht-id
         server.private_address: 172.11.159.11:15001
                 server.address: 0.0.0.0:26654
@@ -848,7 +848,7 @@ rm -rf ~/.lambda_miner ~/.lambda_storage ~/.lambda_storagecli
 !!! success "返回如下结果"
     ```
     
-                   version: 0.3.0-rc1
+                   version: 0.3.2
                     dht id: G4xW3UHMfFnTmaRMZUJ7PKcfvr9YTTFyekcsRxKDZZD9
     server.private_address: 172.11.159.11:15001   successful
             server.address: 0.0.0.0:26654    successful
@@ -863,7 +863,7 @@ rm -rf ~/.lambda_miner ~/.lambda_storage ~/.lambda_storagecli
 
 !!! success "返回如下结果"
     ```
-                   version: 0.3.0-rc1
+                   version: 0.3.2
                     dht id: 3mta4YEgHB43RHYE83aWBouvFNNCtSc832siEwmcTUsZ
       storage.storage_name: sn1
      storage.miner_address: 172.11.159.11:15001   successful
@@ -880,7 +880,7 @@ rm -rf ~/.lambda_miner ~/.lambda_storage ~/.lambda_storagecli
 
 !!! success "返回如下结果"
     ```
-                   version:  0.3.0-rc1
+                   version:  0.3.2
       storage.storage_name:  sn1
           storage.data_dir:  [/lambda/data/xvdd/store /lambda/data/xvde/store /lambda/data/xvdc/中文test/store /lambda/.1lambda_storage/store]
 

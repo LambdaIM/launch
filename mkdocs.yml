@@ -71,8 +71,9 @@ nav:
     - Lambda 使用文档:
         - 概览: Lambda-User-Guide.md
         - Lambda 质押操作手册: Delegate-Operation-Guide.md
+        - Lambda 聚合挖矿市场操作手册: Farming-Operation-Guide.md
         - Lambda 存储市场质押操作手册: Market-Delegate-Operation-Guide.md
-        - Lambda 资产管理: Asset-Manage-Guide.md
+#        - Lambda 资产管理: Asset-Manage-Guide.md
         - Lambda 社区治理: governance.md
     - Lambda 命令行使用文档:
         - 概览: Lambda-Cmd-Guide.md

@@ -1,38 +1,36 @@
-# 测试网lambda v0.5.3 - lambda storage v0.3.0-rc1
+# 测试网lambda v0.6.0 - lambda storage v0.3.2
 
-## lambda testnet v0.5.3
+## lambda testnet v0.6.0
 
 **本版本用于测试网**  
-包名: lambda-0.5.3-testnet.tar.gz  
-MD5: c07e25c07cf4358d0aced12233281d80
+包名: lambda-0.6.0-testnet.tar.gz  
+MD5: c8f18cb9642e99c92122cc211dd56920
   
-1. 优化业务存储结构；
-2. 数字资产发行新增预挖矿阶段；
-3. 资产市场授权规则变更；
-4. 修复已知bug。
+1. 新增聚合挖矿市场；
+2. 修复已知bug。
 
 新节点接入参考：[http://docs.lambda.im/Testnet-Validator-Guide/](http://docs.lambda.im/Testnet-Validator-Guide/)  
 
-数字资产管理手册：[http://docs.lambda.im/Testnet-Asset-Manage-Guide/](http://docs.lambda.im/Testnet-Asset-Manage-Guide/)
+聚合挖矿市场操作手册：[http://docs.lambda.im/Farming-Operation-Guide/](http://docs.lambda.im/Farming-Operation-Guide/)
 
 下载地址：  
-[https://github.com/LambdaIM/launch/releases/tag/v0.5.3](https://github.com/LambdaIM/launch/releases/tag/v0.5.3)
+[https://github.com/LambdaIM/launch/releases/tag/v0.6.0](https://github.com/LambdaIM/launch/releases/tag/v0.6.0)
 
-[http://download.lambdastorage.com/lambda/0.5.3/](http://download.lambdastorage.com/lambda/0.5.3/)
+[http://download.lambdastorage.com/lambda/0.6.0/](http://download.lambdastorage.com/lambda/0.6.0/)
 
-## lambda storage v0.3.0-rc1
+## lambda storage v0.3.2
 
 **本版本用于测试网**  
-包名: lambda-storage-0.3.0-rc1-testnet.tar.gz  
-MD5: 6b3d9738d99861d9c97b5dcde189d8b5
+包名: lambda-storage-0.3.2-testnet.tar.gz  
+MD5: 19e503fdaece9ce112d2eb0df4691f20
 
-1. 支持资产订单文件上传；
-2. 支持文件转让；
-3. 修复已知bug。
+1. 支持聚合挖矿市场订单；
+2. 优化dht网络；
+3. 修复storagecli账户和文件分享相关bug。
 
 矿工和存储节点接入参考：[http://docs.lambda.im/Testnet-Miner-Guide/](http://docs.lambda.im/Testnet-Miner-Guide/) 
 
 下载地址： 
-[https://github.com/LambdaIM/launch/releases/tag/v0.5.3](https://github.com/LambdaIM/launch/releases/tag/v0.5.3)
+[https://github.com/LambdaIM/launch/releases/tag/v0.6.0](https://github.com/LambdaIM/launch/releases/tag/v0.6.0)
 
-[http://download.lambdastorage.com/lambda-storage/0.3.0-rc1/](http://download.lambdastorage.com/lambda-storage/0.3.0-rc1/)
+[http://download.lambdastorage.com/lambda-storage/0.3.2/](http://download.lambdastorage.com/lambda-storage/0.3.2/)

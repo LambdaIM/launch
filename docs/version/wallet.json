@@ -1,5 +1,5 @@
 {
-    "version":"0.5.3",
+    "version":"0.6.0",
     "url":"http://docs.lambda.im/version/WalletLatest/",
     "brief":{
         "en":"Add delete account function, multilingual optimization, import configuration file optimization, partial transaction type copywriting optimization, add top menu, support the display of S3 Version (this version is mainly used for test network storage mining)",

@@ -4,9 +4,9 @@
 ### 配置客户端
 
 ```   plain
-wget http://download.lambdastorage.com/lambda/0.5.3/lambda-0.5.3-testnet.tar.gz
+wget http://download.lambdastorage.com/lambda/0.6.0/lambda-0.6.0-testnet.tar.gz
 mkdir -p ~/LambdaIM && cd ~/LambdaIM
-tar zxvf lambda-0.5.3-testnet.tar.gz && cd lambda-0.5.3-testnet
+tar zxvf lambda-0.6.0-testnet.tar.gz && cd lambda-0.6.0-testnet
 ./lambdacli config node tcp://bj1.testnet.lambdastorage.com:26657
 ./lambdacli config chain-id lambda-chain-test4.9
 ./lambdacli config trust-node true
@@ -339,7 +339,7 @@ http://bj1.testnet.lambdastorage.com:13659/node_info
   "id": "e02882af5bdafa5aec086c32b8398c268d2337f1",
   "listen_addr": "bj1.testnet.lambdastorage.com:26656",
   "network": "lambda-chain-test4.9", //chain-id
-  "version": "0.5.3-goleveldb",
+  "version": "0.6.0-goleveldb",
   "channels": "4020212223303800",
   "moniker": "cv-moniker-1",
   "other": {
@@ -655,9 +655,9 @@ lambda storage目前提供了两个版本的 兼容部分s3接口的 gateway：
 初始化：
 
 ```   plain
-wget http://download.lambdastorage.com/lambda-storage/0.3.0-rc1/lambda-storage-0.3.0-rc1-testnet.tar.gz
+wget http://download.lambdastorage.com/lambda-storage/0.3.2/lambda-storage-0.3.2-testnet.tar.gz
 mkdir -p ~/LambdaIM && cd ~/LambdaIM
-tar zxvf lambda-storage-0.3.0-rc1-testnet.tar.gz && cd lambda-storage-0.3.0-rc1-testnet
+tar zxvf lambda-storage-0.3.2-testnet.tar.gz && cd lambda-storage-0.3.2-testnet
 ./storagecli init
 ```
 配置s3端口与访问KEY：
