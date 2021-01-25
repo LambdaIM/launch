@@ -42,10 +42,9 @@
 * [订单续期](#订单续期)
 * [市场质押](#市场质押)
 * [提取市场质押收益](#提取市场质押收益)
-* [创建资产与做市商相关操作](#创建资产与做市商相关操作)
-* [资产质押与矿工相关操作](#资产质押与矿工相关操作)
-* [授权市场维护与验证节点相关操作](#授权市场维护与验证节点相关操作)
-* [购买授权空间与空间用户相关操作](#购买授权空间与空间用户相关操作)
+* [聚合挖矿市场介绍](#聚合挖矿市场介绍)
+* [聚合挖矿资产相关操作](#聚合挖矿资产相关操作)
+* [聚合挖矿算力相关操作](#聚合挖矿算力相关操)
 
 
 
@@ -542,138 +541,58 @@ TBB可用于质押
 
 ![avatar](img/Withdrawmarketrevenuemodel.png)
 
-## 创建资产与做市商相关操作
-在钱包的设置页面切换到做市商角色
-![avatar](img/Authorization/role.png)
-### 创建资产
-然后在钱包首页点击资产标签
-![avatar](img/Authorization/asset.png)
-做市商需要先创建资产，后创建市场并关联之前创建的资产
+## 聚合挖矿市场介绍
 
-点击创建资产按钮，打开创建资产对话框
-![avatar](img/Authorization/create1.png)
-创建资产需要100万lambda
-资产的增发类型有不可增发、一次性增发、挖矿增发
-我们要创建的是挖矿增发
-![avatar](img/Authorization/create2.png)
-挖矿增发需要填写的字段说明
-```
-资产名称：资产的名称，英文字母和数字组合
-资产全称备注：资产的名称的全称和说明
-初始发行量：初始化资产的数量，创建资产成功后这个数量的资产会进入当前账户的余额
-发行总量：资产发行的总量
-每块高增发量：每挖矿一个块，挖出多少资产
-减产系数：小于1的数字， 比如最初每块产100个币，10000块高减产一次，减产系数是0.5，那增发10000块高的时候，后续增发的币就变成50个了，又增发10000个块高后，后续增发的币就变成25个了
-最大减产次数：最多减产几次
-减产周期：例如周期是1000，表示1000个块高减产一次
-初次增发块高：第一次增发的时候，块高是多少
-```
+首页点击聚合挖矿进入聚合挖矿市场
+![avatar](img/miner/jhome.png)
 
-填写完成后，点下一步，确认填写的信息和手续费，完成交易后资产就创建成功了
-### 创建授权市场
-点击创建市场，打开创建市场对话框
-![avatar](img/Authorization/create3.png)
+市场首页展示的信息有 资产总量，和算力总量，还有当前市场的状态
+![avatar](img/miner/jinfo.png)
 
-创建市场需要填写市场名称、和资产名称、兑换比例，这里的资产是之前创建的挖矿增发资产
+聚合挖矿实现了挖矿过程中有资产的出资产、有算力的出算力，一起挖矿分享收益
 
-兑换比例指的是这个市场，多少币兑换1TB的存储空间
-例如3000lamb=1TBB
+1:状态为资产收益率较高时，通过存入资产可以获取较多的收益。
 
-点击下一步，确认填写的信息和手续费，完成交易，市场就创建成功了
-### 解散授权市场
-将标签页面切换到授权市场，找到自己创建的市场，点击解散市场
-![avatar](img/Authorization/market.png)
-弹窗解散市场对话框，点击下一步，确认手续费后，完成交易后，市场就解散了
-![avatar](img/Authorization/Disbanded.png)
+2:状态为算力收益率较高时，通过提供算力可以获取较多的收益。
 
-### 授权矿工挖矿
-点击授权，弹出授权窗口
-![avatar](img/Authorization/Minerauthorization.png)
-需要注意的是这里公钥支持两种加密算法secp256k1，ed25519 生成的公钥
+## 聚合挖矿资产相关操作
 
-对于使用钱包的用户，可以在设置页面复制账户的公钥，填进去也是可以的
-例如
- 钱包配置文件中格式化后的的公钥 lambdapub1addwnpepqwdrgj5xqkn3uydvyu6glz4l6ju34lx2ec0j2lzlxgd2mjgh0xyns7djzpe
+点击资产标签，切换到资产信息页面
 
-secp256k1算法生成的 的公钥 A5o0SoYFpx4RrCc0j4q/1Lka/MrOHyV8XzIarckXeYk4
+![avatar](img/miner/jasserts.png)
 
-edd25519 算法生成的公钥 K7cURUPuZroE666ZTWGme2ciQ69PfjKxyaK1hXTMDgk=
+列表展示当前存入的资产和未提取的收益
 
-输入授权人公钥，点击下一步，确认手续费后，完成交易，市场就解散了，
-需要说明的是确认页面看到的公钥，是解码后的原始公钥，和输入的公钥长度不一样
+点击存入资产按钮，打开弹窗，输入金额，即可存入资产
+![avatar](img/miner/jDeposit.png)
 
+资产随时取出资产，点击取出资产按钮，打开弹窗，即可取出资产
 
+![avatar](img/miner/jWithdrawal.png)
 
-## 资产质押与矿工相关操作
-在授权市场中挖矿，需要先成为lambda矿工
-在顶部菜单挖矿向导中，在验证节点质押后，创建子账户，初始化矿工身份，就可以在授权市场中质押了
-![avatar](img/Authorization/assetminer.png)
+产生的收益也可以随时提取，点击取出资产按钮，打开弹窗，即可提取收益
 
-点击质押弹出质押窗口
+![avatar](img/miner/jincome.png)
 
-![avatar](img/Authorization/pledge.png)
+## 聚合挖矿算力相关操作
 
-输入要质押的空间大小，点击下一步，确认质押空间大小，设置手续费，完成交易即可质押成功
-点击赎回按钮，弹出赎回对话框
-![avatar](img/Authorization/redeem.png)
+点击算力标签 切换到算力页面
 
-赎回会赎回全部质押
-点击下一步，确认手续费后，完成交易即可赎回成功
+页面列表展示数据为我的算力和未提取的收益
+![avatar](img/miner/jpowerinfo.png)
 
-### 提取授权市场订单收益
+点击提取收益按钮，打开弹窗
+![avatar](img/miner/jpowerincome.png)
 
-在钱包首页，点击提取授权市场订单收益，弹出对话框
-![avatar](img/Authorization/minermenu.png)
-选择资产类别，在填写页码，例如1、2、3、4
-![avatar](img/Authorization/miner1.png)
-交易完成即可提取这个这个资产对应的市场的订单收益
+点击订单列表，切换到订单页面
+![avatar](img/miner/jorderlist.png)
+可以查看订单详情
+![avatar](img/miner/jorderinfo.png)
+如果订单有效期在一个月以内
 
+可以点击订单续期，打开弹窗，可延长订单到期时间
 
-## 授权市场维护与验证节点相关操作
-
-验证节点可以维护授权市场，验证节点可以移除矿工
-点击移除矿工弹出 移除矿工对话框
-![avatar](img/Authorization/market-va.png)
-填写矿工的lambda 地址
-![avatar](img/Authorization/Deleteminer.png)
-点击下一步，确认矿工lambda地址和手续费，完成交易即可移除矿工
-
-## 购买授权空间与空间用户相关操作
-打开钱包后，点击首页的资产标签，即可看到各种资产的余额
-![avatar](img/Authorization/userspace0.png)
-
-### 购买空间
-点击授权市场，切换到授权市场页面，可以查看当前链上有哪些市场，每个市场使用哪种资产
-![avatar](img/Authorization/userspace1.png)
-点击一个市场的购买，打开购买弹窗
-![avatar](img/Authorization/userspace2.png)
-
-这里填写矿工操作地址时候需要在浏览器中查找合适的矿工
-![avatar](img/Authorization/userspace3.png)
-在找到合适的矿工，复制矿工地址，填写到钱包中，
-输入需要购买的空间和时长大小，点击下一步,确认手续费后，交易完成就购买成功了
-
-购买成功后点击匹配订单，可以查看订单记录和订单详情
-![avatar](img/Authorization/userspace4.png)
-![avatar](img/Authorization/userspace6.png)
-
-### 订单续期
-在匹配订单的详情页面
-![avatar](img/Authorization/userspace6.png)
-点击订单续期，打开订单续期对话框
-![avatar](img/Authorization/userspace7.png)
-填写需要续期的时长，完成交易即可。
-
-
-
-
-
-
-
-
-
-
-
+![avatar](img/miner/jorderRenewal.png)
 
 
 
