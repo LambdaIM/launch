@@ -570,7 +570,7 @@ TBB可用于质押
 
 ![avatar](img/miner/jWithdrawal.png)
 
-产生的收益也可以随时提取，点击取出资产按钮，打开弹窗，即可取出资产
+产生的收益也可以随时提取，点击取出资产按钮，打开弹窗，即可提取收益
 
 ![avatar](img/miner/jincome.png)
 
