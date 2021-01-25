@@ -590,7 +590,7 @@ TBB可用于质押
 ![avatar](img/miner/jorderinfo.png)
 如果订单有效期在一个月以内
 
-可以点击订单续期，打开弹窗，为延长订单的时间
+可以点击订单续期，打开弹窗，可延长订单到期时间
 
 ![avatar](img/miner/jorderRenewal.png)
 
