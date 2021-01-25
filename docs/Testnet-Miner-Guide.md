@@ -367,7 +367,8 @@ rm -rf ~/.lambda_miner ~/.lambda_storage ~/.lambda_storagecli
 ### （二选一）聚合挖矿市场矿工
 #### 声明挖矿
 
-矿工可以声明挖矿并且加入到聚合挖矿市场中并且无需任何保证金，只需要按挖矿空间比例支付一笔小额手续费即可，声明挖矿的矿工会自动生成一笔类似于普通市场的匹配订单，可使用该订单上传文件和挖矿
+1. 矿工可在聚合挖矿市场中声明挖矿且无需任何保证金，只需要按挖矿空间比例支付一笔小额手续费即可；
+2. 声明挖矿的矿工会自动生成一笔类似普通市场的匹配订单，可使用该订单上传下载文件
 
 ```
 ./lambdacli tx pool declare-mining --size [size]GB --from [miner-name]
@@ -389,7 +390,7 @@ rm -rf ~/.lambda_miner ~/.lambda_storage ~/.lambda_storagecli
 fee = 1 * 3000(兑换比例) * 0.3%(手续费比例) = 9LAMB (=9,000,000ulamb)
 ```
 
-更多操作参考：[聚合挖矿市场操作手册](Farming-Operation-Guide.md)
+更多操作参考：[聚合挖矿市场操作手册](http://docs.lambda.im/Farming-Operation-Guide/#_7)
 
 ### （二选一）lambda市场矿工
 #### 1. 创建卖单
