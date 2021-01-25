@@ -31,3 +31,4 @@ lambdacli tx --help
 | [gov](./gov/README.md)                        |  Gov transactions subcommands
 | [market](market/README.md)                             |  Market transactions subcommands                                            |
 | [dam](dam/README.md)                             |  Digital assset market transactions subcommands                                            |
+| [pool](pool/README.md)                             |  Pool transactions subcommands                                            |

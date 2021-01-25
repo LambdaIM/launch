@@ -33,4 +33,5 @@ lambdacli query --help
 | [gov](./gov/README.md)                             |  Querying commands for the gov module                                            |
 | [market](market/README.md)                             |  Querying commands for the market module                                            |
 | [dam](dam/README.md)                             |  Querying commands for the dam module                                            |
+| [pool](pool/README.md)                             |  Querying commands for the pool module                                            |
 
