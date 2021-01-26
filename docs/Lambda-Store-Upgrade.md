@@ -77,7 +77,7 @@ kill `ps aux | grep 'storagenode' |grep -v grep| awk '{print $2}'`
 ### 重启minernode
 1.修改lambdacli配置
 ```
-./lambdacli config chain-id lambda-chain-test5.3
+./lambdacli config chain-id lambda-chain-test6.0
 ```
 
 2.启动minernode：  

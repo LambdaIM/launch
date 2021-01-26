@@ -34,7 +34,7 @@ tar zxvf lambda-0.6.0-testnet.tar.gz && cd lambda-0.6.0-testnet
 将下面命令中的[your-moniker]替换成您自定义的节点名称，不用加中括号`  
 `注意：这里的 your-moniker 必须使用英文，用于P2P网络
 ```
-./lambda init [your-moniker] --chain-id lambda-chain-test5.3
+./lambda init [your-moniker] --chain-id lambda-chain-test6.0
 ```
 如果初始化报错，可能是由于有老版本的测试网配置数据导致，可以通过下面的命令清除错误数据再重新执行上面的`lambda init`
 ```
@@ -60,7 +60,7 @@ rm -rf ~/.lambda/config/config.toml ~/.lambda/config/genesis.json ~/.lambda/iden
 ./lambdacli config node tcp://0.0.0.0:26657
 ```
 ```
-./lambdacli config chain-id lambda-chain-test5.3
+./lambdacli config chain-id lambda-chain-test6.0
 ```
 ```
 ./lambdacli config trust-node true

@@ -47,7 +47,7 @@ kill `ps aux | grep lambda |grep -v grep| awk '{print $2}'`
 ### 4. 修改lambdacli配置
 要确保机器已开启端口26656, 26657
 ```
-./lambdacli config chain-id lambda-chain-test5.3
+./lambdacli config chain-id lambda-chain-test6.0
 ```
 
 ### 5. 备份和恢复db
