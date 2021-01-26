@@ -175,7 +175,7 @@ rm -rf ~/.lambda_miner ~/.lambda_storage ~/.lambda_storagecli
 #### 4.2 初始化矿工及配置
 
 !!! example ""
-    1. 初始化矿工
+    1. 初始化矿工(此步可能耗时较久，请耐心等待)
     ```
     ./minernode init --testnet
     ```
@@ -184,14 +184,20 @@ rm -rf ~/.lambda_miner ~/.lambda_storage ~/.lambda_storagecli
     
     !!! abstract ""
         
-        === "修改配置文件"
+        === "修改矿工配置"
+        
+            1. 配置矿工对外提供服务的地址(以矿工所在机器的外网IP为 200.200.200.100 为例)：
+            ```       
+            ./minernode config kad.external_address 200.200.200.100:13000          
             ```
-            vi ~/.lambda_miner/config/config.toml
-            ```
-            参考配置示例手动修改配置文件 
             
-            ??? note "展开查看配置示例"
-                ```
+            2. (可选)修改meta files路径（默认路径为`/root/.lambda_miner`，以修改为`/data1/test`为例）
+            ```
+            ./minernode config db.meta_dir /data1/test
+            ```
+            
+            ??? note "展开查看配置说明"
+                ```shell hl_lines="26"
                 [build]
                 version = "0.3.2"
                 commit = "030c696bc6829cfafb3d240d66058b16b41aa460"
@@ -228,23 +234,7 @@ rm -rf ~/.lambda_miner ~/.lambda_storage ~/.lambda_storagecli
                 
                 [db]
                 # db config
-                lru_cache = "0"
-                keep_log_file_num = "16"
-                write_buffer_size = "268435456"
-                recycle_log_file_num = "0"
-                target_file_size_base = "268435456"
-                max_write_buffer_number = "25"
-                max_bytes_for_level_base = "4294967296"
-                level_0_stop_writes_trigger = "24"
-                target_file_size_multiplier = "1"
-                max_background_compactions = "2"
-                max_bytes_for_level_multiplier = "2"
-                level_0_slowdown_writes_trigger = "17"
-                level_0_file_num_compaction_trigger = "8"
-                level_compaction_dynamic_level_bytes = "0"
-                compaction_algorithm = "0"
-                rate_bytes_per_sec = "67108864"
-                data_backup_path = ""
+                meta_dir = "/root/.lambda_miner"
                 ```
 
 #### 4.3 查看矿工子账户地址
@@ -353,6 +343,7 @@ rm -rf ~/.lambda_miner ~/.lambda_storage ~/.lambda_storagecli
 ### 5. 初始化storagenode
 
 !!! example ""
+    (此步可能耗时较久，请耐心等待)
     ```
     ./storagenode init --testnet
     ```
@@ -641,14 +632,14 @@ fee = 1 * 3000(兑换比例) * 0.3%(手续费比例) = 9LAMB (=9,000,000ulamb)
 
     !!! abstract ""
         
-        === "修改配置文件"  
-            参考如下说明手动修改配置文件  
+        === "修改配置"  
             ```
-            vi ~/.lambda_storagecli/config/user.toml
+            ./storagecli config broker.validator_addr [nodeip]:13659
             ```
+            - `[nodeip]` 为自己质押的验证节点`公网IP`，如`bj4.testnet.lambdastorage.com`
         
-            ??? note "展开查看配置示例"
-                ```
+            ??? note "展开查看配置说明"
+                ```shell hl_lines="8"
                 [broker]
                 # dht_gateway_addr为验证节点的dht服务 IP和端口；
                 # 可以是自己质押的验证节点配置的kad.external_address

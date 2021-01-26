@@ -83,7 +83,8 @@ ntpdate -u ntp.api.bz
             miner_address = "192.168.10.10:13001"
             ## 存储路径，可填写多个以逗号隔开
             data_dir = ["/root/.lambda_storage"]
-            
+            # for meta files(db etc)
+            meta_dir = "/root/.lambda_storage/meta"
             ```
 
 ### 3. 启动storagenode
