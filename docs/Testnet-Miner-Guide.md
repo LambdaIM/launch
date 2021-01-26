@@ -197,7 +197,7 @@ rm -rf ~/.lambda_miner ~/.lambda_storage ~/.lambda_storagecli
             ```
             
             ??? note "展开查看配置说明"
-                ```shell hl_lines="26"
+                ```shell hl_lines="24 38"
                 [build]
                 version = "0.3.2"
                 commit = "030c696bc6829cfafb3d240d66058b16b41aa460"
