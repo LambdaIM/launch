@@ -197,7 +197,7 @@ rm -rf ~/.lambda_miner ~/.lambda_storage ~/.lambda_storagecli
             ```
             
             ??? note "展开查看配置说明"
-                ```shell hl_lines="24 38"
+                ```shell hl_lines="23 37"
                 [build]
                 version = "0.3.2"
                 commit = "030c696bc6829cfafb3d240d66058b16b41aa460"
@@ -367,10 +367,8 @@ rm -rf ~/.lambda_miner ~/.lambda_storage ~/.lambda_storagecli
 
 - `size` 声明挖矿的空间，单位为GB
 
-说明
+说明：矿工在声明挖矿时候，需要提交一笔手续费，这笔手续费的计算相当于空间对应LAMB的兑换比例
 ```
-矿工在声明挖矿时候，需要提交一笔手续费，这笔手续费的计算相当于空间对应LAMB的兑换比例
-
 例如：
 某个矿工在聚合挖矿市场声明一笔1000G的挖矿空间需要9LAMB手续费
 
