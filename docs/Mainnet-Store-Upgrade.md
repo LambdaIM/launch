@@ -1,4 +1,4 @@
-# storage0.3.1升级
+# storage0.3.3升级
 
 * [下载安装包并解压](#下载安装包并解压)
 * [停止minernode和storagenode](#停止minernode和storagenode)
@@ -9,7 +9,7 @@
 
 新矿工和存储节点接入参考：[配置矿工和存储节点](Mainnet-Miner-Guide.md)  
 
-以下为旧版本升级 升级到 `0.3.1` 步骤  
+以下为旧版本升级 升级到 `0.3.3` 步骤  
 
 
 ### 下载安装包并解压
@@ -21,15 +21,15 @@ mkdir -p ~/LambdaIM && cd ~/LambdaIM
 ```
 下载安装包
 ```
-http://download.lambdastorage.com/lambda-storage/0.3.1/lambda-storage-0.3.1.tar.gz
+http://download.lambdastorage.com/lambda-storage/0.3.3/lambda-storage-0.3.3.tar.gz
 ```
 解压安装包
 ```
-tar zxvf lambda-storage-0.3.1.tar.gz
+tar zxvf lambda-storage-0.3.3.tar.gz
 ```
 进入解压后的目录
 ```
-cd lambda-storage-0.3.1
+cd lambda-storage-0.3.3
 ```
 
 ### 停止minernode和storagenode

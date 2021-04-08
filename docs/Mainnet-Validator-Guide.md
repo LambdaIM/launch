@@ -7,7 +7,7 @@ ntpdate -u ntp.api.bz
 ```
 如服务器上无`ntpdate`命令，可使用`sudo yum install -y ntpdate`(CentOS)或`sudo apt-get install ntpdate -y`(Ubuntu)进行安装。
 
-主网节点升级可参考：[主网Validator 0.5.2 升级教程](Mainnet-Validator-Upgrade-Guide.md)  
+主网节点升级可参考：[主网Validator 0.6.1 升级教程](Mainnet-Validator-Upgrade-Guide.md)  
 
 ### 1. 下载安装包并解压
 `创建目录并进入`
@@ -16,15 +16,15 @@ mkdir -p ~/LambdaIM && cd ~/LambdaIM
 ```
 `下载安装包`
 ```
-wget https://github.com/LambdaIM/launch/releases/download/v0.5.2/lambda-0.5.2-release.tar.gz
+wget https://github.com/LambdaIM/launch/releases/download/v0.6.1/lambda-0.6.1-release.tar.gz
 
 如下载缓慢可使用下面的链接：
-wget http://download.lambdastorage.com/lambda/0.5.2/lambda-0.5.2-release.tar.gz
+wget http://download.lambdastorage.com/lambda/0.6.1/lambda-0.6.1-release.tar.gz
 ```
 
 `解压安装包`
 ```
-tar zxvf lambda-0.5.2-release.tar.gz && cd lambda-0.5.2-release
+tar zxvf lambda-0.6.1-release.tar.gz && cd lambda-0.6.1-release
 ```
 
 ### 2. 初始化节点  
@@ -136,13 +136,13 @@ discovery_interval = "3m0s"
 #### 使用社区提供的区块链数据包启动节点（二选一）
 从零块高同步块耗时较长，可使用社区提供的区块链数据包启动节点  
 
-下载数据压缩包lambda_0.5.2_data.tar.gz
+下载数据压缩包lambda_0.6.1_data.tar.gz
 ``` 
-wget http://download.lambdastorage.com/lambda/0.5.2/lambda_0.5.2_data.tar.gz
+wget http://download.lambdastorage.com/lambda/0.6.1/lambda_0.6.1_data.tar.gz
 ```
-解压`lambda_0.5.2_data.tar.gz`到`~/.lambda/data/`目录下（解压过程耗时较长，请耐心等待）
+解压`lambda_0.6.1_data.tar.gz`到`~/.lambda/data/`目录下（解压过程耗时较长，请耐心等待）
 ``` 
-tar -zxvf lambda_0.5.2_data.tar.gz -C ~/.lambda/data/
+tar -zxvf lambda_0.6.1_data.tar.gz -C ~/.lambda/data/
 ```
 启动节点
 ```
