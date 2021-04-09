@@ -4,7 +4,7 @@
 
 **本版本用于主网**    
 包名: lambda-0.6.1-release.tar.gz   
-MD5: cc67dfacf91772e627d05b04f4efa1bd  
+MD5: 1e02678bffb800a5a671b1b875071366  
 
 **更新内容**   
 1. 优化业务存储结构；  
@@ -24,7 +24,7 @@ MD5: cc67dfacf91772e627d05b04f4efa1bd
 
 **本版本用于主网**    
 包名: lambda-storage-0.3.3.tar.gz  
-MD5: 60d937ea1a040ef17715dd7a68238cb7
+MD5: b3a964510c54c972af8a72f41627db35
 
 **更新内容**   
 1. 磁盘空间预留问题修复;  
