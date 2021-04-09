@@ -22,7 +22,7 @@ ntpdate -u ntp.api.bz
     ```
     2. 下载安装包
     ```
-    wget https://github.com/LambdaIM/launch/releases/download/Storage0.3.3/lambda-storage-0.3.3.tar.gz
+    wget https://github.com/LambdaIM/launch/releases/download/v0.6.1/lambda-storage-0.3.3.tar.gz
     ```
     如下载缓慢可使用下面的链接：
     ```
@@ -157,7 +157,7 @@ ntpdate -u ntp.api.bz
 #### 4.2 初始化矿工及配置
 
 !!! example ""
-    1. 初始化矿工
+    1. 初始化矿工(此步可能耗时较久，请耐心等待)
     ```
     ./minernode init 
     ```
@@ -327,6 +327,7 @@ ntpdate -u ntp.api.bz
 ### 5. 初始化storagenode
 
 !!! example ""
+    (此步可能耗时较久，请耐心等待)
     ```
     ./storagenode init 
     ```
@@ -336,7 +337,36 @@ ntpdate -u ntp.api.bz
 [storagenode配置启动参考](./Mainnet-Storagenode-Configure.md)
 
 ## 二、买卖单创建
-### 1. 创建卖单
+矿工只能在 lambda市场 和 聚合挖矿市场 中选择一个市场进行挖矿。
+
+### （二选一）聚合挖矿市场矿工
+#### 声明挖矿空间
+
+1. 矿工可在聚合挖矿市场中声明挖矿且无需任何保证金，只需要按挖矿空间比例支付一笔小额手续费即可；
+2. 声明挖矿空间的矿工会自动生成一笔类似普通市场的匹配订单，可使用该订单上传下载文件
+
+```
+./lambdacli tx pool declare-mining --size [size]GB --from [miner-name]
+```
+
+- `size` 声明挖矿的空间，单位为GB
+
+说明：矿工在声明挖矿时候，需要提交一笔手续费，这笔手续费的计算相当于空间对应LAMB的兑换比例
+```
+例如：
+某个矿工在聚合挖矿市场声明一笔1000G的挖矿空间需要9LAMB手续费
+
+./lambdacli tx pool declare-mining --size 1000GB --from miner2
+则手续费的计算为:
+1000GB = 1TB 相当于1个TBB，
+当前1TBB兑换1LAMB的比例为3000
+fee = 1 * 3000(兑换比例) * 0.3%(手续费比例) = 9LAMB (=9,000,000ulamb)
+```
+
+更多操作参考：[聚合挖矿市场操作手册](http://docs.lambda.im/Farming-Operation-Guide/#_7)
+
+### （二选一）lambda市场矿工
+#### 1. 创建卖单
 
 * 只能有赔付比率`rate`为 1的卖单，可设置大于等于指定市场的最低价格（lambdamarket市场最低价格为`5000000ulamb`）；
 * 设置需要卖出的空间大小`size`；   
@@ -346,7 +376,7 @@ ntpdate -u ntp.api.bz
 
 市场操作手册参考：[市场操作手册](./Market-Delegate-Operation-Guide.md)
 
-#### 1.1 创建卖单
+##### 1.1 创建卖单
 
 !!! example ""
     一个矿工可创建多笔卖单，卖单总空间不能大于质押TBB数量，例如：一个矿工质押了`1000000utbb`（即`1TBB`），创建卖单总空间不能超过`1TB`（即`1000GB`）
@@ -361,7 +391,7 @@ ntpdate -u ntp.api.bz
     --from [miner-name] --broadcast-mode block -y
     ```
     
-#### 1.2 查询卖单
+##### 1.2 查询卖单
 
 !!! example ""
     查询账户地址：
@@ -402,7 +432,7 @@ ntpdate -u ntp.api.bz
           MaxDuration:        43200h0m0s
         ```
 
-#### 1.3 取消卖单
+##### 1.3 取消卖单
 
 !!! example ""
     根据SellOrderID取消卖单
@@ -411,7 +441,7 @@ ntpdate -u ntp.api.bz
     ```
 
 
-### 2. 创建买单
+#### 2. 创建买单
 
 - `[account-name]` 为当前账户的名称；
 - `[duration]` 为购买时长；
@@ -419,7 +449,7 @@ ntpdate -u ntp.api.bz
 - `[size]` 为需要购买的空间，不小于对应卖单指定的最小购买空间。
 - `[orderId]` 必须要指定该参数，可指定1个或多个卖单ID，指定多个卖单ID时以逗号分隔，例如：`58941CFFEEA859AED51172F0F9DF3E77293D2E12,54F82FBD979BE150C8B3246D82DDF60F043129EE`
 
-#### 2.1 创建买单
+##### 2.1 创建买单
 
 !!! example ""
     
@@ -429,7 +459,7 @@ ntpdate -u ntp.api.bz
     --market-name lambdamarket --size [size]GB --broadcast-mode block -y
     ```
 
-#### 2.2 查询匹配订单  
+##### 2.2 查询匹配订单  
 
 !!! example ""  
     查询账户地址：
@@ -474,7 +504,7 @@ ntpdate -u ntp.api.bz
         ```
   
   
-### 3. 匹配订单续期 
+#### 3. 匹配订单续期 
 1. 匹配订单未到期的，购买了空间的账户可使用`lambdacli tx market order-renewal`命令续期。  
 2. 匹配订单已过期的，不能再进行续期；  
 3. 同一匹配订单可多次续期；   
@@ -482,10 +512,10 @@ ntpdate -u ntp.api.bz
 5. 订单续期后，需要执行`minernode order refresh`使矿工获取匹配订单最新结束日期；  
 6. 订单续期后，需要重新执行`storagecli token sync [account]`使存储获取订单最新日期   
 
-续期成功后，可进入浏览器[http://explorer.lambda.im/#/](http://explorer.lambda.im/#/)搜索匹配订单ID，查看`匹配订单详情页`中结束时间是否延期了对应时长。  
+续期成功后，可进入浏览器[http://testbrowser.lambda.im/#/](http://testbrowser.lambda.im/#/)搜索匹配订单ID，查看`匹配订单详情页`中结束时间是否延期了对应时长。  
 或使用上面查询匹配订单命令`lambdacli query market matchorders`查看返回结果中的匹配订单结束时间（即`EndTime`）是否延期了对应时长。
 
-#### 3.1 订单续期
+##### 3.1 订单续期
 
 !!! example "" 
     ```
@@ -515,7 +545,7 @@ ntpdate -u ntp.api.bz
          
         ```
 
-#### 3.2 矿工更新订单数据        
+##### 3.2 矿工更新订单数据        
    订单续期后，需要执行`minernode order refresh`使矿工获取匹配订单最新结束日期
     
 !!! example "" 
@@ -529,7 +559,7 @@ ntpdate -u ntp.api.bz
     7A15D9D8D35B2E4BE8DAFA4DCE0F4E2B04A2F126
     ```  
 
-#### 3.3 存储更新订单数据               
+##### 3.3 存储更新订单数据               
    订单续期后，需要重新执行`storagecli token sync [account]`使存储获取订单最新日期，通过`storagecli order list [account]` 可查看订单到期时间
     
 !!! example "" 
@@ -548,7 +578,7 @@ ntpdate -u ntp.api.bz
     293B8613B1E26A79F6554472645FACB809F4BAE8           30 GiB               7.9 GiB
     29E301D07BDF6D22CE5813760F8F857326842C20           7.0 GiB              200 MiB
     5A8E65C1C04177234DC8E7B7DFBCE98CC31134AC           1.0 GiB              677 MiB
-    EC349DC8803BEE33B21E487A2481EB94CFC1F8DD           5.1 GiB              627 MiB
+    EC349DC8803BEE33B21E487A2481EB94CFC1F8DD           5.0 GiB              627 MiB
     sync orders finish
     ```
     
@@ -565,7 +595,7 @@ ntpdate -u ntp.api.bz
     293B8613B1E26A79F6554472645FACB809F4BAE8 |2020-09-24 18:23:49 CST |7.9 GiB/30 GiB  |Avaialable
     29E301D07BDF6D22CE5813760F8F857326842C20 |2020-07-12 17:37:06 CST |200 MiB/7.0 GiB |Avaialable
     5A8E65C1C04177234DC8E7B7DFBCE98CC31134AC |2020-09-29 09:48:16 CST |50 MiB/1.0 GiB  |Avaialable
-    EC349DC8803BEE33B21E487A2481EB94CFC1F8DD |2020-08-11 17:35:00 CST |150 MiB/5.1 GiB |Avaialable
+    EC349DC8803BEE33B21E487A2481EB94CFC1F8DD |2020-08-11 17:35:00 CST |150 MiB/5.0 GiB |Avaialable
     Total: 5
     Current time: 2020-04-14 17:58:49 CST
        

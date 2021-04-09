@@ -36,6 +36,6 @@ MD5: 60d937ea1a040ef17715dd7a68238cb7
 矿工和存储升级0.3.3参考文档：[storage0.3.3升级](http://docs.lambda.im/Mainnet-Store-Upgrade/)  
 
 下载地址：   
-[https://github.com/LambdaIM/launch/releases/tag/Storage0.3.3](https://github.com/LambdaIM/launch/releases/tag/Storage0.3.3)
+[https://github.com/LambdaIM/launch/releases/tag/v0.6.1](https://github.com/LambdaIM/launch/releases/tag/v0.6.1)
 
 [http://download.lambdastorage.com/lambda-storage/0.3.3/](http://download.lambdastorage.com/lambda-storage/0.3.3/)
