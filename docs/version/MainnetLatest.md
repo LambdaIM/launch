@@ -16,6 +16,9 @@ MD5: 1e02678bffb800a5a671b1b875071366
 
 0.6.1节点升级参考：[主网Validator 0.6.1 升级教程](http://docs.lambda.im/Mainnet-Validator-Upgrade-Guide/)
 
+聚合挖矿市场操作手册：[http://docs.lambda.im/Farming-Operation-Guide/](http://docs.lambda.im/Farming-Operation-Guide/)
+
+
 下载地址：  
 [https://github.com/LambdaIM/launch/releases/tag/v0.6.1](https://github.com/LambdaIM/launch/releases/tag/v0.6.1)  
 [http://download.lambdastorage.com/lambda/0.6.1/](http://download.lambdastorage.com/lambda/0.6.1/)
@@ -27,8 +30,10 @@ MD5: 1e02678bffb800a5a671b1b875071366
 MD5: b3a964510c54c972af8a72f41627db35
 
 **更新内容**   
-1. 磁盘空间预留问题修复;  
+1. 支持聚合挖矿市场订单;  
 2. 挖矿删除问题修复;   
+3. 磁盘空间预留问题修复；
+4. 其他已知bug修复
 
 
 新矿工和存储节点接入参考：[http://docs.lambda.im/Mainnet-Miner-Guide/](http://docs.lambda.im/Mainnet-Miner-Guide/)   
