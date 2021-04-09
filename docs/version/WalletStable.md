@@ -1,26 +1,20 @@
-# Wallet0.3.33
+# Wallet0.6.66
 
-钱包发布说明： 
-本版本用于主网    
+钱包发布说明：  
+**本版本可用于主网和测试网**  
+安装钱包之前请备份好之前钱包的配置文件    
 
 包名：  
-Windows安装包: Wallet.Setup.0.3.33.WIN.exe  
-MD5         : 7b4d5260f82959ab83f48efb9ccba998  
+Windows安装包: Wallet-Setup-0.6.66.exe  
+MD5 : b81534a195974afe573d692c32ca5301  
 
-Mac 安装包   : Wallet-0.3.33.MAC.dmg  
-MD5         : ddedb4e86cb99b9f92a4382f5ef6951c  
+Mac 安装包 : Wallet-0.6.66.dmg  
+MD5 : 61978959af83ea441b90b0b7b41c88e8  
 
-
-1. lamb余额为0 手续费为0 质押失败和交易tbb失败的问题
-2. 合伙人反质押列表数据接口修复
-3. 验证节点转质押和解除质押 提示信息 中天数修改为动态读取
-
-====
-
-1. lamb balance 0 handling fee 0 pledge failure and transaction TBB failure
-2. Partner Anti-pledge List Data Interface Repair
-3. Change the number of days in the reminder information of the verification node to read dynamically
+1. 支持聚合挖矿市场；  
+2. 修复已知bug；  
+  
 
 下载地址：  
-[https://github.com/LambdaIM/launch/releases/tag/Wallet0.3.33](https://github.com/LambdaIM/launch/releases/tag/Wallet0.3.33)  
-[http://download.lambdastorage.com/wallet/0.3.33/](http://download.lambdastorage.com/wallet/0.3.33/)
+[https://github.com/LambdaIM/launch/releases/tag/Wallet0.6.66](https://github.com/LambdaIM/launch/releases/tag/Wallet0.6.66)
+[http://download.lambdastorage.com/wallet/0.6.66/](http://download.lambdastorage.com/wallet/0.6.66/)

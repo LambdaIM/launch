@@ -1,13 +1,13 @@
 # Lambda主网钱包使用说明
-版本 0.5.56 
+版本 0.6.66 
 
 一个钱包支持创建和管理多个账户，支持语言有中文和英文。  
 测试网0.6.66钱包使用参考：[桌面钱包使用手册(测试网)](Lambda-Wallet-Guide-Testnet.md)
 
 
 下载地址 ：  
-[https://github.com/LambdaIM/launch/releases/tag/Wallet0.5.56](https://github.com/LambdaIM/launch/releases/tag/Wallet0.5.56)  
-[http://download.lambdastorage.com/wallet/0.5.56/](http://download.lambdastorage.com/wallet/0.5.56/)
+[https://github.com/LambdaIM/launch/releases/tag/Wallet0.6.66](https://github.com/LambdaIM/launch/releases/tag/Wallet0.6.66)  
+[http://download.lambdastorage.com/wallet/0.6.66/](http://download.lambdastorage.com/wallet/0.6.66/)
 
 
 ![avatar](img/wallethome@2x.png)
@@ -40,6 +40,9 @@
 * [订单续期](#订单续期)
 * [市场质押](#市场质押)
 * [提取市场质押收益](#提取市场质押收益)
+* [聚合挖矿市场介绍](#聚合挖矿市场介绍)
+* [聚合挖矿资产相关操作](#聚合挖矿资产相关操作)
+* [聚合挖矿算力相关操作](#聚合挖矿算力相关操)
 
 
 
@@ -520,6 +523,58 @@ TBB可用于质押
 
 ![avatar](img/Withdrawmarketrevenuemodel.png)
 
+## 聚合挖矿市场介绍
+
+首页点击聚合挖矿进入聚合挖矿市场
+![avatar](img/miner/jhome.png)
+
+市场首页展示的信息有 资产总量，和算力总量，还有当前市场的状态
+![avatar](img/miner/jinfo.png)
+
+聚合挖矿实现了挖矿过程中有资产的出资产、有算力的出算力，一起挖矿分享收益
+
+1:状态为资产收益率较高时，通过存入资产可以获取较多的收益。
+
+2:状态为算力收益率较高时，通过提供算力可以获取较多的收益。
+
+## 聚合挖矿资产相关操作
+
+点击资产标签，切换到资产信息页面
+
+![avatar](img/miner/jasserts.png)
+
+列表展示当前存入的资产和未提取的收益
+
+点击存入资产按钮，打开弹窗，输入金额，即可存入资产
+![avatar](img/miner/jDeposit.png)
+
+资产随时取出资产，点击取出资产按钮，打开弹窗，即可取出资产
+
+![avatar](img/miner/jWithdrawal.png)
+
+产生的收益也可以随时提取，点击取出资产按钮，打开弹窗，即可提取收益
+
+![avatar](img/miner/jincome.png)
+
+## 聚合挖矿算力相关操作
+
+点击算力标签 切换到算力页面
+
+页面列表展示数据为我的算力和未提取的收益
+![avatar](img/miner/jpowerinfo.png)
+
+点击提取收益按钮，打开弹窗
+![avatar](img/miner/jpowerincome.png)
+
+点击订单列表，切换到订单页面
+![avatar](img/miner/jorderlist.png)
+可以查看订单详情
+![avatar](img/miner/jorderinfo.png)
+如果订单有效期在一个月以内
+
+可以点击订单续期，打开弹窗，可延长订单到期时间
+
+![avatar](img/miner/jorderRenewal.png)
 
 
 

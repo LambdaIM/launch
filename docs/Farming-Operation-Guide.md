@@ -48,7 +48,7 @@
 
 ## 聚合挖矿矿工
 账户质押TBB并`create-miner`成为矿工后，可进入lambda市场或聚合挖矿市场进行挖矿。  
-矿工初始化及存储配置参考：[矿工0.3.2接入教程](Testnet-Miner-Guide.md)
+矿工初始化及存储配置参考：[主网矿工接入教程](Mainnet-Miner-Guide.md)
 
 **注意**
 

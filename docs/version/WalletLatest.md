@@ -1,24 +1,20 @@
-# Wallet0.5.56
+# Wallet0.6.66
 
-钱包发布说明： 
-本版本用于主网    
+钱包发布说明：  
+**本版本可用于主网和测试网**  
+安装钱包之前请备份好之前钱包的配置文件    
 
 包名：  
-Windows安装包: Wallet-Setup-0.5.56.exe  
-MD5         : cbb89a69f1f45bf8a6fb79dd98d00e68  
+Windows安装包: Wallet-Setup-0.6.66.exe  
+MD5 : b81534a195974afe573d692c32ca5301  
 
-Mac 安装包   : Wallet-0.5.56.dmg  
-MD5         : 5d9ddb5781ab2c78c6d46c5112a485dd  
+Mac 安装包 : Wallet-0.6.66.dmg  
+MD5 : 61978959af83ea441b90b0b7b41c88e8  
 
-
-1. 新增删除账户功能； 
-2. 支持打开s3服务上传下载文件；  
-3. 新增矿工子账户导入、导出；  
-4. 多语言、导入配置、文案优化；
-5. 新增订单续期、提取订单收益、提取挖矿收益等功能；
-6. 新增挖矿向导
+1. 支持聚合挖矿市场；  
+2. 修复已知bug；  
   
 
 下载地址：  
-[https://github.com/LambdaIM/launch/releases/tag/Wallet0.5.56](https://github.com/LambdaIM/launch/releases/tag/Wallet0.5.56)
-[http://download.lambdastorage.com/wallet/0.5.56/](http://download.lambdastorage.com/wallet/0.5.56/)
+[https://github.com/LambdaIM/launch/releases/tag/Wallet0.6.66](https://github.com/LambdaIM/launch/releases/tag/Wallet0.6.66)
+[http://download.lambdastorage.com/wallet/0.6.66/](http://download.lambdastorage.com/wallet/0.6.66/)
