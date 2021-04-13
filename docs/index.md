@@ -20,6 +20,8 @@ Lambda 存储网络主要由共识网络、存储网络和去中心化的存储�
 
 如果您准备成为 Lambda 存储矿工，想要了解存储矿工前期准备及接入流程，请参阅文档 [存储矿工挖矿手册](Lambda-Store-and-Mining.md)、 [存储矿工主网接入教程](Mainnet-Miner-Guide.md)。 
 
+如果您想进入 Lambda 聚合挖矿市场，请参阅文档 [聚合挖矿市场操作手册](Farming-Operation-Guide.md)。
+
 如果您无机器配置，准备参与 Lambda TBB 质押挖矿，请参阅文档 [桌面钱包使用手册(主网)](Lambda-Wallet-Guide.md)。 
 
 如果您想通过开发组件来拓展 Lambda 生态及技术应用，成为 Lambda 开发者中一员，请参阅 [应用开发指导](DApp-Develop-Guide.md)。 
