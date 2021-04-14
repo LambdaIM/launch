@@ -13,8 +13,8 @@ nav:
         #- Lambda 主网钱包使用说明: Lambda-Wallet-Guide.md
     - Lambda 技术架构:
         - 概览: Lambda-Tech-Arch.md
-        - Lambda 技术架构: https://talk.lambdastorage.com/t/topic/527
-        - Lambda PDP 概述: https://talk.lambdastorage.com/t/topic/528
+        - Lambda 技术架构: Lambda-Tech-Detail.md
+        - Lambda PDP 概述: Lambda-PDP-Detail.md
         - Lambda 聚合协议技术原理: Poly-Mining-Protocol.md
     - Lambda 生态应用:
         - 概览: Lambda-Ecolo-App.md
