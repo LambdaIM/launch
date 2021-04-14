@@ -154,7 +154,7 @@ golang 标准库 [crypto/elliptic](https://golang.org/pkg/crypto/elliptic/) 提�
 
 ### PDP 方案: 概述
 
-- 流程（细节阐释请参考[论文 1](https://doi.org/10.1109/TC.2011.245) 3.4 节)
+- 流程（细节阐释请参考[论文](https://doi.org/10.1109/TC.2011.245) 3.4 节)
 
  ![图片](arch_img/pdp_detail/17.png)
  
