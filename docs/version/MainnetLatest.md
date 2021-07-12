@@ -7,8 +7,7 @@
 MD5: 64097c52f6f31e549883fcebae19be76  
 
 **更新内容**   
-1. 更新默认配置；  
-2. 修复已知bug。   
+1. 更新默认配置；   
 
 
 新节点接入参考：[主网Validator接入教程](http://docs.lambda.im/Mainnet-Validator-Guide/)   
