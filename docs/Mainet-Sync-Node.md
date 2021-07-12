@@ -7,15 +7,15 @@ mkdir -p ~/LambdaIM && cd ~/LambdaIM
 ```
 `下载安装包`
 ```
-wget https://github.com/LambdaIM/launch/releases/download/v0.3.3/lambda-0.3.3-release.tar.gz
+wget https://github.com/LambdaIM/launch/releases/download/v0.3.4/lambda-0.3.4-release.tar.gz
 
 如下载缓慢可使用下面的链接：
-wget http://download.lambdastorage.com/lambda/0.3.3/lambda-0.3.3-release.tar.gz
+wget http://download.lambdastorage.com/lambda/0.3.4/lambda-0.3.4-release.tar.gz
 ```
 
 `解压安装包`
 ```
-tar zxvf lambda-0.3.3-release.tar.gz && cd lambda-0.3.3-release
+tar zxvf lambda-0.3.4-release.tar.gz && cd lambda-0.3.4-release
 ```
 
 ### 2. 初始化节点  

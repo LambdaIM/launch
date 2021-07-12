@@ -19,7 +19,7 @@ lambdacli tx gov submit-proposal software-upgrade -h
 ## Examples
 ```$xslt
  ./lambdacli tx gov submit-proposal software-upgrade ../upgrade.json --from master --broadcast-mode block
-{"chain_id":"testing","account_number":"0","sequence":"6","fee":{"amount":null,"gas":"200000"},"msgs":[{"type":"cosmos-sdk/MsgSubmitProposal","value":{"content":{"type":"lambda/SoftwareUpgradeProposal","value":{"title":"Software Upgrade","description":"Upgrade to new version","version":"1","software":"https://github.com/LambdaIM/launch/releases/tag/v0.3.3","switch_height":"50","threshold":"0.800000000000000000"}},"initial_deposit":[{"denom":"ulamb","amount":"520000000"}],"proposer":"lambda105jf3p5qkrnq973xmc6e9f8asly79sv7phcrym"}}],"memo":""}
+{"chain_id":"testing","account_number":"0","sequence":"6","fee":{"amount":null,"gas":"200000"},"msgs":[{"type":"cosmos-sdk/MsgSubmitProposal","value":{"content":{"type":"lambda/SoftwareUpgradeProposal","value":{"title":"Software Upgrade","description":"Upgrade to new version","version":"1","software":"https://github.com/LambdaIM/launch/releases/tag/v0.3.4","switch_height":"50","threshold":"0.800000000000000000"}},"initial_deposit":[{"denom":"ulamb","amount":"520000000"}],"proposer":"lambda105jf3p5qkrnq973xmc6e9f8asly79sv7phcrym"}}],"memo":""}
 
 confirm transaction before signing and broadcasting [Y/n]: y
 Password to sign with 'master':
@@ -43,7 +43,7 @@ Response:
 	"title": "Software Upgrade",
 	"description": "Upgrade to new version",
 	"version": "1",
-	"software": "https://github.com/LambdaIM/launch/releases/tag/v0.3.3",
+	"software": "https://github.com/LambdaIM/launch/releases/tag/v0.3.4",
 	"switch_height": "50",
 	"threshold": "0.8",
 	"deposit": [{
