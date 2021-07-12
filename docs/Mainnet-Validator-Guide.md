@@ -63,18 +63,9 @@ rm ~/.lambda/config/config.toml ~/.lambda/config/genesis.json ~/.lambda/config/a
 
 ### 5. 配置种子节点  
 编辑`~/.lambda/config/config.toml`文件，将文件中的seeds字段的值替换如下
-```
-72e1dd22f2c3effc4e6ff842035f109480a997ae@hk.mainnet.lambdastorage.com:26656
-
-```
-
-如果上面节点连接有问题，可以使用下面的任一种子节点
 
 国内种子节点推荐
 ```
-72e1dd22f2c3effc4e6ff842035f109480a997ae@hk.mainnet.lambdastorage.com:26656
-d3440b0b7a0ccf419f506a1242431813cf8a699c@hhht.mainnet.lambdastorage.com:26656
-98a0a749080b367d218f68b628b2db3d8d175af9@zjk.mainnet.lambdastorage.com:26656
 7bfaaba8ffcc2cf20304f8992db915b2604ed720@bj.mainnet.lambdastorage.com:26656 
 ```
 
@@ -106,10 +97,7 @@ debug_log_traffic = "false"
 [kad]
 # DHT接入节点地址，存储网络提供，可填写多个
 bootstrap_addr = [
-                  "zjk.mainnet.lambdastorage.com:12000",
-                  "hhht.mainnet.lambdastorage.com:12000",
                   "bj.mainnet.lambdastorage.com:12000",
-                  "hk.mainnet.lambdastorage.com:12000",
                   "tokyo2.mainnet.lambdastorage.com:12000",]
 bootstrap_backoff_max = "30s"
 bootstrap_backoff_base = "1s"

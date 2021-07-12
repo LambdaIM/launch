@@ -70,21 +70,9 @@ ntpdate -u ntp.api.bz
         
         === "dht1"
             ```shell
-            ./lambdacli config dht-gateway-address zjk.mainnet.lambdastorage.com:12000
-            ```
-        === "dht2"
-            ```shell
-            ./lambdacli config dht-gateway-address hhht.mainnet.lambdastorage.com:12000
-            ```
-        === "dht3"
-            ```shell
             ./lambdacli config dht-gateway-address bj.mainnet.lambdastorage.com:12000
-            ```
-        === "dht4"
-            ```shell
-            ./lambdacli config dht-gateway-address hk.mainnet.lambdastorage.com:12000
-            ```  
-        === "dht5(国外)"
+            ``` 
+        === "dht2(国外)"
             ```shell
             ./lambdacli config dht-gateway-address tokyo2.mainnet.lambdastorage.com:12000
             ```              
@@ -199,10 +187,7 @@ ntpdate -u ntp.api.bz
                 # DHT接入节点地址，存储网络提供，可填写多个
                 # 可填写自己质押的验证节点配置lambda.toml中的 kad.external_address
                 bootstrap_addr = [
-                  "zjk.mainnet.lambdastorage.com:12000",
-                  "hhht.mainnet.lambdastorage.com:12000",
                   "bj.mainnet.lambdastorage.com:12000",
-                  "hk.mainnet.lambdastorage.com:12000",
                   "tokyo2.mainnet.lambdastorage.com:12000",]
                 # this should listen at Public IP
                 ## 对外暴露的提供服务的地址
@@ -627,10 +612,10 @@ fee = 1 * 3000(兑换比例) * 0.3%(手续费比例) = 9LAMB (=9,000,000ulamb)
                 [broker]
                 # dht_gateway_addr为验证节点的dht服务 IP和端口；
                 # 可以是自己质押的验证节点配置的kad.external_address
-                # 可选官方dht地址：zjk.mainnet.lambdastorage.com:12000/hhht.mainnet.lambdastorage.com:12000/bj.mainnet.lambdastorage.com:12000/hk.mainnet.lambdastorage.com:12000/tokyo2.mainnet.lambdastorage.com:12000
+                # 可选官方dht地址：bj.mainnet.lambdastorage.com:12000/tokyo2.mainnet.lambdastorage.com:12000
                 dht_gateway_addr = "tokyo2.mainnet.lambdastorage.com:12000" 
                 # validator_addr为验证节点IP和端口，可以是自己质押的验证节点rest-server服务指定的laddr地址
-                # 可选官方地址：zjk.mainnet.lambdastorage.com:13659/hhht.mainnet.lambdastorage.com:13659/bj.mainnet.lambdastorage.com:13659/hk.mainnet.lambdastorage.com:13659/tokyo2.mainnet.lambdastorage.com:13659
+                # 可选官方地址：bj.mainnet.lambdastorage.com:13659/tokyo2.mainnet.lambdastorage.com:13659
                 validator_addr = "tokyo2.mainnet.lambdastorage.com:13659"   
                 
                 [gateway]

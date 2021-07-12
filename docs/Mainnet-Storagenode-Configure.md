@@ -60,10 +60,7 @@ ntpdate -u ntp.api.bz
             # address you want kad to connect with
             # DHT接入节点地址，可以是自己质押的验证节点或minernode配置的kad.external_address
             bootstrap_addr = [
-                      "zjk.mainnet.lambdastorage.com:12000",
-                      "hhht.mainnet.lambdastorage.com:12000",
                       "bj.mainnet.lambdastorage.com:12000",
-                      "hk.mainnet.lambdastorage.com:12000",
                       "tokyo2.mainnet.lambdastorage.com:12000",]
     
             db_path = "/root/.lambda_storage/kademlia"

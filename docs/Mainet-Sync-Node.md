@@ -42,25 +42,14 @@ rm ~/.lambda/config/config.toml ~/.lambda/config/genesis.json
 
 ### 4. 配置种子节点  
 编辑`~/.lambda/config/config.toml`文件，将文件中的seeds字段的值替换如下
+国内种子节点推荐
 ```
-vim ~/.lambda/config/config.toml
-seeds = "72e1dd22f2c3effc4e6ff842035f109480a997ae@seednodes1.oneweb.one:26656"
-
-如需配置多个节点需以逗号隔开，例如：
-seeds = "72e1dd22f2c3effc4e6ff842035f109480a997ae@seednodes1.oneweb.one:26656,d3440b0b7a0ccf419f506a1242431813cf8a699c@39.104.97.255:26656,98a0a749080b367d218f68b628b2db3d8d175af9@39.100.6.247:26656,91fa14e2c8da164ff7969f2bbc0ba5c6e206da8a@101.201.65.116:26656"
+7bfaaba8ffcc2cf20304f8992db915b2604ed720@bj.mainnet.lambdastorage.com:26656 
 ```
 
-
-主网目前种子节点列表：
+国外种子节点推荐
 ```
-国外种子节点
-dd3360f3a4334432af394a835662a2b21bf406e2@seednodes.oneweb.one:26656
-
-国内种子节点列表
-72e1dd22f2c3effc4e6ff842035f109480a997ae@seednodes1.oneweb.one:26656
-d3440b0b7a0ccf419f506a1242431813cf8a699c@39.104.97.255:26656
-98a0a749080b367d218f68b628b2db3d8d175af9@39.100.6.247:26656
-91fa14e2c8da164ff7969f2bbc0ba5c6e206da8a@101.201.65.116:26656 
+2274be959a4598a789791edf811546c20b68495f@tokyo2.mainnet.lambdastorage.com:26656
 ```
 
 
